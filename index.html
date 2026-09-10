@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>책육아방 맞춤 수학 교구 & 학습지 맞춤 대시보드 :)</title>
+  <meta name="description" content="만 2세부터 초등 저학년까지, 아이 나이(±1세) 맞춤형 수학 교구와 학습지 라인업, 브랜드별 7대 지표 분석, 단계별 학습 로드맵 플로우차트, 학술 실증 연구 및 메타 분석 파이썬 랩">
+  
+  <!-- Pretendard Modern Web Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. HERO & ONBOARDING SECTION (첫 화면 아기 나이 및 유형 선택)
+  ========================================================= -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="hero-header">
+        <div class="hero-badge">🎓 대한민국 유아·초등 수학교육 종합 분석 리포트 Prepared by EMom</div>
+        <h1 class="hero-title">책육아방 맞춤<br><span>수학 교구 & 학습지</span> 맞춤 대시보드 :)</h1>
+      </div>
+
+      <!-- Onboarding Control Card -->
+      <div class="onboarding-card">
+        <!-- Step 1: Age Selection -->
+        <div class="onboarding-step-title">
+          <span class="step-num">1</span>
+          <span>아이의 현재 나이를 선택해주세요 (±1세 범위 자동 매칭)</span>
+        </div>
+        <div class="age-selector-grid">
+          <button class="age-btn" data-age="2">
+            <span class="age-val">2세</span>
+            <span class="age-sub">만 1~2세</span>
+          </button>
+          <button class="age-btn" data-age="3">
+            <span class="age-val">3세</span>
+            <span class="age-sub">만 2~3세</span>
+          </button>
+          <button class="age-btn" data-age="4">
+            <span class="age-val">4세</span>
+            <span class="age-sub">만 3~4세</span>
+          </button>
+          <button class="age-btn active" data-age="5">
+            <span class="age-val">5세</span>
+            <span class="age-sub">만 4~5세</span>
+          </button>
+        </div>
+
+        <!-- Step 2: Type Toggle (교구 / 학습지) -->
+        <div class="onboarding-step-title">
+          <span class="step-num">2</span>
+          <span>어떤 교육 콘텐츠를 찾고 계신가요?</span>
+        </div>
+        <div class="type-toggle-group">
+          <button class="type-btn active" data-type="manipulative">
+            <span>🧩</span>
+            <span>교구만 보기 (원목·구체물 조작)</span>
+          </button>
+          <button class="type-btn" data-type="workbook">
+            <span>📚</span>
+            <span>학습지만 보기 (원리·연산·사고력)</span>
+          </button>
+        </div>
+
+        <!-- Summary & Call to Action -->
+        <div class="selection-summary">
+          <div class="summary-info">
+            <div class="summary-icon">🎯</div>
+            <div class="summary-text">
+              <h4 id="summaryTargetAge">만 5세 맞춤 플랜 (4~6세 범위)</h4>
+              <p id="summaryFilterDesc">현재 4세부터 6세까지의 수학 교구 데이터를 우선 선별하여 큐레이션합니다.</p>
+            </div>
+          </div>
+          <button class="explore-btn" id="exploreStartBtn">
+            <span>맞춤 결과 보기</span>
+            <span>↓</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. STICKY NAVIGATION & QUICK FILTER BAR
+  ========================================================= -->
+  <div class="sticky-nav-bar" id="stickyNav">
+    <div class="container">
+      <div class="nav-content">
+        <div class="nav-brand">
+          <span>📐</span>
+          <span>MathKids Dashboard</span>
+        </div>
+
+        <div class="nav-quick-filters">
+          <div class="current-filter-badge" id="navFilterBadge">
+            👶 만 5세 (범위: 4~6세)
+          </div>
+
+          <!-- Quick Age Selector -->
+          <div class="nav-mini-select">
+            <span>나이:</span>
+            <select id="navAgeSelect">
+              <option value="2">만 2세 (1~3세)</option>
+              <option value="3">만 3세 (2~4세)</option>
+              <option value="4">만 4세 (3~5세)</option>
+              <option value="5" selected>만 5세 (4~6세)</option>
+            </select>
+          </div>
+
+          <!-- Quick Type Selector -->
+          <div class="nav-mini-select">
+            <span>유형:</span>
+            <select id="navTypeSelect">
+              <option value="manipulative" selected>교구만</option>
+              <option value="workbook">학습지만</option>
+            </select>
+          </div>
+
+          <!-- Search Box -->
+          <div class="nav-search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="globalSearchInput" placeholder="교구·학습지명, 키워드 검색...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs Navigation -->
+  <div class="tabs-bar">
+    <div class="container">
+      <div class="tabs-list">
+        <button class="tab-btn active" data-tab="tabManipulative">
+          <span>🧩 교구 탐색기</span>
+        </button>
+        <button class="tab-btn" data-tab="tabWorkbook">
+          <span>📚 학습지 브랜드</span>
+        </button>
+        <button class="tab-btn" data-tab="tabScience">
+          <span>🔬 학술 연구 검증실</span>
+        </button>
+        <button class="tab-btn" data-tab="tabMeta">
+          <span>📊 메타 분석</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       3. MAIN DASHBOARD CONTENT PANELS
+  ========================================================= -->
+  <main class="main-content" id="mainContent">
+    <div class="container">
+
+      <!-- TAB 1: 교구 탐색기 -->
+      <section class="tab-panel active" id="tabManipulative">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">🧩 교구 전문 브랜드 탐색기</h2>
+            <p class="section-subtitle">플레이팩토, 연두비 몬테소리, EDX, 씨투엠 창의교구, 몬스터매스, 조이매스 등 교구 전문 브랜드 종합 랭킹 및 7대 지표 정밀 분석 (행 또는 '평점 보기 ▼' 클릭 시 세부 지표가 열립니다)</p>
+          </div>
+        </div>
+
+        <div class="info-alert" style="flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:flex-start; gap:12px; width:100%;">
+            <span style="font-size:1.4rem;">📊</span>
+            <div class="info-alert-text">
+              <h5>교구 6대 항목 별점 산정 기준 및 연구 결과 기반 랭킹 안내</h5>
+              <p>각 교구의 별점(★ 1~5점)은 각 브랜드의 공식 교육과정, 실제 교구 구성물, 초등학교 교과서 연계도, <strong>국내외 학술 연구 검증 결과</strong>, 실제 학부모 피드백을 바탕으로 객관적 기준에 따라 산정되었습니다. (<strong>비용은 별점 계산에서 제외</strong>되었으며, <strong>선택하신 연령대(발달 과업 및 실제 출시 라인업)에 따라 실시간으로 맞춤 가중 점수가 재계산되어 랭킹이 동적으로 변화</strong>합니다.)</p>
+            </div>
+          </div>
+
+          <!-- 접을 수 있는 깔끔한 6대 평가 기준 안내 -->
+          <details class="criteria-collapse">
+            <summary class="criteria-toggle-btn">
+              <span>💡 6대 평가 지표(연산·사고력·교구·엄마표·초등연계·연구) 채점 기준 보기</span>
+              <span class="arrow">▼</span>
+            </summary>
+            <div class="criteria-panel">
+              <div class="criteria-card-item">
+                <span class="criteria-badge">🧮 수·연산</span>
+                <span class="criteria-desc">수 개념, 자릿값, 10의 보수, 사칙연산의 구체물 조작 체득 수준</span>
+              </div>
+              <div class="criteria-card-item">
+                <span class="criteria-badge">🧠 사고력</span>
+                <span class="criteria-desc">공간지각력, 회전·대칭, 전략적 문제해결, 패턴 추론 깊이</span>
+              </div>
+              <div class="criteria-card-item">
+                <span class="criteria-badge">🧩 교구 완성도</span>
+                <span class="criteria-desc">실물 구체물 조작 완성도 및 교구 자체의 독립적 활용도 (전원 5★)</span>
+              </div>
+              <div class="criteria-card-item">
+                <span class="criteria-badge">🏡 엄마표</span>
+                <span class="criteria-desc">전문 방문교사 없이 부모가 가이드북만으로 지도 가능한 용이성</span>
+              </div>
+              <div class="criteria-card-item">
+                <span class="criteria-badge">🏫 초등 연계</span>
+                <span class="criteria-desc">초등 1~2학년 수학 5대 영역 및 교과서 단원과의 1:1 직결률</span>
+              </div>
+              <div class="criteria-card-item">
+                <span class="criteria-badge">🔬 연구 검증</span>
+                <span class="criteria-desc">Science, APA 등 공인 학술지 실증 논문 및 무작위 대조군(RCT) 검증도</span>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="cards-grid" id="manipulativeGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB 3: 학습지 브랜드 탐색기 -->
+      <section class="tab-panel" id="tabWorkbook">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">📚 학습지 전문 브랜드 탐색기</h2>
+            
+            <!-- 메타연구 실증 브리핑: 유아기 학습지 조기 주입의 한계 -->
+            <div class="meta-research-brief-card">
+              <div class="brief-badge">🔬 교육학 메타·종단 연구 경고 (Empirical Research Warning)</div>
+              <div class="brief-main-statement">
+                "만 3~6세 유아기 지면 학습지·기계적 연산 드릴은 장기 수학 성취도에 도움이 되지 않으며, 오히려 뇌 발달에 역효과를 냅니다."
+              </div>
+              <ul class="brief-points">
+                <li>
+                  <span class="bullet">📉</span>
+                  <div>
+                    <strong>초등 고학년 성적 역전·급락:</strong> 2,990명 대규모 무작위 대조군(RCT) 추적 연구 결과, 유아기 조기 학습지 훈련 아동은 초등 6학년 시점에 비학습 대조군보다 표준화 수학 성적이 <em>오히려 유의미하게 하락</em>했습니다.
+                    <span class="citation">Vanderbilt Univ., Durkin et al., <em>Dev Psychol</em>, 2022; Marcon, <em>ECRP</em>, 2002</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet">🚫</span>
+                  <div>
+                    <strong>수 감각(Number Sense) 마비:</strong> 자릿값과 양감에 대한 구체물 조작 없이 지면 세로셈·알고리즘을 기계적으로 반복 암기하면, 자발적인 수학적 추론과 독창적 사고력이 마비됩니다.
+                    <span class="citation">Kamii & Dominick, <em>NCTM</em>, 1998</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet">🧠</span>
+                  <div>
+                    <strong>수학 불안증(Math Anxiety) & 자존감 저하:</strong> 지면 반복 학습지는 유아의 신체적 스트레스 반응(손톱 물어뜯기, 다리 떨기)을 폭발적으로 증가시키며, 수학에 대한 실패 공포와 학습 거부감을 조기에 고착화시킵니다.
+                    <span class="citation">Stipek et al., <em>Child Dev</em>, 1995; Burts et al., <em>ECRQ</em>, 1990</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="brief-footer-note">
+                💡 <strong>전문가 권고:</strong> 유아기(만 3~6세) 수학의 절대 표준은 <strong>손으로 만지는 구체물 교구 조작</strong>이며, 학습지는 7세~초등학교 입학 직전 <em>'손글씨 운필력'</em> 및 <em>'지면 시험 형식 적응용'</em>으로 1일 1~2쪽 가볍게 제한하는 것이 뇌인지 발달상 가장 안전합니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="workbookGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB 3: 학술 연구 검증실 -->
+      <section class="tab-panel" id="tabScience">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">🔬 교육학 실증 연구 검증실 (Science Hub)</h2>
+            <p class="section-subtitle">미국 및 국제 학술지에 게재된 엄밀한 실증 논문(RCT, 종단 연구)을 통해 교구의 실효성과 주입식 학습지의 부작용을 검증합니다.</p>
+          </div>
+        </div>
+
+        <div class="research-container">
+          <!-- 1부: 학습지 중심 vs 교구 놀이 중심 실증 비교 -->
+          <div class="research-sub-section">
+            <h3>⚠️ 1. 학습지 위주 주입식 교육의 한계와 부작용 실증 연구</h3>
+            <div class="info-alert warning">
+              <span style="font-size:1.5rem;">🚨</span>
+              <div class="info-alert-text">
+                <h5>학술 연구의 공통된 결론 (Empirical Consensus)</h5>
+                <p>유아기(만 3~6세)에 지면 문제집/반복 연산 위주로 학습한 아동은 단기적으로 계산 속도가 빨라 보일 수 있으나, <strong>초등 4~6학년이 되면 수학 성적이 급락(Fade-out)</strong>하며 높은 불안감과 개념적 유연성 결여를 보인다는 사실이 장기 추적 연구를 통해 입증되었습니다.</p>
+              </div>
+            </div>
+            <div id="worksheetResearchContainer">
+              <!-- Dynamically populated by app.js -->
+            </div>
+          </div>
+
+          <!-- 2부: 교구 조작의 긍정적 실증 연구 & 가베 RCT 부재 팩트체크 -->
+          <div class="research-sub-section">
+            <h3>📐 2. 구체물 조작(교구) 및 게임의 수학적 성취도 효과 연구</h3>
+            <div id="manipulativeResearchContainer">
+              <!-- Dynamically populated by app.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 5: 메타 분석 Python Lab -->
+      <section class="tab-panel" id="tabMeta">
+        <div class="section-header" style="flex-direction:column; align-items:flex-start; gap:8px;">
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+            <span class="meta-live-badge">🐍 Python 3.10+ Executable Pipeline</span>
+            <span class="meta-live-badge" style="background:#EEF2FF; color:#4F46E5; border-color:#C7D2FE;">RCT & Empirical Paper Synthesis</span>
+          </div>
+          <h2 class="section-title">📊 교육학 실증 연구 메타 분석 파이썬 랩 (Meta-Analysis Python Lab)</h2>
+          <p class="section-subtitle">
+            본 대시보드에 축적된 국내외 학술 연구(Science, APA, JRME 등 무작위 대조군 RCT 및 종단 추적 연구)를 바탕으로 설계된 실제 실행 가능한 메타 분석 파이썬 코드입니다.
+            분석하고자 하는 교구/학습지 영역을 선택한 후 <strong>[📋 전체 코드 복사]</strong> 또는 <strong>[📥 .py 다운로드]</strong>하여 Google Colab이나 로컬 Jupyter에서 즉시 실행하고 논문용 Forest Plot을 생성할 수 있습니다.
+          </p>
+        </div>
+
+        <!-- Meta-Analysis Domain Selector Bar -->
+        <div class="meta-selector-bar">
+          <div class="meta-selector-label">
+            <strong>🎯 메타 분석 대상 연구 영역 선택:</strong>
+            <span style="font-size:0.8rem; color:var(--text-muted);">(선택 시 데이터셋, 효과크기(d), Forest Plot 및 Python 스크립트가 실시간 동기화됩니다)</span>
+          </div>
+          <div class="meta-preset-pills" id="metaPresetPills">
+            <!-- Dynamically generated pills -->
+          </div>
+        </div>
+
+        <!-- Meta-Analysis KPI Stat Cards -->
+        <div class="meta-stats-grid" id="metaStatsGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+        <!-- Forest Plot Visualization Preview -->
+        <div class="meta-forest-card">
+          <div class="meta-forest-header">
+            <div>
+              <h4 id="metaForestTitle">🌲 Forest Plot 메타 분석 시각화 프리뷰</h4>
+              <p id="metaForestSubtitle">DerSimonian-Laird 변량 효과 모형(Random-Effects Model) 기반 통합 효과 크기 및 연구별 95% 신뢰구간</p>
+            </div>
+            <div class="forest-legend">
+              <span class="fl-item"><span class="fl-box"></span> 개별 연구 가중치 (Box Size ∝ Weight)</span>
+              <span class="fl-item"><span class="fl-diamond"></span> 통합 효과 크기 (Pooled Effect Diamond)</span>
+            </div>
+          </div>
+          <div class="forest-svg-container" id="forestSvgContainer">
+            <!-- Dynamically rendered SVG Forest Plot -->
+          </div>
+        </div>
+
+        <!-- Python IDE Code Screen Window -->
+        <div class="meta-code-window">
+          <div class="code-window-header">
+            <div class="code-dots">
+              <span class="code-dot dot-red"></span>
+              <span class="code-dot dot-yellow"></span>
+              <span class="code-dot dot-green"></span>
+            </div>
+            <div class="code-file-tabs">
+              <button class="code-file-tab active" id="codeTabPython" onclick="switchCodeTab('python')">
+                <span>📄 meta_analysis_pipeline.py</span>
+              </button>
+              <button class="code-file-tab" id="codeTabCsv" onclick="switchCodeTab('csv')">
+                <span>📊 empirical_dataset.csv</span>
+              </button>
+            </div>
+            <div class="code-action-buttons">
+              <button class="code-action-btn" onclick="copyMetaCode()" id="copyCodeBtn" title="클립보드에 파이썬 코드 복사">
+                <span>📋 전체 코드 복사</span>
+              </button>
+              <button class="code-action-btn" onclick="downloadMetaScript()" title="파이썬 .py 파일 다운로드">
+                <span>📥 .py 다운로드</span>
+              </button>
+              <button class="code-action-btn" onclick="downloadMetaCsv()" title="CSV 데이터셋 다운로드">
+                <span>📊 CSV 다운로드</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="code-window-body">
+            <pre class="code-pre"><code id="pythonCodeDisplay" class="python-code-content"></code></pre>
+          </div>
+
+          <div class="code-window-footer">
+            <span>💡 <strong>실행 방법 안내:</strong> Google Colab (<a href="https://colab.research.google.com" target="_blank" rel="noopener" style="color:#60A5FA; text-decoration:underline;">colab.research.google.com</a>) 새 노트북에 위 코드를 붙여넣고 <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Shift + Enter</kbd>를 누르면 즉시 고해상도 Forest Plot PNG가 생성됩니다.</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =========================================================
+       4. MODAL DIALOG & FLOATING COMPARE TRAY
+  ========================================================= -->
+  <!-- Brand Detail Modal -->
+  <div class="modal-overlay" id="brandModalOverlay">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <div id="modalBody">
+        <!-- Dynamically filled -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated Roadmap Modal -->
+  <div class="modal-overlay" id="roadmapModalOverlay">
+    <div class="modal-dialog modal-dialog-wide">
+      <button class="modal-close-btn" id="roadmapModalCloseBtn" onclick="closeRoadmapModal()">✕</button>
+      <div id="roadmapModalBody">
+        <!-- Dynamically filled by openRoadmapModal() -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       5. FOOTER
+  ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h4>책육아방 맞춤 수학 교구 & 학습지 맞춤 대시보드 :)</h4>
+          <p>Prepared by EMom · 공개된 학술 논문 및 공식 커리큘럼 데이터를 바탕으로 제작된 비영리 교육 정보 대시보드입니다.</p>
+        </div>
+        <div>
+          <p>Hosted with ❤️ on <strong>GitHub Pages</strong> | Open Source Research</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="meta-toast" id="metaToast">
+    <span>📋 파이썬 메타 분석 코드가 클립보드에 복사되었습니다!</span>
+  </div>
+
+  <!-- Scripts: Data First, then App Logic -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
