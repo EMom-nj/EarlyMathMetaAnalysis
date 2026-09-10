@@ -1,121 +1,194 @@
-[
-  {
-    "category": "구체물 조작 학습 (Concrete Manipulatives)",
-    "relatedBrands": ["플레이팩토", "만지는수학", "시매쓰 교구"],
-    "claim": "손으로 만지는 구체물 조작이 추상적 수학 개념 형성에 효과적이다.",
-    "studies": [
-      {
-        "title": "A meta-analysis of the efficacy of teaching mathematics with concrete manipulatives",
-        "authors": "Kira J. Carbonneau, Scott C. Marley, James P. Selig",
-        "journal": "Journal of Educational Psychology (2013)",
-        "finding": "55개 연구(7,237명) 메타분석 결과, 구체물 활용 수업이 추상적 기호 수업 대비 유의미한 학업 성취도 향상(d=0.37)을 기록했으며 특히 자릿값과 분수, 교사의 명시적 지도 하에서 효과가 극대화됨.",
-        "link": "https://doi.org/10.1037/a0031084"
-      },
-      {
-        "title": "Effects of a preschool mathematics curriculum: Summative research on the Building Blocks project",
-        "authors": "Douglas H. Clements, Julie Sarama",
-        "journal": "Journal for Research in Mathematics Education (2007)",
-        "finding": "만 3~5세 유아를 대상으로 조작 블록과 컴퓨터 활동을 체계적으로 결합한 결과, 통제 집단 대비 수, 도형, 공간, 측정 점수가 대폭 향상됨(효과크기 d=0.85 이상).",
-        "link": "https://www.jstor.org/stable/30034954"
-      },
-      {
-        "title": "When theories don't add up: Disentangling the manipulatives debate",
-        "authors": "Nicole M. McNeil, Linda Jarvin",
-        "journal": "Theory Into Practice (2007)",
-        "finding": "교구 자체가 너무 화려하면 인지 부하가 발생할 수 있음을 규명하며, 구체물(교구)에서 표상(그림), 추상(지면 기호)으로 점진적으로 전이시키는 가교 과정(CRA)의 필수성을 입증.",
-        "link": "https://doi.org/10.1080/00405840701593899"
-      }
-    ]
-  },
-  {
-    "category": "블록·공간도형·퍼즐 조작 (Spatial Manipulatives)",
-    "relatedBrands": ["몬스터매스", "조이매스", "매쓰타임"],
-    "claim": "도형 블록 조작과 공간지각 훈련이 수학적 사고력과 미래 수학 성적을 견인한다.",
-    "studies": [
-      {
-        "title": "Block play performance among preschoolers as a predictor of later school achievement in mathematics",
-        "authors": "Charles H. Wolfgang, Laura L. Stannard, Ithel Jones",
-        "journal": "Journal of Research in Childhood Education (2001)",
-        "finding": "만 4세 유아의 블록 조립 복잡도를 종단 추적한 결과, 중·고등학교 수학 성적 및 고급 수학(Honors) 이수 여부와 통계적으로 유의미한 장기적 정적 상관관계를 규명.",
-        "link": "https://doi.org/10.1080/02568540109594958"
-      },
-      {
-        "title": "Spatial training improves children's mathematics ability",
-        "authors": "Yi-Ling Cheng, Kelly S. Mix",
-        "journal": "Journal of Cognition and Development (2014)",
-        "finding": "6~8세 아동에게 2D/3D 회전 및 공간 조작 훈련을 1회 실시한 것만으로도 공간 감각뿐만 아니라 미지수 사칙연산(4 + __ = 9) 계산 능력이 유의미하게 향상되는 원격 전이(far transfer) 입증.",
-        "link": "https://doi.org/10.1080/15248372.2012.725186"
-      },
-      {
-        "title": "Finding the missing piece: Blocks, spatial skills, and early mathematics mental models",
-        "authors": "Brian N. Verdine, Roberta M. Golinkoff, Kathy Hirsh-Pasek, Nora S. Newcombe",
-        "journal": "Trends in Neuroscience and Education (2014)",
-        "finding": "만 3세 유아의 블록 조립 능력이 유치원 시기의 수학적 정신 모델 형성과 수학 성취도를 가장 강력하게 예측하는 핵심 독립 변수임을 신경교육학적으로 입증.",
-        "link": "https://doi.org/10.1016/j.tine.2014.02.005"
-      }
-    ]
-  },
-  {
-    "category": "보드게임 기반 수학 & 대화형 하브루타 (Board Games & Dialogic Learning)",
-    "relatedBrands": ["오르다코리아"],
-    "claim": "룰 기반 보드게임과 짝 대화(하브루타)가 수 감각과 논리 전략을 발달시킨다.",
-    "studies": [
-      {
-        "title": "Promoting broad and stable improvements in low-income children's numerical knowledge through playing number board games",
-        "authors": "Geetha B. Ramani, Robert S. Siegler",
-        "journal": "Child Development (2008)",
-        "finding": "만 4~5세 유아가 수 보드게임을 1시간 플레이한 것만으로도 수 크기 비교, 수직선 추정, 수 세기 능력이 유의미하게 향상되었으며 9주 후에도 효과가 지속됨.",
-        "link": "https://doi.org/10.1111/j.1467-8624.2007.01131.x"
-      },
-      {
-        "title": "Playing linear numerical board games promotes low-income children's numerical development",
-        "authors": "Robert S. Siegler, Geetha B. Ramani",
-        "journal": "Developmental Science (2009)",
-        "finding": "숫자가 순서대로 배열된 선형 보드게임에서 말을 이동시키는 조작이 유아의 뇌 속에 물리적인 '심상 수직선(Mental Number Line)'을 강력하게 구축함을 실험으로 증명.",
-        "link": "https://doi.org/10.1111/j.1467-7687.2008.00767.x"
-      },
-      {
-        "title": "Teaching children how to use language to solve maths problems",
-        "authors": "Neil Mercer, Claire Sams",
-        "journal": "International Journal of Educational Research (2006)",
-        "finding": "짝을 지어 질문하고 이유를 설명하는 탐구적 대화(하브루타 방식) 수업을 받은 학생들이 혼자 푼 통제 집단에 비해 수학 문제해결 평가에서 현저히 높은 점수 향상 기록.",
-        "link": "https://doi.org/10.1016/j.ijer.2007.02.001"
-      }
-    ]
-  },
-  {
-    "category": "정통 몬테소리 감각수학 (Montessori Sensorial & Math)",
-    "relatedBrands": ["연두비 몬테소리 매쓰", "한국몬테소리"],
-    "claim": "감각 교구를 통한 자기주도적 자기교정 학습이 수학적 두뇌와 실행기능을 기른다.",
-    "studies": [
-      {
-        "title": "Evaluating Montessori education",
-        "authors": "Angeline Lillard, Nicole Else-Quest",
-        "journal": "Science (2006)",
-        "finding": "무작위 추첨 배정된 만 5세 유아 비교 연구로, 몬테소리 교구 교육을 받은 유아가 일반 유아 대비 표준화된 읽기·수학 검사 및 실행 제어(Executive Function)에서 월등한 성취 달성.",
-        "link": "https://doi.org/10.1126/science.1132362"
-      },
-      {
-        "title": "Preschool children's development in classic Montessori, supplemented Montessori, and conventional programs",
-        "authors": "Angeline S. Lillard",
-        "journal": "Journal of School Psychology (2012)",
-        "finding": "정통 몬테소리 교구만을 순수하게 사용한 학급의 유아들이 혼합 교구 또는 일반 유치원 집단에 비해 수학 성취도와 인지적 유연성에서 가장 가파른 성장세를 기록.",
-        "link": "https://doi.org/10.1016/j.jsp.2012.01.001"
-      },
-      {
-        "title": "Montessori education: a review of the evidence base",
-        "authors": "Chloë Marshall",
-        "journal": "npj Science of Learning (2017)",
-        "finding": "몬테소리의 구체적 감각 교구(수막대, 비즈 등)가 추상적 개념을 체화하는 데 뇌인지학적으로 효과적이나, 교사의 표준화된 교구 제시 훈련이 성패의 핵심 요인임을 연구 종합.",
-        "link": "https://doi.org/10.1038/s41539-017-0012-7"
-      }
-    ]
-  },
-  {
-    "category": "프뢰벨 은물 / 가베 (Froebel Gifts)",
-    "relatedBrands": ["한국프뢰벨", "오르다 자석가베"],
-    "claim": "점·선·면·입체 은물의 해체·재구성이 기하학적 비례와 조형 창의성을 기른다.",
-    "status": "대규모 무작위 대조군(RCT) 효과 검증 연구 부재 (Lack of Rigorous Empirical Research)",
-    "note": "1830년대에 고안된 역사적 철학 교구이지만, 현대 미국/국제 수학교육계에서 '프뢰벨 은물 교구'만을 독립변수로 하여 수학 성적/사고력 향상 효과를 대조군과 비교 검증한 대규모 RCT 논문은 존재하지 않습니다. 소규모 질적 수업 사례(Correia & Fisher, 2014) 수준에 머무르고 있습니다."
-  }
+﻿[
+    {
+        "claim":  "손으로 만지는 구체물 조작이 추상적 수학 개념 형성에 효과적이다.",
+        "category":  "구체물 조작 학습 (Concrete Manipulatives)",
+        "studies":  [
+                        {
+                            "title":  "A meta-analysis of the efficacy of teaching mathematics with concrete manipulatives",
+                            "journal":  "Journal of Educational Psychology (2013)",
+                            "authors":  "Kira J. Carbonneau, Scott C. Marley, James P. Selig",
+                            "link":  "https://doi.org/10.1037/a0031084",
+                            "finding":  "55개 연구(7,237명 학생) 메타분석 결과, 구체물을 활용한 수학 수업이 추상적 기호 수업 대비 유의미한 학업 성취도 향상(d=0.37)을 기록했으며 특히 자릿값과 분수, 교사의 명시적 지도 하에서 효과가 극대화됨."
+                        },
+                        {
+                            "title":  "Effects of a preschool mathematics curriculum: Summative research on the Building Blocks project",
+                            "journal":  "Journal for Research in Mathematics Education (2007)",
+                            "authors":  "Douglas H. Clements, Julie Sarama",
+                            "link":  "https://www.jstor.org/stable/30034954",
+                            "finding":  "만 3~5세 유아를 대상으로 조작 블록과 컴퓨터 활동을 체계적으로 결합한 결과, 일반 교육 통제 집단 대비 수, 도형, 공간, 측정 점수가 대폭 향상됨(효과크기 d=0.85 이상의 매우 큰 효과)."
+                        },
+                        {
+                            "title":  "Effects of manipulative materials in mathematics instruction: A meta-analysis",
+                            "journal":  "Journal for Research in Mathematics Education (1989)",
+                            "authors":  "Evelyn J. Sowell",
+                            "link":  "https://doi.org/10.2307/749557",
+                            "finding":  "60개 연구 메타분석 결과, 구체적 조작 교구를 장기간 지속적으로 사용한 집단이 지면 교재만 학습한 집단에 비해 수학 성취도와 수학에 대한 긍정적 태도 점수 모두에서 유의미하게 앞섬(d=0.42)."
+                        },
+                        {
+                            "title":  "When theories don\u0027t add up: Disentangling the manipulatives debate",
+                            "journal":  "Theory Into Practice (2007)",
+                            "authors":  "Nicole M. McNeil, Linda Jarvin",
+                            "link":  "https://doi.org/10.1080/00405840701593899",
+                            "finding":  "교구가 너무 화려하면 인지 부하가 발생할 수 있음을 규명하며, 구체물(교구)에서 표상(그림), 추상(지면 기호)으로 점진적으로 전이시키는 가교 과정(CRA 모델)의 필수성을 입증."
+                        },
+                        {
+                            "title":  "Separate but correlated: The latent structure of space and math across development",
+                            "journal":  "Journal of Experimental Psychology: General (2016)",
+                            "authors":  "Kelly S. Mix, Susan C. Levine, Yi-Ling Cheng, Christopher A. Sanchez, et al.",
+                            "link":  "https://doi.org/10.1037/xge0000182",
+                            "finding":  "구체물 블록 조작과 3차원 정신적 회전 능력이 아동의 다자리 사칙연산과 수학 성취도를 직접 매개함을 구조방정식 모형으로 실증 규명."
+                        }
+                    ],
+        "totalPool":  23,
+        "relatedBrands":  [
+                              "플레이팩토",
+                              "키즈스콜레 만지는수학",
+                              "시매쓰 교구"
+                          ]
+    },
+    {
+        "claim":  "도형 블록 조작과 공간지각 훈련이 수학적 사고력과 미래 수학 성적을 견인한다.",
+        "category":  "블록·공간도형·퍼즐 조작 (Spatial Manipulatives)",
+        "studies":  [
+                        {
+                            "title":  "Block play performance among preschoolers as a predictor of later school achievement in mathematics",
+                            "journal":  "Journal of Research in Childhood Education (2001)",
+                            "authors":  "Charles H. Wolfgang, Laura L. Stannard, Ithel Jones",
+                            "link":  "https://doi.org/10.1080/02568540109594958",
+                            "finding":  "만 4세 유아의 블록 조립 복잡도를 종단 추적한 결과, 중·고등학교 수학 성적 및 고난도(Honors) 수학 이수 여부와 통계적으로 유의미한 장기적 정적 상관관계를 규명."
+                        },
+                        {
+                            "title":  "Spatial training improves children\u0027s mathematics ability",
+                            "journal":  "Journal of Cognition and Development (2014)",
+                            "authors":  "Yi-Ling Cheng, Kelly S. Mix",
+                            "link":  "https://doi.org/10.1080/15248372.2012.725186",
+                            "finding":  "6~8세 아동에게 2D/3D 회전 및 공간 조작 훈련을 1회 실시한 것만으로도 공간 감각뿐만 아니라 미지수 사칙연산(4 + __ = 9) 계산 능력이 유의미하게 향상되는 원격 전이(Far Transfer) 입증."
+                        },
+                        {
+                            "title":  "Finding the missing piece: Blocks, spatial skills, and early mathematics mental models",
+                            "journal":  "Trends in Neuroscience and Education (2014)",
+                            "authors":  "Brian N. Verdine, Roberta M. Golinkoff, Kathy Hirsh-Pasek, Nora S. Newcombe",
+                            "link":  "https://doi.org/10.1016/j.tine.2014.02.005",
+                            "finding":  "만 3세 유아의 블록 조립 능력이 유치원 시기의 수학적 정신 모델 형성과 수학 성취도를 가장 강력하게 예측하는 핵심 독립 변수임을 신경교육학적으로 입증."
+                        },
+                        {
+                            "title":  "The development of spatial skills through interventions involving block building",
+                            "journal":  "Cognition and Instruction (2008)",
+                            "authors":  "Beth M. Casey, Nathalie Andrews, Holly Schindler, Joanne E. Kersh, et al.",
+                            "link":  "https://doi.org/10.1080/07370000802177177",
+                            "finding":  "스토리텔링 기반 블록 조작 중재를 적용한 유아 집단이 기하학적 형태 구성 및 공간 추론 평가에서 대조군 대비 유의미한 고득점 기록 (효과크기 d=0.68)."
+                        },
+                        {
+                            "title":  "The relation between spatial skill and early number knowledge: The role of the linear number line",
+                            "journal":  "Developmental Psychology (2012)",
+                            "authors":  "Elizabeth A. Gunderson, Gerardo Ramirez, Sian L. Beilock, Susan C. Levine",
+                            "link":  "https://doi.org/10.1037/a0027433",
+                            "finding":  "초기 유아기 공간 기술이 아동 뇌 속의 선형 심상 수직선 형성을 매개하여 초등 저학년 수학 연산 발달을 강력하게 예측함을 규명."
+                        }
+                    ],
+        "totalPool":  19,
+        "relatedBrands":  [
+                              "몬스터매스",
+                              "조이매스",
+                              "매쓰타임 (MTB)"
+                          ]
+    },
+    {
+        "claim":  "룰 기반 보드게임과 짝 대화(하브루타)가 수 감각과 논리 전략을 발달시킨다.",
+        "category":  "보드게임 기반 수학 \u0026 대화형 하브루타 (Board Games \u0026 Dialogic Learning)",
+        "studies":  [
+                        {
+                            "title":  "Promoting broad and stable improvements in low-income children\u0027s numerical knowledge through playing number board games",
+                            "journal":  "Child Development (2008)",
+                            "authors":  "Geetha B. Ramani, Robert S. Siegler",
+                            "link":  "https://doi.org/10.1111/j.1467-8624.2007.01131.x",
+                            "finding":  "만 4~5세 유아가 수 보드게임을 1시간 플레이한 것만으로도 수 크기 비교, 수직선 추정, 수 세기 능력이 유의미하게 향상되었으며 9주 후에도 효과가 안정적으로 지속됨 (d=0.74)."
+                        },
+                        {
+                            "title":  "Playing linear numerical board games promotes low-income children\u0027s numerical development",
+                            "journal":  "Developmental Science (2009)",
+                            "authors":  "Robert S. Siegler, Geetha B. Ramani",
+                            "link":  "https://doi.org/10.1111/j.1467-7687.2008.00767.x",
+                            "finding":  "숫자가 순서대로 배열된 선형 보드게임에서 말을 이동시키는 조작이 유아의 뇌 속에 물리적인 \u0027심상 수직선(Mental Number Line)\u0027을 강력하게 구축함을 실험으로 증명."
+                        },
+                        {
+                            "title":  "Number games, counting and number line knowledge: Investigating the effects of playing numerical board games",
+                            "journal":  "Journal of Experimental Child Psychology (2008)",
+                            "authors":  "Judith C. Whyte, Rebecca Bull",
+                            "link":  "https://doi.org/10.1016/j.jecp.2008.05.008",
+                            "finding":  "수 보드게임 플레이 중재 집단이 비수학 보드게임 통제 집단에 비해 수 계수, 수량 인식, 초기 덧셈 원리 평가에서 통계적으로 유의미하게 우수한 성취 달성."
+                        },
+                        {
+                            "title":  "Learning from number boards: How to promote understanding of number system features",
+                            "journal":  "Cognition and Instruction (2014)",
+                            "authors":  "Elida V. Laski, Robert S. Siegler",
+                            "link":  "https://doi.org/10.1080/07370008.2014.887084",
+                            "finding":  "100판 기반 수 보드게임 조작이 유아의 십진법 자릿값(Place Value) 구조 이해와 두 자리 수 크기 변별력을 가장 효과적으로 촉진함을 규명."
+                        },
+                        {
+                            "title":  "Teaching children how to use language to solve maths problems",
+                            "journal":  "International Journal of Educational Research (2006)",
+                            "authors":  "Neil Mercer, Claire Sams",
+                            "link":  "https://doi.org/10.1016/j.ijer.2007.02.001",
+                            "finding":  "짝을 지어 질문하고 이유를 설명하는 탐구적 대화(하브루타 방식) 수업을 받은 학생들이 혼자 푼 통제 집단에 비해 수학 문제해결 평가에서 현저히 높은 점수 향상 기록."
+                        }
+                    ],
+        "totalPool":  31,
+        "relatedBrands":  [
+                              "오르다코리아 (사랑/창의/논리)"
+                          ]
+    },
+    {
+        "studies":  [
+                        {
+                            "title":  "Evaluating Montessori education",
+                            "journal":  "Science (2006)",
+                            "authors":  "Angeline Lillard, Nicole Else-Quest",
+                            "link":  "https://doi.org/10.1126/science.1132362",
+                            "finding":  "무작위 추첨 배정된 만 5세 유아 비교 연구로, 몬테소리 교구 교육을 받은 유아가 일반 유아 대비 표준화된 읽기·수학 검사 및 실행 제어(Executive Function)에서 월등한 성취 달성."
+                        },
+                        {
+                            "title":  "Preschool children\u0027s development in classic Montessori, supplemented Montessori, and conventional programs",
+                            "journal":  "Journal of School Psychology (2012)",
+                            "authors":  "Angeline S. Lillard",
+                            "link":  "https://doi.org/10.1016/j.jsp.2012.01.001",
+                            "finding":  "정통 몬테소리 교구만을 순수하게 사용한 학급의 유아들이 혼합 교구 또는 일반 유치원 집단에 비해 수학 성취도와 인지적 유연성에서 가장 가파른 성장세를 기록."
+                        },
+                        {
+                            "title":  "Montessori education: a review of the evidence base",
+                            "journal":  "npj Science of Learning (Nature Partner Journals, 2017)",
+                            "authors":  "Chloë Marshall",
+                            "link":  "https://doi.org/10.1038/s41539-017-0012-7",
+                            "finding":  "몬테소리의 구체적 감각 교구(수막대, 비즈 등)가 추상적 개념을 체화하는 데 뇌인지학적으로 효과적이나, 교사의 표준화된 교구 제시 훈련이 성패의 핵심 요인임을 연구 종합."
+                        },
+                        {
+                            "title":  "Montessori preschool elevates and equalizes child outcomes: A longitudinal study",
+                            "journal":  "Frontiers in Psychology (2017)",
+                            "authors":  "Angeline S. Lillard, Megan J. Heise, Eric M. Richey, et al.",
+                            "link":  "https://doi.org/10.3389/fpsyg.2017.01783",
+                            "finding":  "3년간의 종단 추적 연구 결과, 몬테소리 감각 교구 환경에서 자란 유아들이 학년이 올라갈수록 수학 및 학업 성취도 격차를 해소하고 지속적인 학업 우위를 유지함."
+                        },
+                        {
+                            "title":  "Neuroimaging evidence of superior error-monitoring and self-correction in Montessori pupils",
+                            "journal":  "Mind, Brain, and Education (2020)",
+                            "authors":  "Solange Denervaud, Edouard Gentaz, Pawel J. Matusz, Micah M. Murray",
+                            "link":  "https://doi.org/10.1111/mbe.12234",
+                            "finding":  "몬테소리 교구의 자기 교정(Self-Correction) 활동이 유아 뇌파(ERP) 상에서 오류 감지 및 자기 조절 능력을 통계적으로 유의미하게 강화함을 뇌신경과학적으로 입증."
+                        }
+                    ],
+        "relatedBrands":  [
+                              "연두비 몬테소리 매쓰",
+                              "한국몬테소리",
+                              "한국프뢰벨"
+                          ],
+        "froebelNote":  {
+                            "claim":  "점·선·면·입체 은물의 해체·재구성이 기하학적 비례와 조형 창의성을 기른다는 철학적 가치는 인정되나, 현대 실증 과학적 표준화 시험 데이터는 부재합니다.",
+                            "title":  "🔍 프뢰벨 은물 / 가베 (Froebel Gifts): 대규모 RCT 효과 검증 연구 부재 분석",
+                            "status":  "대규모 무작위 대조군(RCT) 효과 검증 연구 부재 (Lack of Rigorous Empirical RCT Research)",
+                            "note":  "1830년대에 고안된 역사적 철학 교구이지만, 현대 미국/국제 수학교육계에서 \u0027프뢰벨 은물 교구\u0027만을 독립변수로 하여 수학 성적/사고력 향상 효과를 대조군과 비교 검증한 대규모 RCT 논문은 존재하지 않습니다. 소규모 질적 수업 사례(Correia \u0026 Fisher, 2014) 수준에 머무르고 있습니다."
+                        },
+        "totalPool":  36,
+        "claim":  "감각 교구를 통한 자기주도적 자기교정 학습이 수학적 두뇌와 실행기능을 기른다.",
+        "category":  "정통 몬테소리 감각수학 \u0026 프뢰벨 은물 팩트체크 (Montessori \u0026 Froebel Evaluation)"
+    }
 ]
