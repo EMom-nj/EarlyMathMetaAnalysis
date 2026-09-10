@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>책육아방 맞춤 수학 교구 & 학습지 맞춤 대시보드 :)</title>
+  <title>책육아방 수학 교구 & 학습지 맞춤 대시보드 :)</title>
   <meta name="description" content="만 2세부터 초등 저학년까지, 아이 나이(±1세) 맞춤형 수학 교구와 학습지 라인업, 브랜드별 7대 지표 분석, 단계별 학습 로드맵 플로우차트, 학술 실증 연구 및 메타 분석 파이썬 랩">
   
   <!-- Pretendard Modern Web Font -->
@@ -263,7 +263,13 @@ button {
   font-weight: 600;
 }
 
-/* Type Toggle Buttons (전체 / 교구 / 학습지) */
+/* Type Toggle Buttons (전체 / 교구 / 학습지) & Action Row */
+.type-action-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .type-toggle-group {
   display: flex;
   gap: 12px;
@@ -271,7 +277,15 @@ button {
   padding: 6px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
-  margin-bottom: 24px;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.type-action-row .explore-btn {
+  padding: 13px 26px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .type-btn {
@@ -2062,6 +2076,14 @@ button {
   }
   .age-selector-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .type-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .type-action-row .explore-btn {
+    justify-content: center;
   }
   .type-toggle-group {
     flex-direction: column;
@@ -4084,11 +4106,17 @@ button {
     padding: 16px;
   }
   .lb-action-cluster {
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    padding-top: 8px;
+    gap: 8px;
+    padding-top: 10px;
     border-top: 1px dashed #F1F5F9;
+  }
+  .lb-btn {
+    justify-content: center;
+    padding: 8px 10px;
+    font-size: 0.79rem;
   }
 }
 
@@ -4098,18 +4126,43 @@ button {
   }
   .lb-action-cluster {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+    padding-top: 8px;
   }
   .lb-btn {
     justify-content: center;
-    padding: 9px 10px;
+    padding: 7px 3px;
+    font-size: 0.74rem;
+    gap: 3px;
+    border-radius: 8px;
+    letter-spacing: -0.2px;
+  }
+  .lb-btn .chevron-icon {
+    width: 10px;
+    height: 10px;
   }
   .lb-radar-bars {
     grid-template-columns: 1fr;
   }
   .lb-strip-tag {
     flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .lb-action-cluster {
+    gap: 3px;
+  }
+  .lb-btn {
+    padding: 6px 2px;
+    font-size: 0.70rem;
+    gap: 2px;
+  }
+  .lb-btn .chevron-icon {
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -4924,6 +4977,146 @@ button {
   margin-top: 4px;
   line-height: 1.5;
 }
+
+/* =========================================================
+   Leaderboard Stream Top 5 Pagination & Expand Controls
+========================================================= */
+.leaderboard-stream-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.stream-header-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stream-badge {
+  background: #EEF2FF;
+  color: #4F46E5;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #C7D2FE;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stream-count-text {
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.stream-count-text strong {
+  color: #1E293B;
+  font-weight: 700;
+}
+
+.stream-quick-toggle-btn {
+  background: white;
+  color: #4F46E5;
+  border: 1px solid #C7D2FE;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stream-quick-toggle-btn:hover {
+  background: #EEF2FF;
+  border-color: #818CF8;
+  transform: translateY(-1px);
+}
+
+.expand-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.btn-expand-stream {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  color: white;
+  font-size: 0.96rem;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  max-width: 520px;
+}
+
+.btn-expand-stream:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+  background: linear-gradient(135deg, #4338CA 0%, #4F46E5 100%);
+}
+
+.btn-expand-stream:active {
+  transform: translateY(0);
+}
+
+.btn-expand-stream.active {
+  background: #F1F5F9;
+  color: #475569;
+  border: 1.5px solid #CBD5E1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.btn-expand-stream.active:hover {
+  background: #E2E8F0;
+  color: #1E293B;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.btn-expand-stream .expand-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-stream-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .stream-quick-toggle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-expand-stream {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -4935,7 +5128,7 @@ button {
     <div class="container">
       <div class="hero-header">
         <div class="hero-badge">🎓 한국 유아·초등 수학교육 종합 분석 리포트 Prepared by EMom</div>
-        <h1 class="hero-title">책육아방 맞춤<br><span>수학 교구 & 학습지</span> 맞춤 대시보드 :)</h1>
+        <h1 class="hero-title">책육아방<br><span>수학 교구 & 학습지</span> 맞춤 대시보드 :)</h1>
       </div>
 
       <!-- Onboarding Control Card -->
@@ -4950,7 +5143,7 @@ button {
             <span class="age-val">2세</span>
             <span class="age-sub">만 1~2세</span>
           </button>
-          <button class="age-btn" data-age="3">
+          <button class="age-btn active" data-age="3">
             <span class="age-val">3세</span>
             <span class="age-sub">만 2~3세</span>
           </button>
@@ -4958,36 +5151,27 @@ button {
             <span class="age-val">4세</span>
             <span class="age-sub">만 3~4세</span>
           </button>
-          <button class="age-btn active" data-age="5">
+          <button class="age-btn" data-age="5">
             <span class="age-val">5세</span>
             <span class="age-sub">만 4~5세</span>
           </button>
         </div>
 
-        <!-- Step 2: Type Toggle (교구 / 학습지) -->
+        <!-- Step 2: Type Toggle (교구 / 학습지) & Explore Action -->
         <div class="onboarding-step-title">
           <span class="step-num">2</span>
           <span>어떤 교육 콘텐츠를 찾고 계신가요?</span>
         </div>
-        <div class="type-toggle-group">
-          <button class="type-btn active" data-type="manipulative">
-            <span>🧩</span>
-            <span>교구만 보기 (원목·구체물 조작)</span>
-          </button>
-          <button class="type-btn" data-type="workbook">
-            <span>📚</span>
-            <span>학습지만 보기 (원리·연산·사고력)</span>
-          </button>
-        </div>
-
-        <!-- Summary & Call to Action -->
-        <div class="selection-summary">
-          <div class="summary-info">
-            <div class="summary-icon">🎯</div>
-            <div class="summary-text">
-              <h4 id="summaryTargetAge">만 5세 맞춤 플랜 (4~6세 범위)</h4>
-              <p id="summaryFilterDesc">현재 4세부터 6세까지의 수학 교구 데이터를 우선 선별하여 큐레이션합니다.</p>
-            </div>
+        <div class="type-action-row">
+          <div class="type-toggle-group">
+            <button class="type-btn active" data-type="manipulative">
+              <span>🧩</span>
+              <span>교구만 보기 (원목·구체물 조작)</span>
+            </button>
+            <button class="type-btn" data-type="workbook">
+              <span>📚</span>
+              <span>학습지만 보기 (원리·연산·사고력)</span>
+            </button>
           </div>
           <button class="explore-btn" id="exploreStartBtn">
             <span>맞춤 결과 보기</span>
@@ -5010,18 +5194,14 @@ button {
         </div>
 
         <div class="nav-quick-filters">
-          <div class="current-filter-badge" id="navFilterBadge">
-            👶 만 5세 (범위: 4~6세)
-          </div>
-
           <!-- Quick Age Selector -->
           <div class="nav-mini-select">
             <span>나이:</span>
             <select id="navAgeSelect">
               <option value="2">만 2세 (1~3세)</option>
-              <option value="3">만 3세 (2~4세)</option>
+              <option value="3" selected>만 3세 (2~4세)</option>
               <option value="4">만 4세 (3~5세)</option>
-              <option value="5" selected>만 5세 (4~6세)</option>
+              <option value="5">만 5세 (4~6세)</option>
             </select>
           </div>
 
@@ -5320,7 +5500,7 @@ button {
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h4>책육아방 맞춤 수학 교구 & 학습지 맞춤 대시보드 :)</h4>
+          <h4>책육아방 수학 교구 & 학습지 맞춤 대시보드 :)</h4>
           <p>Prepared by EMom · 공개된 학술 논문 및 공식 커리큘럼 데이터를 바탕으로 제작된 비영리 교육 정보 대시보드입니다.</p>
         </div>
         <div>
@@ -8872,11 +9052,13 @@ const DASHBOARD_DATA = {
 
 // Application State
 const state = {
-  selectedAge: 5, // 기본 5세
+  selectedAge: 3, // 기본 3세
   selectedType: 'manipulative', // 'manipulative' | 'workbook'
   activeTab: 'tabManipulative',
   searchQuery: '',
-  compareList: [] // 처음 진입 시 빈 상태에서 사용자가 자유롭게 선택
+  compareList: [], // 처음 진입 시 빈 상태에서 사용자가 자유롭게 선택
+  showAllManipulatives: false, // 모바일 스크롤 최적화를 위한 Top 5 기본 뷰
+  showAllWorkbooks: false      // 모바일 스크롤 최적화를 위한 Top 5 기본 뷰
 };
 
 // 정통 교구 및 교구 결합형 브랜드 ID (교구가 있어야 활용 가능한 프로그램은 교구 탭에서만 조회)
@@ -9844,6 +10026,8 @@ function initAgeSelector() {
 
 function setTargetAge(age) {
   state.selectedAge = age;
+  state.showAllManipulatives = false; // 연령 변경 시 Top 5 기본 뷰로 리셋
+  state.showAllWorkbooks = false;
   updateHeroSummary();
   updateMiniFilterBar();
   updateDashboardViews();
@@ -10992,7 +11176,7 @@ function renderManipulatives() {
     if (!ageMatch && !hasSets) return false;
 
     if (state.searchQuery) {
-      const q = state.searchQuery;
+      const q = state.searchQuery.toLowerCase();
       return b.name.toLowerCase().includes(q) || b.differentiation.toLowerCase().includes(q) || b.coreFocus.toLowerCase().includes(q) || b.pros.toLowerCase().includes(q);
     }
     return true;
@@ -11020,12 +11204,59 @@ function renderManipulatives() {
     return scoreB.elementaryLink - scoreA.elementaryLink;
   });
 
+  const totalCount = filtered.length;
+  const isLimited = !state.showAllManipulatives && totalCount > 5 && !state.searchQuery;
+  const displayList = isLimited ? filtered.slice(0, 5) : filtered;
+
+  let toggleBtnHtml = '';
+  if (totalCount > 5 && !state.searchQuery) {
+    if (!state.showAllManipulatives) {
+      toggleBtnHtml = `
+        <div class="expand-toggle-wrapper">
+          <button class="btn-expand-stream" onclick="toggleManipulativesView(true)">
+            <span>✨ 만 ${state.selectedAge}세 교구 전체 순위 보기 (총 ${totalCount}개 중 ${totalCount - 5}개 더보기)</span>
+            <span class="expand-arrow">▼</span>
+          </button>
+        </div>
+      `;
+    } else {
+      toggleBtnHtml = `
+        <div class="expand-toggle-wrapper">
+          <button class="btn-expand-stream active" onclick="toggleManipulativesView(false)">
+            <span>▲ Top 5 순위만 접어서 보기</span>
+          </button>
+        </div>
+      `;
+    }
+  }
+
   container.innerHTML = `
     <div class="brand-leaderboard-stream" style="grid-column: 1 / -1;">
-      ${filtered.map((b, idx) => renderLeaderboardItem(b, idx, 'manip')).join('')}
+      <div class="leaderboard-stream-header">
+        <div class="stream-header-info">
+          <span class="stream-badge">${isLimited ? '🏆 Top 5 우선 정렬' : '📋 전체 순위 목록'}</span>
+          <span class="stream-count-text">만 ${state.selectedAge}세 추천 교구 <strong>${displayList.length}개</strong> ${isLimited ? `(총 ${totalCount}개 중)` : '전체 표시 중'}</span>
+        </div>
+        ${totalCount > 5 && !state.searchQuery ? `
+          <button class="stream-quick-toggle-btn" onclick="toggleManipulativesView(${!state.showAllManipulatives})">
+            ${state.showAllManipulatives ? '▲ Top 5만 접기' : `전체보기 (${totalCount}개) ▼`}
+          </button>
+        ` : ''}
+      </div>
+      ${displayList.map((b, idx) => renderLeaderboardItem(b, idx, 'manip')).join('')}
+      ${toggleBtnHtml}
     </div>
   `;
 }
+
+window.toggleManipulativesView = function(showAll) {
+  state.showAllManipulatives = showAll;
+  renderManipulatives();
+  if (!showAll) {
+    const panel = document.getElementById('tabManipulative');
+    if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 // ---------------------------------------------------------
 // 탭 3. 📚 학습지 전문 브랜드 탐색기 (Workbooks Explorer)
@@ -11044,7 +11275,7 @@ function renderWorkbooks() {
     if (!ageMatch && !hasSets) return false;
 
     if (state.searchQuery) {
-      const q = state.searchQuery;
+      const q = state.searchQuery.toLowerCase();
       return b.name.toLowerCase().includes(q) || b.differentiation.toLowerCase().includes(q) || b.coreFocus.toLowerCase().includes(q) || b.pros.toLowerCase().includes(q);
     }
     return true;
@@ -11068,12 +11299,59 @@ function renderWorkbooks() {
     return scoreB.elementaryLink - scoreA.elementaryLink;
   });
 
+  const totalCount = filtered.length;
+  const isLimited = !state.showAllWorkbooks && totalCount > 5 && !state.searchQuery;
+  const displayList = isLimited ? filtered.slice(0, 5) : filtered;
+
+  let toggleBtnHtml = '';
+  if (totalCount > 5 && !state.searchQuery) {
+    if (!state.showAllWorkbooks) {
+      toggleBtnHtml = `
+        <div class="expand-toggle-wrapper">
+          <button class="btn-expand-stream" onclick="toggleWorkbooksView(true)">
+            <span>✨ 만 ${state.selectedAge}세 학습지 전체 순위 보기 (총 ${totalCount}개 중 ${totalCount - 5}개 더보기)</span>
+            <span class="expand-arrow">▼</span>
+          </button>
+        </div>
+      `;
+    } else {
+      toggleBtnHtml = `
+        <div class="expand-toggle-wrapper">
+          <button class="btn-expand-stream active" onclick="toggleWorkbooksView(false)">
+            <span>▲ Top 5 순위만 접어서 보기</span>
+          </button>
+        </div>
+      `;
+    }
+  }
+
   container.innerHTML = `
     <div class="brand-leaderboard-stream" style="grid-column: 1 / -1;">
-      ${filtered.map((b, idx) => renderLeaderboardItem(b, idx, 'wb')).join('')}
+      <div class="leaderboard-stream-header">
+        <div class="stream-header-info">
+          <span class="stream-badge">${isLimited ? '🏆 Top 5 우선 정렬' : '📋 전체 순위 목록'}</span>
+          <span class="stream-count-text">만 ${state.selectedAge}세 추천 학습지 <strong>${displayList.length}개</strong> ${isLimited ? `(총 ${totalCount}개 중)` : '전체 표시 중'}</span>
+        </div>
+        ${totalCount > 5 && !state.searchQuery ? `
+          <button class="stream-quick-toggle-btn" onclick="toggleWorkbooksView(${!state.showAllWorkbooks})">
+            ${state.showAllWorkbooks ? '▲ Top 5만 접기' : `전체보기 (${totalCount}개) ▼`}
+          </button>
+        ` : ''}
+      </div>
+      ${displayList.map((b, idx) => renderLeaderboardItem(b, idx, 'wb')).join('')}
+      ${toggleBtnHtml}
     </div>
   `;
 }
+
+window.toggleWorkbooksView = function(showAll) {
+  state.showAllWorkbooks = showAll;
+  renderWorkbooks();
+  if (!showAll) {
+    const panel = document.getElementById('tabWorkbook');
+    if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 // ---------------------------------------------------------
 // 탭 4. ⚖️ 1:1 브랜드 정밀 비교기 (Comparison Matrix)
