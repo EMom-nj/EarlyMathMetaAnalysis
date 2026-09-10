@@ -1,0 +1,1143 @@
+[
+  {
+    "brandId": "playfacto",
+    "seriesId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "brand": "(주)타임교육C&P / 매스티안",
+    "seriesName": "플레이팩토 전 과정 로드맵",
+    "category": "교구 전문",
+    "type": "초등 5대 교과 연계 올라운더 교구",
+    "summary": "3~4세 감각 탐색에서 시작하여 4~7세 5대 영역 통합 조작, 초등 교과 연계 및 연산 EGG로 완성되는 최적의 수학교구 로드맵",
+    "flowchart": [
+      {
+        "stageId": "pre-kids",
+        "stageName": "프리키즈",
+        "ageGroup": "🌱 Pre-Kids 3~4세",
+        "stageDesc": "오감 자극 및 감각 놀이 수학 입문",
+        "steps": [
+          { "id": "p1", "title": "수학적 호기심 형성", "desc": "크기 비교, 모양 맞추기, 친환경 원목 조작 놀이" },
+          { "id": "p2", "title": "감각 탐색", "desc": "기초 수 세기, 촉각·시각 패턴 직관적 인지" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "kids",
+        "stageName": "키즈",
+        "ageGroup": "👶 Kids 4~7세",
+        "stageDesc": "누리과정 및 초등 5대 영역(수연산·도형·측정·규칙·분류) 융합",
+        "steps": [
+          { "id": "k1", "title": "Step 1: 수와 연산", "desc": "1~10 수량 일치, 10 가르기/모으기 (4~5세)" },
+          { "id": "k2", "title": "Step 2: 도형 탐구", "desc": "기본 평면·입체도형 직관 조작 (5~6세)" },
+          { "id": "k3", "title": "Step 3: 측정 비교", "desc": "길이·무게·들이 양감 체득 (5~6세)" },
+          { "id": "k4", "title": "Step 4: 규칙 & 분류", "desc": "마디 규칙 패턴, 다중 속성 분류 (6~7세)" }
+        ],
+        "layout": "grid-2x2",
+        "nextArrow": true
+      },
+      {
+        "stageId": "elementary",
+        "stageName": "초등",
+        "ageGroup": "🏫 BASIC ~ 초등 6세+",
+        "stageDesc": "초등 교과 1:1 직결 및 심화 사고력 완성",
+        "steps": [
+          { "id": "e1", "title": "교과 연계 심화", "desc": "본교구 10종 활용 초등 1~4학년 전 과정 마스터" },
+          { "id": "e2", "title": "사고력 연산 EGG", "desc": "원리 시각화 모델 기반 체계적 연산 구조화" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "프리키즈 (Pre-Kids)", "content": "오감 자극, 감각 놀이, 크기 비교, 모양 맞추기 (3~4세)", "booksCount": 12, "studyStandard": "주 1~2회 놀이식 조작" },
+      { "level": "키즈 Step 1", "content": "숫자 인지, 1~10 수량 파악, 기본 평면도형 탐색 (4~5세)", "booksCount": 12, "studyStandard": "월 1회 교구+워크북 4주 완성" },
+      { "level": "키즈 Step 2", "content": "10 가르기와 모으기, 기초 연산 입문, 입체도형 (5~6세)", "booksCount": 12, "studyStandard": "월 1회 교구+워크북 4주 완성" },
+      { "level": "키즈 Step 3", "content": "규칙성, 분류, 측정(길이/무게), 초등 입문 준비 (6~7세)", "booksCount": 12, "studyStandard": "월 1회 교구+워크북 4주 완성" },
+      { "level": "플레이팩토 BASIC & 본교구 10종", "content": "초등 1~2학년 교과 5대 영역 100% 직결 실물 조작 (6세~초2)", "booksCount": 12, "studyStandard": "주 1~2회 활동 (회당 40~50분)" },
+      { "level": "사고력 연산 EGG (1~3단계)", "content": "단순 암기 탈피, 시각적 모델링 기반 원리 연산 완성 (유아~초3)", "booksCount": 18, "studyStandard": "매일 15분, 주 5일" }
+    ]
+  },
+  {
+    "brandId": "yeondubi-montessori",
+    "seriesId": "yeondubi-montessori",
+    "brandName": "연두비 몬테소리 매쓰",
+    "brand": "(주)도서출판 연두비 (AMI 공인)",
+    "seriesName": "연두비 몬테소리 매쓰 3단계 로드맵",
+    "category": "교구 전문",
+    "type": "정통 몬테소리 감각·십진법·자기주도 교구",
+    "summary": "유럽 정통 원목 교구 19종과 미션북 60권으로 감각 탐색에서 십진법 자릿값, 지면 추상화까지 스스로 오류를 정정하며 나아가는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "sensory",
+        "stageName": "감각 탐색",
+        "ageGroup": "🌱 입문 0~3세",
+        "stageDesc": "형태와 무게, 크기의 양감을 온몸으로 체득",
+        "steps": [
+          { "id": "m_s1", "title": "형태 감각 변별", "desc": "꼭지원기둥, 분수원기둥, 도형틀을 통한 시각·촉각 변별" },
+          { "id": "m_s2", "title": "크기 및 무게 양감 체득", "desc": "크기 비교, 분홍탑, 갈색계단 등 3차원 공간 직관 형성" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "quantity",
+        "stageName": "수 개념 & 십진법",
+        "ageGroup": "👶 키즈 3~5세",
+        "stageDesc": "실제 구체물 수량에서 10진 자릿값 체계 완벽 체화",
+        "steps": [
+          { "id": "m_q1", "title": "Step 1: 수막대 수량 일치", "desc": "1~10cm 수막대로 수량과 숫자의 물리적 일치 (3~4세)" },
+          { "id": "m_q2", "title": "Step 2: 모래숫자판 & 세갱판", "desc": "모래숫자판 촉각 쓰기, 세갱판으로 11~19 연속 수 이해" },
+          { "id": "m_q3", "title": "Step 3: 금색구슬 십진법", "desc": "1낱개, 10막대, 100판, 1000큐브로 자릿값 체득 (4~5세)" }
+        ],
+        "layout": "col-3",
+        "nextArrow": true
+      },
+      {
+        "stageId": "abstraction",
+        "stageName": "구체 연산 & 지면 추상화",
+        "ageGroup": "🏫 어드밴스 5~7세+",
+        "stageDesc": "교구 조작에서 지면 연산으로 매끄러운 추상화 전환",
+        "steps": [
+          { "id": "m_a1", "title": "뱀놀이 & 우표놀이", "desc": "덧셈·뺄셈 뱀놀이, 우표놀이로 받아올림/내림 자연 체득" },
+          { "id": "m_a2", "title": "미션북 60권 자기주도", "desc": "600개 미션북으로 오류 자동정정 기반 초등 연계 완성" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "감각 탐색 단계 (0~3세)", "content": "원기둥, 도형틀, 크기 및 형태 감각 변별, 오감 발달", "booksCount": 10, "studyStandard": "자유로운 감각 탐구 활동" },
+      { "level": "수 개념 기초 (3~4세)", "content": "수막대 1~10, 모래숫자판, 수카드, 수량과 숫자의 1:1 대응", "booksCount": 15, "studyStandard": "주 2~3회 교구 조작" },
+      { "level": "십진법 자릿값 (4~5세)", "content": "금색구슬 세트 (1, 10, 100, 1000 자릿값 양감 형성), 세갱판", "booksCount": 15, "studyStandard": "주 3회 활동" },
+      { "level": "구체 연산 & 우표놀이 (5~6세)", "content": "덧셈/뺄셈 뱀놀이, 우표놀이, 지면 기호화 전환 입문", "booksCount": 10, "studyStandard": "주 3~4회, 일일 미션" },
+      { "level": "미션북 & 초등 연계 완성 (6~7세)", "content": "미션북 60권 풀세트 마스터, 사칙연산 원리 및 초등 1~2학년 연계", "booksCount": 10, "studyStandard": "매일 15분 자기주도 미션" }
+    ]
+  },
+  {
+    "brandId": "monstermath",
+    "seriesId": "monstermath",
+    "brandName": "몬스터매스 (Monster Math)",
+    "brand": "(주)조이앤에듀",
+    "seriesName": "몬스터매스 교구-아레테 로드맵",
+    "category": "교구 전문",
+    "type": "도형·공간지각력 특화 & 2단계 지면 브릿지",
+    "summary": "구체물 교구 조작(구체적 사고)으로 공간 개념을 깨우치고, 독보적 지면 교재 '아레테'로 추상적 사고력을 완성하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "mm-s",
+        "stageName": "유치 입문 (S단계)",
+        "ageGroup": "🌱 S단계 5~6세",
+        "stageDesc": "구체물 첫 만남과 기초 양감 및 형태 변별",
+        "steps": [
+          { "id": "mm_s1", "title": "구체물 첫 만남", "desc": "동물 블록, 기본 도형 맞추기, 색상/모양 분류" },
+          { "id": "mm_s2", "title": "기초 공간 탐구", "desc": "평면 채우기, 기초 패턴 구성, 감각 형성" },
+          { "id": "mm_s3", "title": "양감 및 변별", "desc": "크기·무게 직관 인지 및 다중 속성 변별" }
+        ],
+        "layout": "col-3",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mm-ka",
+        "stageName": "창의 교구 (K·A단계)",
+        "ageGroup": "👶 K·A단계 6~7세",
+        "stageDesc": "본격 창의사고력 교구 조작과 문제해결력 훈련",
+        "steps": [
+          { "id": "mm_k1", "title": "Step 1: 평면도형 구성", "desc": "칠교, 펜토미노 평면 분할 및 위치 회전 감각" },
+          { "id": "mm_k2", "title": "Step 2: 공간 블록 조작", "desc": "소마큐브, 패턴블록으로 3차원 투영 훈련" },
+          { "id": "mm_k3", "title": "Step 3: 기초 연산 규칙", "desc": "수막대와 기하판으로 연산 구조와 수 규칙 탐구" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mm-bcd",
+        "stageName": "초등 심화 & 아레테",
+        "ageGroup": "🏫 B·C·D단계 초등 저학년",
+        "stageDesc": "고난도 공간도형과 지면 사고력 교재 아레테의 결합",
+        "steps": [
+          { "id": "mm_b1", "title": "입체도형 & 회전체", "desc": "전개도, 단면 자르기, 복합 입체 회전 마스터" },
+          { "id": "mm_b2", "title": "아레테 (ARETE) 교재", "desc": "교구 경험을 지면 기호와 논리로 치환하는 2단계 완성" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "S단계 (유치 기초)", "content": "동물 블록, 기초 패턴, 모양 변별, 기초 양감 (5~6세)", "booksCount": 12, "studyStandard": "주 1회 수업 + 가정 복습" },
+      { "level": "K단계 (창의 입문)", "content": "칠교, 평면도형 구성, 공간 위치 감각 형성 (6세)", "booksCount": 12, "studyStandard": "주 1회 교구 조작 (50분)" },
+      { "level": "A단계 (예비초 사고력)", "content": "소마큐브 입문, 펜토미노, 입체 구성 기초, 규칙 (7세)", "booksCount": 12, "studyStandard": "주 1회 교구 조작 (50분)" },
+      { "level": "B단계 (초등 1학년)", "content": "초1 교과 연계 공간도형, 쌓기나무 층별 투영, 아레테 연계", "booksCount": 12, "studyStandard": "주 1~2회 (교구+지면)" },
+      { "level": "C~D단계 (초등 2~3학년)", "content": "도형 돌리기/뒤집기, 전개도, 회전체, 고난도 아레테 지면", "booksCount": 24, "studyStandard": "주 1~2회 심화 탐구" }
+    ]
+  },
+  {
+    "brandId": "joymath",
+    "seriesId": "joymath",
+    "brandName": "조이매스 (JoyMath)",
+    "brand": "(주)조이매스 (황선욱 교수 연구팀)",
+    "seriesName": "조이매스 영역별 단품 교구 로드맵",
+    "category": "교구 전문",
+    "type": "가성비 모듈형 단품 교구 & 워크북",
+    "summary": "전집 부담 없이 칠교, 지오보드, 소마큐브, 수막대 등 필요한 영역 교구만 1~2만 원대에 골라 수준별 워크북으로 완성하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "jm-1",
+        "stageName": "평면 감각 입문",
+        "ageGroup": "🌱 기초 4~5세",
+        "stageDesc": "친근한 단품 교구로 평면 모양과 수 감각 터치",
+        "steps": [
+          { "id": "jm_1", "title": "칠교판 & 패턴블록", "desc": "정사각 칠교 7조각 맞추기, 6가지 도형 테셀레이션" },
+          { "id": "jm_2", "title": "수막대 기초 놀이", "desc": "1~10cm 수막대 길이 비교와 10의 보수 놀이" }
+        ],
+        "layout": "row-2",
+        "nextArrow": true
+      },
+      {
+        "stageId": "jm-2",
+        "stageName": "공간 지각 확장",
+        "ageGroup": "👶 심화 6~7세",
+        "stageDesc": "격자판과 3D 큐브로 공간지각력 집중 확장",
+        "steps": [
+          { "id": "jm_k1", "title": "칠교판 (Tangram)", "desc": "평면 분할 및 다각형 조립" },
+          { "id": "jm_k2", "title": "소마큐브 (Soma)", "desc": "3D 입체 공간 회전 및 조립" },
+          { "id": "jm_k3", "title": "펜토미노 (Pentomino)", "desc": "12종 조각 면적 채우기" },
+          { "id": "jm_k4", "title": "지오보드 & 기하판", "desc": "둘레/넓이 및 선대칭 탐구" }
+        ],
+        "layout": "grid-2x2",
+        "nextArrow": true
+      },
+      {
+        "stageId": "jm-3",
+        "stageName": "초등 교과 심화",
+        "ageGroup": "🏫 초등 전학년",
+        "stageDesc": "하노이탑과 분수 등 교과 취약 영역 완벽 보완",
+        "steps": [
+          { "id": "jm_e1", "title": "하노이의 탑", "desc": "재귀적 규칙 탐구, 전략적 최소 이동 추론" },
+          { "id": "jm_e2", "title": "분수 교구 세트", "desc": "원형/막대 분수로 분수·소수 개념 시각화 체득" }
+        ],
+        "layout": "row-2",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "칠교판 수준 1~3", "content": "기초 맞추기 ➔ 회전/대칭 ➔ 복합 다각형 구성 (4세~초등)", "booksCount": 3, "studyStandard": "하루 15분 주 3일" },
+      { "level": "지오보드 (기하판) 수준 1~3", "content": "도형 둘레/넓이, 선대칭/점대칭, 평면기하 직관 탐구 (5세~초등)", "booksCount": 3, "studyStandard": "하루 15분 주 3일" },
+      { "level": "패턴블록 수준 1~3", "content": "정삼각형/사다리꼴/육각형 각도, 분수, 테셀레이션 (4세~초2)", "booksCount": 3, "studyStandard": "하루 15분 주 3일" },
+      { "level": "소마큐브 수준 1~3", "content": "7개 입체 조각 3차원 투영, 쌓기나무 숨은 블록 (5세~초3)", "booksCount": 3, "studyStandard": "하루 20분 주 2~3일" },
+      { "level": "수막대 & 분수 교구", "content": "10의 보수, 사칙연산 원리, 분수·소수 개념 체득 (5세~초등)", "booksCount": 4, "studyStandard": "주 2회 원리 탐구" }
+    ]
+  },
+  {
+    "brandId": "kids-schole",
+    "seriesId": "kids-schole",
+    "brandName": "키즈스콜레 만지는수학 & 루크",
+    "brand": "(주)대교 키즈스콜레",
+    "seriesName": "만지는수학 & 두뇌 훈련 루크 로드맵",
+    "category": "교구 전문",
+    "type": "체계적 영역별 교구 + 독일식 자가점검 키트",
+    "summary": "수연산·도형·규칙 3대 영역 만지는 수학 교구와 독일식 자가점검 타일 루크(LUK)로 자기주도 문제해결력을 완성하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "ks-1",
+        "stageName": "만지는수학 입문",
+        "ageGroup": "🌱 기초 3~4세",
+        "stageDesc": "놀이처럼 만지며 수량 직관과 사물 속성 분류",
+        "steps": [
+          { "id": "ks_1", "title": "피싱 게임 & 수 쌓기", "desc": "자석 낚시와 블록 쌓기로 수량 1:1 직관 체득" },
+          { "id": "ks_2", "title": "리틀 타운 & 패턴 나사", "desc": "색상, 크기, 모양 다중 속성 분류와 손근육 협응" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "ks-2",
+        "stageName": "만지는수학 심화",
+        "ageGroup": "👶 심화 5~6세",
+        "stageDesc": "10의 구조 연산과 3D 그림자 투영 공간 훈련",
+        "steps": [
+          { "id": "ks_k1", "title": "Step 1: 머긴스 빙고", "desc": "10의 보수와 주사위 덧뺄셈" },
+          { "id": "ks_k2", "title": "Step 2: 바벨큐브", "desc": "3차원 블록과 그림자 투영" },
+          { "id": "ks_k3", "title": "Step 3: 다중 패턴", "desc": "2중·3중 복합 규칙 추론" },
+          { "id": "ks_k4", "title": "Step 4: 루크 체킹", "desc": "자가 정답 무늬 즉시 검증" }
+        ],
+        "layout": "grid-2x2",
+        "nextArrow": true
+      },
+      {
+        "stageId": "ks-3",
+        "stageName": "자가점검 두뇌 훈련",
+        "ageGroup": "🏫 초등 연계 6세~초등",
+        "stageDesc": "정답 무늬를 스스로 맞춰보는 독일식 LUK 완성",
+        "steps": [
+          { "id": "ks_e1", "title": "밤비노 루크 ➔ 미니 루크", "desc": "타일 6개/12개로 정답 패턴을 스스로 확인하는 자가점검" },
+          { "id": "ks_e2", "title": "크리에이티브 7 원목", "desc": "자석 내장 원목으로 자유로운 고난도 3D 건축 조형" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "만지는 수학: 수와 연산", "content": "피싱 게임, 타워링, 머긴스 빙고 4종 교구 + 놀이책 9권 (3~7세)", "booksCount": 9, "studyStandard": "주 2회 활동" },
+      { "level": "만지는 수학: 도형과 공간", "content": "패턴블록, 바벨큐브, 밸런스 게임, 쉐도우 블록 + 놀이책 9권 (3~7세)", "booksCount": 9, "studyStandard": "주 2회 활동" },
+      { "level": "만지는 수학: 규칙과 분류", "content": "리틀 타운, 패턴 나사, 속성 분류 퍼즐 + 놀이책 9권 (3~7세)", "booksCount": 9, "studyStandard": "주 2회 활동" },
+      { "level": "밤비노 루크 (6타일)", "content": "독일식 자가점검 두뇌 훈련, 글자 없이 그림 기호 추론 (3~5세)", "booksCount": 15, "studyStandard": "하루 1~2장 자가확인" },
+      { "level": "미니 루크 (12타일)", "content": "숫자 타일 기반 수학적 논리, 집중력, 공간지각 (6세~초등)", "booksCount": 30, "studyStandard": "하루 15분 자기주도" }
+    ]
+  },
+  {
+    "brandId": "montessori",
+    "seriesId": "montessori",
+    "brandName": "한국몬테소리",
+    "brand": "(주)한국몬테소리 / 아가월드",
+    "seriesName": "한국몬테소리 정규 홈스쿨 로드맵",
+    "category": "교구 전문",
+    "type": "전문 방문교사 1:1 홈스쿨 몬테소리",
+    "summary": "베이비에서 리틀, 빅 몬테소리로 이어지며 전문 교사의 1:1 지도 하에 십진법과 정통 몬테소리 수학 영역을 마스터하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "mon-1",
+        "stageName": "베이비 몬테소리",
+        "ageGroup": "🌱 영유아 0~3세",
+        "stageDesc": "감각 발달 및 손-눈 협응, 형태 지각 기초",
+        "steps": [
+          { "id": "mon_1", "title": "끼우기 상자 & 도형틀", "desc": "원, 세모, 네모 감각 틀을 통한 시각·촉각 협응" },
+          { "id": "mon_2", "title": "신체 조절 감각 발달", "desc": "꼭지 도형, 계란 컵 등 소근육 미세 조절 훈련" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mon-2",
+        "stageName": "리틀 몬테소리",
+        "ageGroup": "👶 유치부 3~5세",
+        "stageDesc": "기초 수량 인지와 연속 수, 자릿값 구조 입문",
+        "steps": [
+          { "id": "mon_k1", "title": "Step 1: 수막대 수량 일치", "desc": "1~10cm 수막대로 수량과 숫자의 1:1 결합" },
+          { "id": "mon_k2", "title": "Step 2: 모래숫자판 쓰기", "desc": "모래의 거친 촉감을 손가락으로 느끼며 숫자 쓰기" },
+          { "id": "mon_k3", "title": "Step 3: 세강판 연속 수", "desc": "11~19 연속 수 및 10~90 십진 자릿값 기초 이해" }
+        ],
+        "layout": "col-3",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mon-3",
+        "stageName": "빅 몬테소리",
+        "ageGroup": "🏫 취학 전 5~7세",
+        "stageDesc": "1000 단위 금색구슬과 지면 연산 우표놀이 완성",
+        "steps": [
+          { "id": "mon_e1", "title": "금색 구슬 십진법", "desc": "1낱개, 10막대, 100판, 1000큐브로 자릿값 양감 극대화" },
+          { "id": "mon_e2", "title": "우표놀이 & 뱀놀이", "desc": "색상별 우표 타일 조작으로 받아올림 사칙연산 완성" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "베이비 몬테소리", "content": "끼우기 상자, 동그라미·세모·네모 도형틀, 계란 컵 (0~3세)", "booksCount": 5, "studyStandard": "주 1회 방문수업 (20~30분)" },
+      { "level": "리틀 몬테소리 (수 영역)", "content": "수막대, 모래숫자판, 세강판, 색구슬 옷걸이 (3~5세)", "booksCount": 8, "studyStandard": "주 1회 방문수업 (30~40분)" },
+      { "level": "빅 몬테소리 (수학 풀세트)", "content": "금색 구슬 십진법, 덧셈/뺄셈 뱀놀이, 우표놀이, 분수 (5~7세)", "booksCount": 12, "studyStandard": "주 1회 방문수업 (40~50분)" }
+    ]
+  },
+  {
+    "brandId": "mathtime",
+    "seriesId": "mathtime",
+    "brandName": "매쓰타임 (MathTime MTB)",
+    "brand": "(주)매쓰타임",
+    "seriesName": "MTB 자석블록 기하수학 로드맵",
+    "category": "교구 전문",
+    "type": "정다면체·프랙탈 3차원 공간기하 특화",
+    "summary": "네오디뮴 자석봉과 쇠구슬로 평면 다각형에서 5대 플라톤 정다면체, 지오데식 돔, 프랙탈까지 기하학 전 과정을 직접 만드는 공간 로드맵",
+    "flowchart": [
+      {
+        "stageId": "mt-1",
+        "stageName": "베이직 입문",
+        "ageGroup": "🌱 기초 5~6세",
+        "stageDesc": "자석봉과 쇠구슬의 결합으로 평면 뼈대 완성",
+        "steps": [
+          { "id": "mt_1", "title": "자석봉 & 쇠구슬 결합", "desc": "자석의 N/S극 인력과 쇠구슬 연결 원리 탐색" },
+          { "id": "mt_2", "title": "평면 다각형 프레임", "desc": "삼각형, 사각형, 오각형 등 평면 다각형 뼈대 구성" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mt-2",
+        "stageName": "3D 공간 뼈대 구성",
+        "ageGroup": "👶 심화 6~7세",
+        "stageDesc": "모서리와 꼭짓점을 눈으로 보며 입체 투영 체득",
+        "steps": [
+          { "id": "mt_k1", "title": "Step 1: 정사면체 뼈대", "desc": "가장 완벽한 기본 삼각뿔 구조의 강도와 균형" },
+          { "id": "mt_k2", "title": "Step 2: 정육면체 구성", "desc": "모서리 12개, 꼭짓점 8개, 면 6개의 공간 관계 체득" },
+          { "id": "mt_k3", "title": "Step 3: 삼각기둥·사각뿔", "desc": "다양한 다면체의 층별 단면과 전개도 구조 파악" }
+        ],
+        "layout": "col-3",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mt-3",
+        "stageName": "정다면체 & 프랙탈",
+        "ageGroup": "🏫 초등~중등",
+        "stageDesc": "플라톤의 5대 정다면체와 대형 프랙탈 구조물",
+        "steps": [
+          { "id": "mt_e1", "title": "5대 플라톤 정다면체", "desc": "정사·정육·정팔·정십이·정이십면체 완벽 구현" },
+          { "id": "mt_e2", "title": "지오데식 돔 & 프랙탈", "desc": "축구공(깎은 이십면체), 시에르핀스키 사면체 확장" }
+        ],
+        "layout": "row-2",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "MTB 베이직 세트", "content": "자석봉, 쇠구슬, 기본 다각형 및 기초 입체 뼈대 구성 (5세~초등)", "booksCount": 2, "studyStandard": "주 2회 조립 탐구" },
+      { "level": "MTB 프리미엄 정다면체 세트", "content": "5가지 플라톤 정다면체 및 준정다면체 완벽 구현 (6세~중등)", "booksCount": 4, "studyStandard": "주 1~2회 심화 조립" },
+      { "level": "지오데식 돔 & 프랙탈 확장", "content": "깎은 정이십면체, 돔 구조, 시에르핀스키 사면체 프랙탈 (초등~고등)", "booksCount": 2, "studyStandard": "프로젝트형 공간 탐구" }
+    ]
+  },
+  {
+    "brandId": "orda",
+    "seriesId": "orda",
+    "brandName": "오르다코리아 (Orda Korea)",
+    "brand": "(주)오르다코리아",
+    "seriesName": "오르다 3단계 게임수학 & 자석가베 로드맵",
+    "category": "교구 전문",
+    "type": "이스라엘 하버드 게임수학 & 특허 자석가베",
+    "summary": "사랑·창의·논리 3개 세트의 보드게임으로 논리적 사고와 문제해결력을 키우고 360도 회전 자석가베로 3D 조형을 완성하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "or-1",
+        "stageName": "사랑세트",
+        "ageGroup": "🌱 기초 4~5세",
+        "stageDesc": "기초 인지와 감각, 규칙 준수 게임 입문",
+        "steps": [
+          { "id": "or_1", "title": "사랑세트 (친화적 감성 게임)", "desc": "부모와의 상호작용 놀이를 통한 정서 교감, 기본 인지 및 게임 규칙 내면화" }
+        ],
+        "layout": "single",
+        "nextArrow": true
+      },
+      {
+        "stageId": "or-2",
+        "stageName": "창의세트",
+        "ageGroup": "👶 심화 6~7세",
+        "stageDesc": "논리적 사고와 전략 수립, 기초 연산 훈련",
+        "steps": [
+          { "id": "or_k1", "title": "Step 1: 덧셈주사위 & 메모리", "desc": "주사위 연산과 기억력 결합 전략 게임" },
+          { "id": "or_k2", "title": "Step 2: 구슬삼목 & 공간이동", "desc": "오목 기반 공간 전략과 상대 경로 예측 훈련" },
+          { "id": "or_k3", "title": "Step 3: 트래픽 & 전략 퍼즐", "desc": "조건에 따른 순서 해결과 논리적 문제해결력" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "or-3",
+        "stageName": "논리세트 & 자석가베",
+        "ageGroup": "🏫 초등 8세~초등 고학년",
+        "stageDesc": "고도의 상위 인지 전략과 360도 회전자석 3D 조형",
+        "steps": [
+          { "id": "or_e1", "title": "딥씨 & 사목놀이 (논리세트)", "desc": "연역적 추론, 확률 계산, 고도의 전략 게임" },
+          { "id": "or_e2", "title": "M-가베 1~10 (자석가베)", "desc": "360도 회전 자석 특허로 무너지지 않는 3D 입체 구성" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "or-4",
+        "stageName": "매쓰 & 브레인 파워빌더스",
+        "ageGroup": "📚 지면 사고력 4~7세",
+        "stageDesc": "미국 NCTM 5대 수리사고력과 하브루타 논리창의 지면 워크북",
+        "steps": [
+          { "id": "or_mpb", "title": "매쓰 파워 빌더스 (STEP 1~3)", "desc": "NCTM 5대 영역(수와 연산, 대수, 기하, 측정, 자료) 총 288개 나선형 수리활동 완성" },
+          { "id": "or_bpb", "title": "브레인 파워 빌더스 (기본~STEP 3)", "desc": "조건 추론, 유연한 사고, 공간지각, 창의적 문제해결력 훈련 지면 활동지" }
+        ],
+        "layout": "row",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "오르다 사랑세트 (18종)", "content": "곰돌이 퍼즐, 아가블록, 색깔기차, 덤블링 서커스 (4~5세)", "booksCount": 18, "studyStandard": "주 1회 게임 활동 (30~40분)" },
+      { "level": "오르다 창의세트 (20종)", "content": "덧셈주사위, 메모리게임, 구슬삼목, 공간이동, 트래픽 (6~7세)", "booksCount": 20, "studyStandard": "주 1회 게임 활동 (40~50분)" },
+      { "level": "오르다 논리세트 (18종)", "content": "딥씨(Deep Sea), 사목놀이, 분수게임, 펜토미노 전략 (8세~초등)", "booksCount": 18, "studyStandard": "주 1회 게임 활동 (50분)" },
+      { "level": "자석가베 (M-Gabe 1~10)", "content": "1~10 전통 가베에 360도 회전 자석 내장 프리미엄 원목 (2세~초등)", "booksCount": 10, "studyStandard": "자유 조형 및 가베 워크북" },
+      { "level": "매쓰 파워 빌더스 (STEP 1~3)", "content": "5~7세 NCTM 5대 영역 수리사고력 (단계별 96개 활동, 총 288활동)", "booksCount": 3, "studyStandard": "단계별 96활동, 주 2~3회 지면 학습" },
+      { "level": "브레인 파워 빌더스 (기본~STEP 3)", "content": "4~7세 하브루타 질문·토론식 논리적 추론 및 창의 사고력 활동북", "booksCount": 4, "studyStandard": "주 2회 홈스쿨링 활동" }
+    ]
+  },
+  {
+    "brandId": "froebel",
+    "seriesId": "froebel",
+    "brandName": "한국프뢰벨 은물",
+    "brand": "(주)한국프뢰벨",
+    "seriesName": "프뢰벨 정통 은물(Gabe) 3단계 로드맵",
+    "category": "교구 전문",
+    "type": "세계 최초 유아 교구 은물 & 감성 수학동화",
+    "summary": "1~2은물의 형태 탐색에서 3~6은물의 입체 건축, 7~10은물의 평면·선·점으로 분해하며 다중지능 수학동화와 연계하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "fr-1",
+        "stageName": "형태 탐색",
+        "ageGroup": "🌱 입문 2.5~4세",
+        "stageDesc": "구·원기둥·정육면체의 형태와 움직임 감각 탐색",
+        "steps": [
+          { "id": "fr_1", "title": "1~2은물 (형태 탐색)", "desc": "털실공 6색, 원목 구·원기둥·정육면체의 굴림과 회전" },
+          { "id": "fr_2", "title": "형태와 움직임 체득", "desc": "회전축에 따른 잔상 효과와 형태의 변형 감각 형성" }
+        ],
+        "layout": "row-2",
+        "nextArrow": true
+      },
+      {
+        "stageId": "fr-2",
+        "stageName": "입체 분해 & 평면·선",
+        "ageGroup": "👶 심화 4~6세",
+        "stageDesc": "블록 건축과 면·선·점으로 이어지는 수학적 분해",
+        "steps": [
+          { "id": "fr_k1", "title": "Step 1: 3~6은물 건축", "desc": "정육면체 분할, 직육면체, 기둥으로 3D 건축 구조물" },
+          { "id": "fr_k2", "title": "Step 2: 7~8은물 면·선", "desc": "색판(면)과 막대(선)로 평면 다각형과 패턴 구성" },
+          { "id": "fr_k3", "title": "Step 3: 9~10은물 곡선·점", "desc": "고리(곡선)와 점판(점)으로 기하학의 최소 단위 체득" }
+        ],
+        "layout": "col-3",
+        "nextArrow": true
+      },
+      {
+        "stageId": "fr-3",
+        "stageName": "준은물 & 다중지능",
+        "ageGroup": "🏫 초등 연계 5~7세+",
+        "stageDesc": "손 조형 작업과 감성 수학동화로 통합 사고력 완성",
+        "steps": [
+          { "id": "fr_e1", "title": "준은물 1~8 (조형 작업)", "desc": "구슬 꿰기, 바느질, 색종이 접기, 매트 엮기 등 소근육 창작" },
+          { "id": "fr_e2", "title": "다중지능 수학동화", "desc": "40여 권의 감성 스토리텔링으로 교과 개념 직결" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "프뢰벨 은물 1~2은물", "content": "털실공, 구·원기둥·정육면체 형태 탐색 (2.5~4세)", "booksCount": 4, "studyStandard": "주 1회 방문수업 (30분)" },
+      { "level": "프뢰벨 은물 3~6은물", "content": "정육면체 분할, 직육면체, 기둥 건축 구조 (4~5세)", "booksCount": 6, "studyStandard": "주 1회 방문수업 (40분)" },
+      { "level": "프뢰벨 은물 7~10은물", "content": "색판(면), 막대(선), 고리(곡선), 점판(점) (5~6세)", "booksCount": 6, "studyStandard": "주 1회 방문수업 (40분)" },
+      { "level": "준은물 1~8종", "content": "구슬 꿰기, 구멍 뚫기, 바느질, 매트 엮기, 모래놀이 (4~7세)", "booksCount": 8, "studyStandard": "주 1회 조형 수업" },
+      { "level": "다중지능 수학동화", "content": "공간, 수량, 규칙 개념을 스토리로 풀어낸 40여 권 전집", "booksCount": 40, "studyStandard": "매일 1권 스토리텔링" }
+    ]
+  },
+  {
+    "brandId": "wonrisem",
+    "seriesId": "wonrisem",
+    "brandName": "원리셈",
+    "brand": "천종현수학연구소",
+    "seriesName": "키즈~초등 원리셈 로드맵",
+    "category": "학습지 전문",
+    "type": "원리 기반 연산",
+    "summary": "만 3세 '유아 자신감 수학' 놀이 입문부터 수 감각, 10의 보수, 초등 6학년 분수·소수 사칙 혼합계산까지 원리를 시각화하여 스스로 터득하는 연산 로드맵",
+    "flowchart": [
+      {
+        "stageId": "w-0",
+        "stageName": "유아 자신감 수학 (입문)",
+        "ageGroup": "🐣 만 3~5세 (유아)",
+        "stageDesc": "보드마커 쓰기·지우기 & 대형 스티커 놀이로 시작하는 첫 수학",
+        "steps": [
+          { "id": "w_0_1", "title": "만 3세 (1~4권)", "desc": "1~5 수량 직관 인지, 짝짓기, 모양 분류, 기본 위치 감각" },
+          { "id": "w_0_2", "title": "만 4세 (1~4권)", "desc": "10까지 수 세기, 수 가르기/모으기 기초, 평면도형, 규칙성" },
+          { "id": "w_0_3", "title": "만 5세 (1~4권)", "desc": "20까지 수와 자릿값 기초, 10 만들기, 덧셈·뺄셈 직관 원리" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "w-1",
+        "stageName": "키즈 원리셈",
+        "ageGroup": "🌱 키즈 5~7세",
+        "stageDesc": "수 감각과 10까지의 수, 가르기/모으기",
+        "steps": [
+          { "id": "w_1", "title": "키즈 5~6세 (수 감각)", "desc": "1~5까지의 수, 수 순서와 크기 비교" },
+          { "id": "w_2", "title": "키즈 6~7세 S단계", "desc": "10까지의 수, 10 가르기와 모으기, 한 자리 기초 덧뺄셈" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "w-2",
+        "stageName": "예비초 ~ 초등 저학년",
+        "ageGroup": "👶 초등 1~2학년",
+        "stageDesc": "10의 보수와 두 자리 사칙연산, 구구단 입문",
+        "steps": [
+          { "id": "w_k1", "title": "Step 1: P단계 (7~8세)", "desc": "20까지의 수, 10의 보수 활용, 받아올림 준비" },
+          { "id": "w_k2", "title": "Step 2: 초등 1학년", "desc": "100까지의 수, 받아올림 덧셈·내림 뺄셈 원리" },
+          { "id": "w_k3", "title": "Step 3: 초등 2학년", "desc": "두 자리 덧셈·뺄셈 완성, 구구단 원리와 기초" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "w-3",
+        "stageName": "초등 중고학년 완성",
+        "ageGroup": "🏫 초등 3~6학년",
+        "stageDesc": "분수·소수 사칙연산과 비와 비율 정복",
+        "steps": [
+          { "id": "w_e1", "title": "초등 3~4학년 과정", "desc": "세 자리 사칙연산, 두 자리 나눗셈, 분수 기초" },
+          { "id": "w_e2", "title": "초등 5~6학년 과정", "desc": "분수·소수 사칙연산, 곱셈/나눗셈, 비와 비율" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "유아 자신감 수학 (만 3~5세)", "content": "만 3세 4권, 만 4세 4권, 만 5세 4권 (총 12권) - 쓰고 지우는 마커북 & 스티커 놀이", "booksCount": 12, "studyStandard": "놀이 중심 홈스쿨링, 매일 10분" },
+      { "level": "키즈 원리셈 5~6세", "content": "수 감각, 1~5까지의 수, 수의 순서와 크기 비교", "booksCount": 6, "studyStandard": "매일 10~15분, 주 5일" },
+      { "level": "키즈 원리셈 6~7세 (S단계)", "content": "10까지의 수, 10 가르기와 모으기, 한 자리 기초 덧뺄셈", "booksCount": 6, "studyStandard": "매일 10~15분, 주 5일" },
+      { "level": "키즈 원리셈 7~8세 (P단계)", "content": "20까지의 수, 10의 보수 활용, 받아올림/내림 준비", "booksCount": 6, "studyStandard": "매일 15분, 주 5일" },
+      { "level": "초등 원리셈 1학년", "content": "100까지의 수, 받아올림 덧셈·내림 뺄셈 원리", "booksCount": 6, "studyStandard": "매일 15분, 주 5일" },
+      { "level": "초등 원리셈 2학년", "content": "두 자리 덧셈·뺄셈 완성, 구구단 원리와 기초", "booksCount": 6, "studyStandard": "매일 15분, 주 5일" },
+      { "level": "초등 원리셈 3학년", "content": "세 자리 사칙연산, 두 자리 곱셈, 나눗셈 입문, 분수 기초", "booksCount": 6, "studyStandard": "매일 15~20분, 주 5일" },
+      { "level": "초등 원리셈 4학년", "content": "큰 수, 두 자리 나눗셈, 분모가 같은 분수의 덧셈과 뺄셈", "booksCount": 4, "studyStandard": "매일 15~20분, 주 5일" },
+      { "level": "초등 원리셈 5~6학년", "content": "분수·소수 사칙연산, 분수의 곱셈/나눗셈, 비와 비율", "booksCount": 8, "studyStandard": "매일 20분, 주 5일" },
+      { "level": "예비 중등 과정", "content": "정수와 유리수 사칙 혼합계산, 문자와 식, 일차방정식", "booksCount": 2, "studyStandard": "매일 20분, 주 5일" }
+    ]
+  },
+  {
+    "brandId": "somasem",
+    "seriesId": "somasem",
+    "brandName": "소마셈",
+    "brand": "소마사고력수학 (SOMA)",
+    "seriesName": "K단계~D단계 사고력 연산 로드맵",
+    "category": "학습지 전문",
+    "type": "사고력 연산",
+    "summary": "단순 기계적 연산이 아닌 수의 구조와 다양한 연산 퍼즐 모델링으로 유치부부터 초4까지 사고력 연산을 완성하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "sm-1",
+        "stageName": "K단계 유아",
+        "ageGroup": "🌱 K단계 5~6세",
+        "stageDesc": "10~50까지의 수와 5 이하 덧뺄셈",
+        "steps": [
+          { "id": "sm_1", "title": "10~50까지의 수 인지", "desc": "수의 구조, 수 가르기와 모으기 직관" },
+          { "id": "sm_2", "title": "5 이하 덧뺄셈", "desc": "그림 모델과 수직선으로 연산 의미 파악" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "sm-2",
+        "stageName": "P·A단계 취학전후",
+        "ageGroup": "👶 6~7세 ~ 초등 1학년",
+        "stageDesc": "10의 보수와 두 자리 덧뺄셈 모델링",
+        "steps": [
+          { "id": "sm_k1", "title": "Step 1: P단계 (6~7세)", "desc": "100까지의 수, 10의 보수를 이용한 덧셈과 뺄셈" },
+          { "id": "sm_k2", "title": "Step 2: A단계 (초1)", "desc": "100 이하 두 자리 덧뺄셈, 받아올림 원리 모델링" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "sm-3",
+        "stageName": "B·C·D단계 초등 심화",
+        "ageGroup": "🏫 초등 2~4학년",
+        "stageDesc": "곱셈구구와 분수·소수 사칙연산 완성",
+        "steps": [
+          { "id": "sm_e1", "title": "B·C단계 (초2~3)", "desc": "세 자리 덧뺄셈, 곱셈구구 원리, 연산 퍼즐, 분수 입문" },
+          { "id": "sm_e2", "title": "D단계 (초4)", "desc": "큰 수의 연산, 혼합 계산, 분수와 소수의 사칙연산 완성" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "K단계 (K1~K8)", "content": "10~50까지의 수, 5 이하 덧뺄셈, 수 가르기와 모으기 (5~6세)", "booksCount": 8, "studyStandard": "매일 15분, 주 5일 (하루 1장)" },
+      { "level": "P단계 (P1~P8)", "content": "100까지의 수, 10을 이용한 덧셈과 뺄셈, 10의 보수 (6~7세)", "booksCount": 8, "studyStandard": "매일 15분, 주 5일 (하루 2장)" },
+      { "level": "A단계 (A1~A8)", "content": "100 이하 두 자리 덧뺄셈, 받아올림/내림 원리 모델링 (초1)", "booksCount": 8, "studyStandard": "매일 15~20분, 주 5일" },
+      { "level": "B단계 (B1~B8)", "content": "세 자리 덧뺄셈, 곱셈구구 원리와 의미, 연산 퍼즐 (초2)", "booksCount": 8, "studyStandard": "매일 15~20분, 주 5일" },
+      { "level": "C단계 (C1~C8)", "content": "곱셈과 나눗셈 심화, 분수와 소수의 기초 개념과 덧뺄셈 (초3)", "booksCount": 8, "studyStandard": "매일 20분, 주 5일" },
+      { "level": "D단계 (D1~D8)", "content": "큰 수의 연산, 혼합 계산, 분수와 소수의 사칙연산 완성 (초4)", "booksCount": 8, "studyStandard": "매일 20분, 주 5일" }
+    ]
+  },
+  {
+    "brandId": "top-thinking",
+    "seriesId": "top-thinking",
+    "brandName": "TOP 사고력 수학",
+    "brand": "천종현수학연구소",
+    "seriesName": "K~C단계 창의사고력 로드맵",
+    "category": "학습지 전문",
+    "type": "사고력 심화",
+    "summary": "수·연산, 평면도형, 규칙과 분류를 시작으로 초3 심화 논리 퍼즐과 경우의 수까지 이어지는 사고력 수학 로드맵",
+    "flowchart": [
+      {
+        "stageId": "top-1",
+        "stageName": "K단계 유아",
+        "ageGroup": "🌱 K단계 6~7세",
+        "stageDesc": "수와 연산, 평면도형, 규칙과 분류 기초",
+        "steps": [
+          { "id": "top_1", "title": "수와 연산 감각", "desc": "10의 구조와 묶음, 직관적 수량 사고력" },
+          { "id": "top_2", "title": "평면도형 & 규칙", "desc": "모양 나누기, 패턴 완성, 조건 분류 기초" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "top-2",
+        "stageName": "P·A단계 예비초~초1",
+        "ageGroup": "👶 7~8세 예비초~초1",
+        "stageDesc": "공간 위치 감각과 쌓기나무, 조건 추론",
+        "steps": [
+          { "id": "top_k1", "title": "Step 1: P단계 (7~8세)", "desc": "10의 구조, 모양 나누기, 공간 위치, 패턴 완성" },
+          { "id": "top_k2", "title": "Step 2: A단계 (초1)", "desc": "쌓기나무 층별, 조건 추론 퍼즐, 시계와 달력" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "top-3",
+        "stageName": "B·C단계 초등 심화",
+        "ageGroup": "🏫 초등 2~3학년",
+        "stageDesc": "도형 돌리기, 나눗셈 퍼즐, 논리 추론, 경우의 수",
+        "steps": [
+          { "id": "top_e1", "title": "B단계 (초2)", "desc": "칠교, 도형 돌리기, 곱셈 사고력, 마방진" },
+          { "id": "top_e2", "title": "C단계 (초3)", "desc": "각도, 나눗셈 퍼즐, 논리 추론, 경우의 수" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "K단계 (K1~K3)", "content": "수와 연산, 평면도형, 규칙과 분류 기초 (6~7세 유아)", "booksCount": 3, "studyStandard": "매일 15분, 주 3~5일" },
+      { "level": "P단계 (P1~P3)", "content": "10의 구조, 모양 나누기, 공간 위치, 패턴 완성 (7~8세 예비초1)", "booksCount": 3, "studyStandard": "매일 15분, 주 3~5일" },
+      { "level": "A단계 (A1~A3)", "content": "초1 교과 연계 사고력, 쌓기나무, 조건 추론, 시계와 달력", "booksCount": 3, "studyStandard": "매일 20분, 주 3~5일" },
+      { "level": "B단계 (B1~B3)", "content": "초2 교과 연계 사고력, 칠교, 도형 돌리기, 곱셈 사고력", "booksCount": 3, "studyStandard": "매일 20분, 주 3~5일" },
+      { "level": "C단계 (C1~C3)", "content": "초3 심화 사고력, 각도, 나눗셈 퍼즐, 논리 추론, 경우의 수", "booksCount": 3, "studyStandard": "매일 20분, 주 3~5일" }
+    ]
+  },
+  {
+    "brandId": "plato",
+    "seriesId": "plato",
+    "brandName": "플라토 (Plato)",
+    "brand": "시매쓰출판",
+    "seriesName": "플라토 공간도형 6단계 로드맵",
+    "category": "학습지 전문",
+    "type": "공간도형 집중 드릴",
+    "summary": "하루 10분, 평면 규칙에서 입체도형 회전체, 전개도, 공간과 입체까지 초등 6개 학년 공간도형을 완전 정복하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "pl-1",
+        "stageName": "S단계 유치",
+        "ageGroup": "🌱 S단계 6세 유치",
+        "stageDesc": "평면 규칙과 모양 나누기, 기초 방향 감각",
+        "steps": [
+          { "id": "pl_1", "title": "평면 규칙 & 모양", "desc": "모양 나누기, 모양 모으기, 기초 평면 감각" },
+          { "id": "pl_2", "title": "기초 공간 방향", "desc": "위/아래, 앞/뒤, 왼쪽/오른쪽 방향 직관화" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "pl-2",
+        "stageName": "A·B단계 예비초~초1",
+        "ageGroup": "👶 7세~초등 1학년",
+        "stageDesc": "쌓기나무 층별 투영과 도형 밀기/뒤집기",
+        "steps": [
+          { "id": "pl_k1", "title": "Step 1: A단계 (7세)", "desc": "평면도형, 쌓기나무 기초(1~2층), 도형 밀기/뒤집기" },
+          { "id": "pl_k2", "title": "Step 2: B단계 (초1)", "desc": "입체도형 탐색, 여러 모양 만들기, 숨은 블록 찾기" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "pl-3",
+        "stageName": "C~F단계 공간 완성",
+        "ageGroup": "🏫 초등 2~6학년",
+        "stageDesc": "도형 돌리기, 전개도, 겨냥도, 선대칭·점대칭",
+        "steps": [
+          { "id": "pl_e1", "title": "C·D단계 (초2~3)", "desc": "칠교 구성, 도형 돌리기, 원의 성질, 각도 기초" },
+          { "id": "pl_e2", "title": "E·F단계 (초4~6)", "desc": "직육면체 겨냥도/전개도, 선대칭·점대칭, 공간과 입체" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "S단계 (S1~S4)", "content": "평면규칙, 모양 나누기, 모양 모으기, 기초 공간 방향 (6세 유치)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" },
+      { "level": "A단계 (A1~A4)", "content": "평면도형, 쌓기나무 기초(1~2층), 도형 밀기/뒤집기 (7세 예비초)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" },
+      { "level": "B단계 (B1~B4)", "content": "입체도형 탐색, 여러 가지 모양 만들기, 숨은 블록 찾기 (초1)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" },
+      { "level": "C단계 (C1~C4)", "content": "평면도형 성질, 칠교판 구성, 도형 돌리기, 쌓기나무 층별 (초2)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" },
+      { "level": "D단계 (D1~D4)", "content": "원의 성질, 각도 기초, 평면도형 복합 이동 (초3)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" },
+      { "level": "E단계 (E1~E4)", "content": "다각형 둘레와 넓이, 입체도형 겨냥도와 전개도 입문 (초4)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" },
+      { "level": "F단계 (F1~F4)", "content": "선대칭·점대칭 위치, 직육면체 전개도, 공간과 입체 (초5~6)", "booksCount": 4, "studyStandard": "하루 10분, 주 5일" }
+    ]
+  },
+  {
+    "brandId": "facto",
+    "seriesId": "facto",
+    "brandName": "창의사고력 팩토 (FACTO)",
+    "brand": "매스티안",
+    "seriesName": "킨더~초등 창의사고력 팩토 로드맵",
+    "category": "학습지 전문",
+    "type": "창의 사고력",
+    "summary": "킨더팩토에서 키즈팩토, 초등 팩토 레벨 1~6까지 4개 영역별 창의사고력과 영재원 대비 심화 문제해결력을 구축하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "fa-1",
+        "stageName": "킨더팩토",
+        "ageGroup": "🌱 킨더 5~7세",
+        "stageDesc": "수, 도형퍼즐, 연산, 측정·분류·규칙 4영역",
+        "steps": [
+          { "id": "fa_1", "title": "수 / 도형과 퍼즐", "desc": "기초 수 개념, 퍼즐 맞추기, 평면도형 탐구" },
+          { "id": "fa_2", "title": "연산 / 측정·규칙", "desc": "직관적 연산 퍼즐, 길이/무게 비교, 마디 패턴" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "fa-2",
+        "stageName": "키즈팩토",
+        "ageGroup": "👶 키즈 7세~초1",
+        "stageDesc": "원리(A/B/C)와 응용(A/B/C)의 2단계 연계",
+        "steps": [
+          { "id": "fa_k1", "title": "Step 1: 원리편 (A·B·C)", "desc": "사고력 기본 원리 탐구 및 영역별 기초 체계화" },
+          { "id": "fa_k2", "title": "Step 2: 응용편 (A·B·C)", "desc": "초등 1~2학년 연계 창의 사고력 심화 응용 문제" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "fa-3",
+        "stageName": "초등팩토 레벨 1~6",
+        "ageGroup": "🏫 초등 1~6학년",
+        "stageDesc": "학년별 필수 사고력과 고난도 영재원 대비 퍼즐",
+        "steps": [
+          { "id": "fa_e1", "title": "레벨 1~3 (기본+발전)", "desc": "초등 1~3학년 교과 심화 사고력 및 수학적 추론" },
+          { "id": "fa_e2", "title": "레벨 4~6 (고난도 심화)", "desc": "논리 퍼즐, 정수론, 기하 심화, 경우의 수, 영재원 대비" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "킨더팩토 (Kinder)", "content": "수 / 도형과 퍼즐 / 연산 / 측정·분류·규칙 4영역 (5~7세)", "booksCount": 4, "studyStandard": "주 2~3회, 회당 20분" },
+      { "level": "키즈팩토 (Kids)", "content": "원리(A/B/C) 3권 + 응용(A/B/C) 3권 초등 연계 사고력 (7세~초1)", "booksCount": 6, "studyStandard": "주 3회, 회당 25분" },
+      { "level": "초등팩토 레벨 1~3", "content": "기본 3권 + 발전 3권 (학년별 초등 1~3학년 필수 사고력)", "booksCount": 18, "studyStandard": "주 2~3회, 회당 30분" },
+      { "level": "초등팩토 레벨 4~6", "content": "고난도 논리 퍼즐, 수론, 기하 심화, 경우의 수 (초등 4~6학년)", "booksCount": 18, "studyStandard": "주 2회, 회당 40분" }
+    ]
+  },
+  {
+    "brandId": "gitan",
+    "seriesId": "gitan",
+    "brandName": "기탄수학",
+    "brand": "기탄교육",
+    "seriesName": "기탄수학 A단계~J단계 드릴 로드맵",
+    "category": "학습지 전문",
+    "type": "반복 연산 드릴",
+    "summary": "선 긋기와 1~10 수 쓰기에서 초등 고학년 분수·소수 사칙 혼합계산까지 매일 정량 반복으로 계산 속도와 정확성을 극대화하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "gi-1",
+        "stageName": "A·B단계 기초",
+        "ageGroup": "🌱 기초 4~6세",
+        "stageDesc": "선 긋기, 1~50 수 세기와 쓰기",
+        "steps": [
+          { "id": "gi_1", "title": "A단계 (4~5세)", "desc": "선 긋기, 1~10 수 세기, 수 쓰기, 수량 파악" },
+          { "id": "gi_2", "title": "B단계 (5~6세)", "desc": "1~50 수 세기, 수 배열표, 5 이하 덧뺄셈 기초" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "gi-2",
+        "stageName": "C·D·E단계 초1~2",
+        "ageGroup": "👶 6세~초등 1학년",
+        "stageDesc": "10의 보수와 받아올림/내림 연산 숙달",
+        "steps": [
+          { "id": "gi_k1", "title": "Step 1: C단계 (6~7세)", "desc": "10 가르기와 모으기, 9 이하 덧뺄셈" },
+          { "id": "gi_k2", "title": "Step 2: D단계 (7세~초1)", "desc": "합이 10~18인 덧셈(받아올림), 십몇에서 빼기" },
+          { "id": "gi_k3", "title": "Step 3: E단계 (초1)", "desc": "두 자리 ± 한 자리 받아올림/내림 암산 숙달" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "gi-3",
+        "stageName": "F~J단계 초등 고학년",
+        "ageGroup": "🏫 초등 2~6학년",
+        "stageDesc": "구구단, 두 자리 나눗셈, 분수·소수 사칙 혼합",
+        "steps": [
+          { "id": "gi_e1", "title": "F·G·H단계 (초2~4)", "desc": "구구단 숙달, 두/세 자리 곱나눗셈, 사칙 혼합" },
+          { "id": "gi_e2", "title": "I·J단계 (초5~6)", "desc": "약분과 통분, 분수·소수 사칙 혼합계산 정복" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "A단계 (A1~A5)", "content": "선 긋기, 1~10 수 세기, 수 쓰기, 수량 파악 (4~5세)", "booksCount": 5, "studyStandard": "매일 10분 (하루 1~2장)" },
+      { "level": "B단계 (B1~B5)", "content": "1~50 수 세기, 수 배열표, 5 이하 덧뺄셈 기초 (5~6세)", "booksCount": 5, "studyStandard": "매일 10~15분 (하루 2~3장)" },
+      { "level": "C단계 (C1~C5)", "content": "10 가르기와 모으기, 합이 9 이하 한 자리 덧뺄셈 (6~7세)", "booksCount": 5, "studyStandard": "매일 15분 (하루 3장)" },
+      { "level": "D단계 (D1~D5)", "content": "합이 10~18인 덧셈(받아올림), 십몇에서 빼기 (7세~초1)", "booksCount": 5, "studyStandard": "매일 15분 (하루 3장)" },
+      { "level": "E단계 (E1~E5)", "content": "두 자리 ± 한 자리 (받아올림/내림 숙달, 초1)", "booksCount": 5, "studyStandard": "매일 15분 (하루 3~5장)" },
+      { "level": "F단계 (F1~F5)", "content": "두 자리 ± 두 자리 완성, 구구단 기초 및 곱셈구구 (초2)", "booksCount": 5, "studyStandard": "매일 15분 (하루 3~5장)" },
+      { "level": "G단계 (G1~G5)", "content": "구구단 숙달, (두/세 자리) × 한 자리, 나눗셈 기초 (초3)", "booksCount": 5, "studyStandard": "매일 15~20분" },
+      { "level": "H단계 (H1~H5)", "content": "(두/세 자리) × 두 자리, 두 자리 나눗셈, 사칙 혼합 (초4)", "booksCount": 5, "studyStandard": "매일 20분" },
+      { "level": "I단계 (I1~I5)", "content": "약수와 배수, 약분과 통분, 분모 다른 분수 덧뺄셈 (초5)", "booksCount": 5, "studyStandard": "매일 20분" },
+      { "level": "J단계 (J1~J5)", "content": "분수와 소수의 곱셈과 나눗셈, 사칙 혼합계산 정복 (초6)", "booksCount": 5, "studyStandard": "매일 20분" }
+    ]
+  },
+  {
+    "brandId": "kumon",
+    "seriesId": "kumon",
+    "brandName": "구몬수학",
+    "brand": "교원구몬",
+    "seriesName": "구몬 6A~F단계 일일 연산 로드맵",
+    "category": "학습지 전문",
+    "type": "방문 일일 연산",
+    "summary": "매일 5~10매 정량 학습으로 연산 암산력과 학습 습관을 형성하여 초등 고학년 분수 사칙연산까지 완성하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "ku-1",
+        "stageName": "6A~4A단계 유아",
+        "ageGroup": "🌱 만 3~5세",
+        "stageDesc": "선 긋기와 1~100 숫자 읽기/쓰기",
+        "steps": [
+          { "id": "ku_1", "title": "6A~5A단계", "desc": "선 긋기, 숫자 읽기(1~50), 수량 세기" },
+          { "id": "ku_2", "title": "4A단계", "desc": "숫자 쓰기(1~100), 수 순서 감각 형성" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "ku-2",
+        "stageName": "3A~A단계 초1",
+        "ageGroup": "👶 만 5세~초등 1학년",
+        "stageDesc": "+1부터 +10까지 한 자리 덧셈·뺄셈 암산화",
+        "steps": [
+          { "id": "ku_k1", "title": "Step 1: 3A단계", "desc": "+1부터 +5까지 덧셈, 100까지 수 배열" },
+          { "id": "ku_k2", "title": "Step 2: 2A단계", "desc": "+6부터 +10까지 덧셈 집중 드릴" },
+          { "id": "ku_k3", "title": "Step 3: A단계 (초1)", "desc": "한 자리 덧뺄셈 숙달, 가로셈/세로셈 완성" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "ku-3",
+        "stageName": "B~F단계 초등 완성",
+        "ageGroup": "🏫 초등 2~6학년",
+        "stageDesc": "두 자리 덧뺄셈 암산, 구구단, 분수 사칙연산",
+        "steps": [
+          { "id": "ku_e1", "title": "B·C단계 (초2~3)", "desc": "두 자리 덧뺄셈 암산화, 구구단 암기, 한 자리 나눗셈" },
+          { "id": "ku_e2", "title": "D·E·F단계 (초4~6)", "desc": "두 자리 나눗셈, 진분수/대분수/소수 사칙 혼합계산" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "6A ~ 4A단계", "content": "선 긋기, 숫자 읽기(1~50), 숫자 쓰기(1~100), 수 순서 (만 3~5세)", "booksCount": 600, "studyStandard": "매일 10매 (10~15분)" },
+      { "level": "3A ~ 2A단계", "content": "+1부터 +10까지 한 자리 덧셈, 100까지 수 배열 (만 5~7세)", "booksCount": 400, "studyStandard": "매일 5~10매 (15분)" },
+      { "level": "A단계", "content": "한 자리 덧셈 숙달, 한 자리 뺄셈 가로셈/세로셈 (초1 수준)", "booksCount": 200, "studyStandard": "매일 5~10매 (15분)" },
+      { "level": "B단계", "content": "두 자리 덧셈(받아올림), 두 자리 뺄셈(받아내림) 암산화 (초2 수준)", "booksCount": 200, "studyStandard": "매일 5매 (15분)" },
+      { "level": "C단계", "content": "구구단 암기 숙달, 두/세 자리 곱셈, 한 자리 나눗셈 (초3 수준)", "booksCount": 200, "studyStandard": "매일 5매 (15~20분)" },
+      { "level": "D단계", "content": "두 자리 나눗셈 완성, 분수 기초, 약분 (초4 수준)", "booksCount": 200, "studyStandard": "매일 5매 (20분)" },
+      { "level": "E단계", "content": "진분수/가분수/대분수의 사칙연산 (초5 수준)", "booksCount": 200, "studyStandard": "매일 5매 (20분)" },
+      { "level": "F단계", "content": "분수와 소수의 사칙 혼합계산 극대화 (초6 수준)", "booksCount": 200, "studyStandard": "매일 5매 (20분)" }
+    ]
+  },
+  {
+    "brandId": "miraen-ssok",
+    "seriesId": "miraen-ssok",
+    "brandName": "하루 한장 쏙셈",
+    "brand": "미래엔",
+    "seriesName": "하루 한장 쏙셈 유아~초등 로드맵",
+    "category": "학습지 전문",
+    "type": "교과 일일 연산",
+    "summary": "하루 한 장 낱권 뽑아 푸는 부담 없는 루틴으로 유아 기초 수에서 초등 전 학년 교과서 연산을 100% 직결하는 로드맵",
+    "flowchart": [
+      {
+        "stageId": "ss-1",
+        "stageName": "유아 1단계",
+        "ageGroup": "🌱 유아 5~6세",
+        "stageDesc": "1~10까지의 수 개념과 수량 비교",
+        "steps": [
+          { "id": "ss_1", "title": "1~10 수 개념", "desc": "직관적 수 세기, 수량 비교, 수 순서 감각" },
+          { "id": "ss_2", "title": "하루 한 장 루틴", "desc": "10주 완성 낱권 쏙 뽑아 풀기" }
+        ],
+        "layout": "col",
+        "nextArrow": true
+      },
+      {
+        "stageId": "ss-2",
+        "stageName": "유아 2~3단계",
+        "ageGroup": "👶 6세~예비초1",
+        "stageDesc": "10 가르기와 모으기, 한 자리 덧뺄셈 완성",
+        "steps": [
+          { "id": "ss_k1", "title": "Step 1: 유아 2단계", "desc": "10 가르기와 모으기, 10 만들기, 기초 덧뺄셈" },
+          { "id": "ss_k2", "title": "Step 2: 유아 3단계", "desc": "한 자리 덧뺄셈 완성, 20까지의 수 확장" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "ss-3",
+        "stageName": "초등 1~6학년",
+        "ageGroup": "🏫 초등 1-1 ~ 6-2",
+        "stageDesc": "초등 수학교과서 단원 100% 직결 교과 연산",
+        "steps": [
+          { "id": "ss_e1", "title": "초등 저학년 (1~2학년)", "desc": "학기별 교과서 진도 연계 덧셈/뺄셈 드릴" },
+          { "id": "ss_e2", "title": "초등 중고학년 (3~6학년)", "desc": "학기별 곱나눗셈, 분수/소수 사칙연산 완성" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "유아 1단계", "content": "1~10까지의 수 개념, 수 세기, 수의 순서와 크기 비교 (5~6세)", "booksCount": 1, "studyStandard": "매일 1장, 10주 완성" },
+      { "level": "유아 2단계", "content": "10 가르기와 모으기, 10 만들기, 기초 덧셈/뺄셈 (6~7세)", "booksCount": 1, "studyStandard": "매일 1장, 10주 완성" },
+      { "level": "유아 3단계", "content": "한 자리 덧셈과 뺄셈 완성, 20까지의 수 (7세~예비초1)", "booksCount": 1, "studyStandard": "매일 1장, 10주 완성" },
+      { "level": "초등 1-1 ~ 6-2", "content": "초등 수학교과서 100% 연계 학기별 교과 연산 집중 드릴 (초1~6)", "booksCount": 12, "studyStandard": "매일 1장, 학기당 10주" }
+    ]
+  },
+  {
+    "brandId": "facto-schule",
+    "seriesId": "facto-schule",
+    "brandName": "팩토슐레 (Facto Schule / 매스티안)",
+    "seriesName": "팩토슐레 유아 STEAM 놀이수학 로드맵",
+    "targetOverview": "4세 ~ 7세 (레벨 1~3, 누리과정 5대 영역 + 스마트 AR 연동)",
+    "nodes": [
+      {
+        "stageId": "fs-1",
+        "stageName": "Level 1 (4~5세)",
+        "ageGroup": "🌱 만 3~4세 / 4~5세",
+        "stageDesc": "오감 놀이와 조작을 통한 첫 수학적 감각 깨우기",
+        "steps": [
+          { "id": "fs_1_1", "title": "수와 연산 1", "desc": "1~5 수량 직관적 인지, 구체물 세기와 짝짓기" },
+          { "id": "fs_1_2", "title": "공간도형 & 측정 1", "desc": "기본 모양 맞추기, 크기·길이 직관 비교" },
+          { "id": "fs_1_3", "title": "규칙 & 문제해결 1", "desc": "2가지 색·모양 반복 패턴 찾기, 분류 놀이" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "fs-2",
+        "stageName": "Level 2 (5~6세)",
+        "ageGroup": "🌿 만 4~5세 / 5~6세",
+        "stageDesc": "전용 교구 6종과 함께하는 구체적 수학 원리 탐구",
+        "steps": [
+          { "id": "fs_2_1", "title": "수와 연산 2", "desc": "10까지의 수 세기, 묶음과 수 가르기/모으기 기초" },
+          { "id": "fs_2_2", "title": "공간도형 & 측정 2", "desc": "평면도형 분할과 합성, 무게와 들이 비교" },
+          { "id": "fs_2_3", "title": "규칙 & 문제해결 2", "desc": "패턴 규칙 확장, 미로와 간단한 조건 추론" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "fs-3",
+        "stageName": "Level 3 (6~7세)",
+        "ageGroup": "🎓 만 5~6세 / 6~7세",
+        "stageDesc": "초등 교과 및 킨더팩토 진입을 위한 창의사고력 완성",
+        "steps": [
+          { "id": "fs_3_1", "title": "수와 연산 3", "desc": "10의 보수, 한 자리 덧셈·뺄셈, 연산 퍼즐 완성" },
+          { "id": "fs_3_2", "title": "공간도형 & 측정 3", "desc": "입체도형 관찰, 시계 보기, 달력과 시간 개념" },
+          { "id": "fs_3_3", "title": "사고력 & AR 피드백", "desc": "스마트 AR 사물인식 앱으로 자기주도 문제 해결" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "Level 1 (4~5세)", "content": "수와 연산, 공간도형, 측정, 규칙, 문제해결력 (총 6권 + 교구 6종)", "booksCount": 6, "studyStandard": "주 2~3회, 회당 15분 놀이" },
+      { "level": "Level 2 (5~6세)", "content": "10까지의 수, 가르기 모으기, 도형 합성, 패턴 탐구 (총 6권 + 교구 6종)", "booksCount": 6, "studyStandard": "주 3~4회, 회당 15~20분" },
+      { "level": "Level 3 (6~7세)", "content": "한 자리 덧뺄셈, 입체도형, 시계, 조건 추론, AR 앱 (총 6권 + 교구 6종)", "booksCount": 6, "studyStandard": "매일 15~20분 (킨더팩토 진입)" }
+    ]
+  },
+  {
+    "brandId": "mylittletiger",
+    "seriesId": "mylittletiger",
+    "brandName": "마이리틀타이거 (삼성출판사)",
+    "seriesName": "타이거 수학홈스쿨 & 연산놀이 로드맵",
+    "targetOverview": "만 2세 ~ 만 5세 (연령별 10권 세트, 총 40권 홈스쿨 코스)",
+    "nodes": [
+      {
+        "stageId": "mlt-1",
+        "stageName": "만 2세 (Step 1~10)",
+        "ageGroup": "👶 2~3세 (유아 첫걸음)",
+        "stageDesc": "스티커 붙이기와 선 긋기로 첫 수학적 흥미 유발",
+        "steps": [
+          { "id": "mlt_2_1", "title": "수놀이 입문 (1~5권)", "desc": "1~5 숫자 모양 인지, 동물 스티커 짝짓기" },
+          { "id": "mlt_2_2", "title": "모양·비교 (6~10권)", "desc": "동그라미·세모·네모, 크다/작다 직관 비교" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mlt-2",
+        "stageName": "만 3~4세 (Step 11~30)",
+        "ageGroup": "👦 4~5세 (개념 확장)",
+        "stageDesc": "10까지 수 세기와 첫 연산놀이, 규칙 패턴 완성",
+        "steps": [
+          { "id": "mlt_3_1", "title": "수 세기 & 쓰기", "desc": "1~10 수량 일치, 숫자 바르게 따라 쓰기" },
+          { "id": "mlt_3_2", "title": "첫 연산놀이 워크북", "desc": "스티커를 붙이며 10 이하 가르기와 모으기 체득" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "mlt-3",
+        "stageName": "만 5세 (Step 31~40)",
+        "ageGroup": "🎒 6~7세 (예비초등)",
+        "stageDesc": "한 자리 덧셈·뺄셈 완성 및 초등 입학 수학 자신감",
+        "steps": [
+          { "id": "mlt_5_1", "title": "연산 마스터", "desc": "한 자리 덧셈·뺄셈, 10의 보수, 20까지 수" },
+          { "id": "mlt_5_2", "title": "도형·측정·시계", "desc": "입체도형 기초, 길이 비교, 정각/30분 시계 보기" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "만 2세 (10권 세트)", "content": "숫자 모양, 선 긋기, 크기 비교, 모양 찾기, 스티커 놀이 (만 2세)", "booksCount": 10, "studyStandard": "매일 1~2장 스티커 놀이" },
+      { "level": "만 3세 (10권 세트)", "content": "1~10 수 세기, 숫자 쓰기, 수의 순서, 첫 연산놀이 입문 (만 3세)", "booksCount": 10, "studyStandard": "매일 2장, 주 5일" },
+      { "level": "만 4세 (10권 세트)", "content": "수 가르기·모으기, 덧뺄셈 기초, 패턴, 비교와 분류 (만 4세)", "booksCount": 10, "studyStandard": "매일 2장, 주 5일" },
+      { "level": "만 5세 (10권 세트)", "content": "한 자리 덧뺄셈 완성, 20까지의 수, 시계, 초등 입학 준비 (만 5세)", "booksCount": 10, "studyStandard": "매일 2~3장 (초등 입학 완성)" }
+    ]
+  },
+  {
+    "brandId": "bluerabbit",
+    "seriesId": "bluerabbit",
+    "brandName": "블루래빗 (Blue Rabbit / 블루레빗)",
+    "seriesName": "블루래빗 수학시작 & 토끼펜 오감 로드맵",
+    "targetOverview": "만 2세 ~ 만 5세 (소리펜 스토리텔링 + 원목 수교구 + 놀이책)",
+    "nodes": [
+      {
+        "stageId": "br-1",
+        "stageName": "수학시작 1단계 (2~3세)",
+        "ageGroup": "👶 2~3세 (감각 탐색기)",
+        "stageDesc": "소리펜(토끼펜)과 함께하는 오감각 수학 놀이",
+        "steps": [
+          { "id": "br_1_1", "title": "소리나는 수학 그림책", "desc": "토끼펜으로 동물 소리·대화 들으며 수량 감각 체득" },
+          { "id": "br_1_2", "title": "원목 구슬 셈틀 조작", "desc": "원목 셈틀 구슬을 손으로 굴리며 1대1 대응 놀이" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "br-2",
+        "stageName": "수학시작 2단계 (4~5세)",
+        "ageGroup": "👦 4~5세 (개념 형성기)",
+        "stageDesc": "스토리텔링과 스티커 놀이책으로 수와 연산놀이 확장",
+        "steps": [
+          { "id": "br_2_1", "title": "재밌다 수학 (수와 셈)", "desc": "1~10 수 세기, 수량 비교, 가르기 모으기 입문" },
+          { "id": "br_2_2", "title": "재밌다 수학 (도형·공간)", "desc": "모양 퍼즐, 규칙 찾기, 미로로 공간감각 배양" }
+        ],
+        "layout": "row",
+        "nextArrow": true
+      },
+      {
+        "stageId": "br-3",
+        "stageName": "수학시작 3단계 (5~6세)",
+        "ageGroup": "🎒 5~6세 (원리 발전기)",
+        "stageDesc": "기초 연산놀이 완성 및 생활 속 수학적 사고력 정착",
+        "steps": [
+          { "id": "br_3_1", "title": "첫 수연산 놀이북", "desc": "손조작 스티커로 한 자리 덧셈·뺄셈 원리 정복" },
+          { "id": "br_3_2", "title": "측정 & 시계 놀이", "desc": "길이·무게·들이 비교, 하루 일과와 시계 보기" }
+        ],
+        "layout": "col",
+        "nextArrow": false
+      }
+    ],
+    "stages": [
+      { "level": "수학시작 1단계 (2~3세)", "content": "토끼펜 그림책, 원목 셈틀, 모양 촉각 놀이 (만 2~3세)", "booksCount": 10, "studyStandard": "부모와 매일 10분 상호작용 놀이" },
+      { "level": "수학시작 2단계 (4~5세)", "content": "스토리텔링 그림책, 재밌다 수학 수와 셈, 도형 놀이 (만 4~5세)", "booksCount": 10, "studyStandard": "매일 15분 토끼펜 + 워크북" },
+      { "level": "수학시작 3단계 (5~6세)", "content": "첫 수연산 놀이, 측정·시계, 창의 두뇌 퍼즐 (만 5~6세)", "booksCount": 10, "studyStandard": "매일 15분 (유치원 누리과정 연계)" }
+    ]
+  }
+]

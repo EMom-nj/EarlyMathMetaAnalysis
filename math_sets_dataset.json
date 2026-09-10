@@ -1,0 +1,452 @@
+[
+  {
+    "brandId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "setName": "플레이팩토 프리키즈",
+    "targetAge": "2~4세",
+    "targetAgeGroup": ["2세", "3세", "4세"],
+    "category": "입문/감각",
+    "features": "오감 자극 및 감각 놀이 중심의 수학 입문. 크기 비교, 모양 맞추기, 기초 수 세기 친환경 원목 조작 놀이."
+  },
+  {
+    "brandId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "setName": "플레이팩토 키즈 (Step 1/2/3)",
+    "targetAge": "4~7세",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세"],
+    "category": "종합 커리큘럼",
+    "features": "스토리텔링형 교구+워크북 학습. Step 1(4~5세), Step 2(5~6세), Step 3(6~7세) 월간 교구 1종 + 놀이책 1권 제공."
+  },
+  {
+    "brandId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "setName": "플레이팩토 본교구 10종",
+    "targetAge": "6세~초등 4학년",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "교과 연계 본교구",
+    "features": "수연산(넘버배틀, 백판, 아리스매치, 메이크텐), 도형(펜토미노플렉스, 큐브타워), 측정/규칙(패턴파인더, 메저먼트키트, 트루펄스) 원목 풀세트."
+  },
+  {
+    "brandId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "setName": "플레이팩토 BASIC",
+    "targetAge": "6세~초등 2학년",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "교과 연계 입문",
+    "features": "본교구 10종을 활용하여 초등 1~2학년 교과서 핵심 개념을 활동 중심으로 마스터하는 입문 워크북 과정."
+  },
+  {
+    "brandId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "setName": "매스티안 사고력 연산 EGG",
+    "targetAge": "유아~초등 3학년",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "연산 드릴",
+    "features": "단순 기계적 계산을 탈피하고 수의 구조와 연산 원리를 시각적 모델로 이해시키는 원리 기반 연산 드릴 (단계별 6권)."
+  },
+  {
+    "brandId": "playfacto",
+    "brandName": "플레이팩토 (PlayFACTO)",
+    "setName": "플레이팩토 수학동화",
+    "targetAge": "유아~7세",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세"],
+    "category": "수학 그림책",
+    "features": "수학적 개념(도형, 수량, 규칙 등)을 창작 스토리와 일러스트로 풀어낸 12권 세트 이야기식 전달."
+  },
+  {
+    "brandId": "monstermath",
+    "brandName": "몬스터매스 (Monster Math)",
+    "setName": "몬스터매스 S단계 (Step)",
+    "targetAge": "5~6세",
+    "targetAgeGroup": ["5세", "6세"],
+    "category": "입문/도형감각",
+    "features": "유아 수학 교구 입문 과정. 칠교, 동물 블록, 기초 패턴 등 구체물을 직접 만지며 모양과 수의 기초 양감 형성."
+  },
+  {
+    "brandId": "monstermath",
+    "brandName": "몬스터매스 (Monster Math)",
+    "setName": "몬스터매스 K단계 / A단계",
+    "targetAge": "6~7세",
+    "targetAgeGroup": ["6세", "7세"],
+    "category": "창의 사고력",
+    "features": "창의사고력 교구 탐구 과정. 평면도형 구성, 공간 위치 감각, 기초 연산 및 규칙성을 교구로 해결."
+  },
+  {
+    "brandId": "monstermath",
+    "brandName": "몬스터매스 (Monster Math)",
+    "setName": "몬스터매스 챌린지 시리즈",
+    "targetAge": "5세~초등",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "단품 교구 집중",
+    "features": "소마큐브, 펜토미노, 패턴블록, 기하판, 하노이탑 등 교구 하나를 깊이 있게 파고드는 홈스쿨링 전용 교구+교재 패키지."
+  },
+  {
+    "brandId": "monstermath",
+    "brandName": "몬스터매스 (Monster Math)",
+    "setName": "아레테 (ARETE)",
+    "targetAge": "6세~초등",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "지면 사고력",
+    "features": "몬스터매스 독보적 지면 사고력 교재. 교구로 직접 조작한 구체적 경험을 지면의 추상적 기호와 문제로 치환하는 2단계 완성."
+  },
+  {
+    "brandId": "monstermath",
+    "brandName": "몬스터매스 (Monster Math)",
+    "setName": "몬스터연산",
+    "targetAge": "6세~초등",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "문해력 연산",
+    "features": "수 개념 이해를 바탕으로 문장제와 식 세우기까지 연결하는 수학적 문해력 기반 연산 교재."
+  },
+  {
+    "brandId": "joymath",
+    "brandName": "조이매스 (JoyMath)",
+    "setName": "칠교판 (Tangram) 세트 & 워크북",
+    "targetAge": "4세~초등전학년",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세", "초등"],
+    "category": "평면도형",
+    "features": "기본 칠교, 하트/달걀 칠교와 수준 1, 2, 3 워크북 연계. 평면도형 구성, 회전, 대칭 개념 완벽 마스터."
+  },
+  {
+    "brandId": "joymath",
+    "brandName": "조이매스 (JoyMath)",
+    "setName": "지오보드 (기하판) 세트 & 워크북",
+    "targetAge": "5세~초등",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "기하/공간",
+    "features": "정사각 및 원형 양면 지오보드와 고무줄을 활용해 다각형, 둘레, 넓이, 선대칭/점대칭 탐구."
+  },
+  {
+    "brandId": "joymath",
+    "brandName": "조이매스 (JoyMath)",
+    "setName": "소마큐브 & 꼬마큐브 세트",
+    "targetAge": "5세~초등",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "입체도형/공간",
+    "features": "7개의 입체 조각으로 3D 조형물 제작. 공간지각력, 입체의 회전과 투영, 쌓기나무 숨은 블록 찾기 대비."
+  },
+  {
+    "brandId": "joymath",
+    "brandName": "조이매스 (JoyMath)",
+    "setName": "수막대 (퀴즈네어 막대) 세트",
+    "targetAge": "4세~초등 2학년",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세", "초등"],
+    "category": "수연산/측정",
+    "features": "1~10cm 길이와 색상이 다른 10종 수막대. 수 가르기/모으기, 10의 보수, 덧셈/뺄셈, 길이 측정을 물리적으로 체득."
+  },
+  {
+    "brandId": "orda",
+    "brandName": "오르다 (Orda)",
+    "setName": "오르다 사랑세트 (18종)",
+    "targetAge": "4~5세",
+    "targetAgeGroup": ["4세", "5세"],
+    "category": "보드게임",
+    "features": "유아기 인지 발달 및 수학적 흥미를 유발하는 첫 보드게임 세트. 곰돌이 퍼즐, 아가블록 등 18종."
+  },
+  {
+    "brandId": "orda",
+    "brandName": "오르다 (Orda)",
+    "setName": "오르다 창의세트 (20종)",
+    "targetAge": "6~7세",
+    "targetAgeGroup": ["6세", "7세"],
+    "category": "보드게임",
+    "features": "취학 전 아동의 논리적 사고와 문제해결력을 폭발시키는 보드게임 세트. 덧셈주사위, 메모리, 구슬삼목 등 20종."
+  },
+  {
+    "brandId": "orda",
+    "brandName": "오르다 (Orda)",
+    "setName": "오르다 논리세트 (18종)",
+    "targetAge": "8세~초등",
+    "targetAgeGroup": ["초등"],
+    "category": "보드게임",
+    "features": "고도의 전략적 사고와 합리적 의사결정을 훈련하는 상위 인지 게임 세트. 사목놀이, 딥씨, 분수게임 등 18종."
+  },
+  {
+    "brandId": "orda",
+    "brandName": "오르다 (Orda)",
+    "setName": "오르다 자석가베 (M-Gabe 1~10)",
+    "targetAge": "24개월~초등",
+    "targetAgeGroup": ["2세", "3세", "4세", "5세", "6세", "7세", "초등"],
+    "category": "자석가베",
+    "features": "360도 회전 자석(특허)이 내장된 1~10 M-Gabe 원목 블록. 무너지지 않고 정교한 3D 입체 조형물 제작."
+  },
+  {
+    "brandId": "orda",
+    "brandName": "오르다 (Orda)",
+    "setName": "오르다 매쓰 파워 빌더스 (MPB STEP 1~3)",
+    "targetAge": "5~7세",
+    "targetAgeGroup": ["5세", "6세", "7세"],
+    "category": "사고력 학습지",
+    "features": "미국 NCTM(수학교사협의회) 5대 영역(수연산, 대수, 기하, 측정, 자료확률) 기반 단계별 96활동 유아 전문 수학사고력 지면 프로그램."
+  },
+  {
+    "brandId": "orda",
+    "brandName": "오르다 (Orda)",
+    "setName": "오르다 브레인 파워 빌더스 (BPB 기본~STEP 3)",
+    "targetAge": "4~7세",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세"],
+    "category": "논리·창의 학습지",
+    "features": "유아기 논리적 사고력과 창의적 문제해결력을 균형 있게 다지는 사고력 전문 지면 활동지. 조건 추론, 유연성, 공간지각 훈련."
+  },
+  {
+    "brandId": "froebel",
+    "brandName": "프뢰벨 (Froebel)",
+    "setName": "프뢰벨 은물 (Gabe 1~10)",
+    "targetAge": "2.5세~7세",
+    "targetAgeGroup": ["2세", "3세", "4세", "5세", "6세", "7세"],
+    "category": "정통 가베",
+    "features": "정통 독일식 원목 교구 10종. 1~2은물(형태 탐색), 3~6은물(건축/입체 분해), 7~10은물(면/선/점) 기본 단위 체득."
+  },
+  {
+    "brandId": "froebel",
+    "brandName": "프뢰벨 (Froebel)",
+    "setName": "프뢰벨 준은물 (1~8)",
+    "targetAge": "4세~7세",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세"],
+    "category": "조형 작업",
+    "features": "은물의 개념을 확장하여 손으로 직접 만들고 꾸미는 조형 작업 교구 8종 (바느질, 구슬꿰기, 색종이, 매트짜기 등)."
+  },
+  {
+    "brandId": "kidsschole",
+    "brandName": "키즈스콜레 (Kids' Schole)",
+    "setName": "만지는 수학 (3대 영역 세트)",
+    "targetAge": "3세~7세",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세", "7세"],
+    "category": "감각 조작",
+    "features": "수와 연산(피싱/타워링), 도형과 공간(패턴블록/바벨큐브), 규칙과 분류(리틀타운/메모리) 각 4종 교구 + 영역별 놀이책 27권."
+  },
+  {
+    "brandId": "kidsschole",
+    "brandName": "키즈스콜레 (Kids' Schole)",
+    "setName": "밤비노 루크 (Bambino LUK)",
+    "targetAge": "3세~5세",
+    "targetAgeGroup": ["3세", "4세", "5세"],
+    "category": "자가점검 퍼즐",
+    "features": "독일식 자가점검 두뇌 훈련 키트 (타일 6개). 그림 기호 배치 후 뒷면 무늬로 아이가 스스로 정답 확인."
+  },
+  {
+    "brandId": "kidsschole",
+    "brandName": "키즈스콜레 (Kids' Schole)",
+    "setName": "미니 루크 (Mini LUK)",
+    "targetAge": "6세~초등",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "자가점검 퍼즐",
+    "features": "독일식 자가점검 두뇌 훈련 키트 (숫자 타일 12개). 수학적 논리, 집중력, 공간지각 문제를 풀고 스스로 정답 확인."
+  },
+  {
+    "brandId": "yeondubi-montessori",
+    "brandName": "연두비 몬테소리 매쓰 (Montessori Math)",
+    "setName": "연두비 몬테소리 매쓰 19종 원목 교구 풀세트",
+    "targetAge": "3세~7세",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세", "7세"],
+    "category": "정통 감각수학",
+    "features": "유럽산 최고급 원목 교구 19종 풀패키지 (수막대, 금색구슬, 세갱판, 수카드, 분수원기둥, 기하입체 등). 십진법 자릿값과 감각적 양감을 완벽 체득."
+  },
+  {
+    "brandId": "yeondubi-montessori",
+    "brandName": "연두비 몬테소리 매쓰 (Montessori Math)",
+    "setName": "단계별 미션북 60권 (총 600 미션) & 가이드북",
+    "targetAge": "3세~7세",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세", "7세"],
+    "category": "자기주도 미션북",
+    "features": "총 600개의 단계별 미션을 담은 60권의 워크북과 부모 가이드북. 구체물 조작에서 오류 자동 정정을 거쳐 초등 교과 연계까지 자기주도 완주."
+  },
+  {
+    "brandId": "montessori",
+    "brandName": "한국몬테소리 (Korea Montessori)",
+    "setName": "빅 몬테소리 (수학 영역 세트)",
+    "targetAge": "5세~7세",
+    "targetAgeGroup": ["5세", "6세", "7세"],
+    "category": "정통 감각수학",
+    "features": "금색 구슬 십진법 세트(1, 10, 100, 1000 양감 체험), 뱀놀이 연산, 우표놀이, 분수 원반 퍼즐."
+  },
+  {
+    "brandId": "mathtime",
+    "brandName": "매쓰타임 (MathTime)",
+    "setName": "MTB 자석블록 프리미엄 정다면체 세트",
+    "targetAge": "6세~중등",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "기하/다면체",
+    "features": "네오디뮴 자석봉과 쇠구슬로 5대 정다면체(정사면체~정이십면체)와 준정다면체를 뼈대(Frame) 구조로 직접 제작."
+  },
+  {
+    "brandId": "cmath",
+    "brandName": "시매쓰출판 (C-Math)",
+    "setName": "플라토 (Plato) 공간도형 시리즈",
+    "targetAge": "6세~초등 6학년",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "도형 드릴",
+    "features": "유·초등 도형 1위 하루 10분 지면 훈련서. S단계(6세 평면규칙), A단계(7세 도형자르기/쌓기나무), B~F단계(초등 공간/전개도/겨냥도)."
+  },
+  {
+    "brandId": "soma",
+    "brandName": "소마 (SOMA)",
+    "setName": "소마셈 (Somasem)",
+    "targetAge": "5세~초등 4학년",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "사고력 연산",
+    "features": "사고력 연산 1위 베스트셀러. K단계(5~6세 수모으기/가르기), P단계(6~7세 10의보수/한자리연산), A~D단계(초등 두자리/구구단/분수)."
+  },
+  {
+    "brandId": "soma",
+    "brandName": "소마 (SOMA)",
+    "setName": "소마 레이키즈 & 레이",
+    "targetAge": "6세~초등 2학년",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "사고력 활동",
+    "features": "대치동 소마 유치부/초등저학년 정규 사고력 활동북. 구체물 교구와 게임을 통한 직관적 문제해결력 함양."
+  },
+  {
+    "brandId": "cheon-jonghyun",
+    "brandName": "천종현수학연구소",
+    "setName": "유아 자신감 수학",
+    "targetAge": "만 3세~만 5세 (3~6세)",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세"],
+    "category": "유아 놀이 활동수학",
+    "features": "보드마커로 쓰고 지우는 코팅 페이지 & 대형 스티커 놀이 활동북. 만 3세(4권), 만 4세(4권), 만 5세(4권) 총 12권. 수량 인지, 분류, 모으기/가르기, 규칙성을 놀이로 체득하여 원리셈·사고력 진입 전 수학 자신감을 형성하는 필수 징검다리 교재."
+  },
+  {
+    "brandId": "cheon-jonghyun",
+    "brandName": "천종현수학연구소",
+    "setName": "원리셈 (Wonrisem)",
+    "targetAge": "5세~초등 6학년",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "원리 연산",
+    "features": "전 소마연구소장 천종현 저술. 원리 시각화(도트/수직선/묶음) ➔ 계산 연습 ➔ 사고력 연산 응용으로 끝내는 매일 15분 학습."
+  },
+  {
+    "brandId": "cheon-jonghyun",
+    "brandName": "천종현수학연구소",
+    "setName": "TOP(탑) 사고력 수학",
+    "targetAge": "6세~초등 4학년",
+    "targetAgeGroup": ["6세", "7세", "초등"],
+    "category": "사고력 심화",
+    "features": "영역별 나선형 구조의 프리미엄 사고력 교재. K단계(6~7세), P단계(7~8세), A~C단계(초등), 직관적 조작 활동 스티커 수록."
+  },
+  {
+    "brandId": "c2m",
+    "brandName": "씨투엠에듀 (C2M)",
+    "setName": "킨더수학 & 필즈수학",
+    "targetAge": "5세~초등",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "사고력/영재대비",
+    "features": "사고력 대가 한헌조 소장 저술. 킨더수학(5~7세 활동수학) 및 필즈수학(킨더~고급 영재교육원 관찰추천 대비)."
+  },
+  {
+    "brandId": "facto",
+    "brandName": "매스티안 팩토 (FACTO)",
+    "setName": "킨더팩토 & 키즈팩토",
+    "targetAge": "5세~초등 1학년",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "창의 사고력",
+    "features": "창의사고력 대표 유형 마스터. 킨더팩토(5~7세 수/도형/연산/측정규칙 4권), 키즈팩토(7세~초1 원리/응용 6권)."
+  },
+  {
+    "brandId": "didimdol",
+    "brandName": "디딤돌 (Didimdol)",
+    "setName": "디딤돌 유아수학 & 최상위사고력 Pre",
+    "targetAge": "5세~7세",
+    "targetAgeGroup": ["5세", "6세", "7세"],
+    "category": "교과/상위권",
+    "features": "초등 1위 디딤돌의 유아 라인업. 유아수학(킨더 3영역) 및 최상위사고력 Pre(상위권 수학 두뇌 자극 서술형)."
+  },
+  {
+    "brandId": "gitan",
+    "brandName": "기탄교육 (Gitan)",
+    "setName": "기탄수학 (A~N단계)",
+    "targetAge": "4세~초등 6학년",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세", "초등"],
+    "category": "반복 연산 드릴",
+    "features": "스몰스텝 무한 반복 연산의 원조. 권당 5~7천원의 극강 가성비로 연산 속도와 정확도 체화."
+  },
+  {
+    "brandId": "kumon",
+    "brandName": "교원구몬 (Kumon)",
+    "setName": "구몬수학 (4A~O단계)",
+    "targetAge": "4세~초등전학년",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세", "초등"],
+    "category": "방문 루틴 연산",
+    "features": "매일 15분 공부 루틴 + 학년 무관 선행 진도. 주 1회 교사 방문 관리로 사칙연산 속도 극대화."
+  },
+  {
+    "brandId": "miraen",
+    "brandName": "미래엔 (Mirae N)",
+    "setName": "하루 한장 쏙셈 (유아~초등)",
+    "targetAge": "5세~초등 6학년",
+    "targetAgeGroup": ["5세", "6세", "7세", "초등"],
+    "category": "교과 일일 연산",
+    "features": "매일 1장씩 뜯어서 푸는 부담 없는 자기주도 연산. 유아 1~3단계 및 초등 교과서 100% 연계."
+  },
+  {
+    "brandId": "facto-schule",
+    "brandName": "팩토슐레 (Facto Schule)",
+    "setName": "팩토슐레 교구 & 워크북 풀세트 (Level 1~3)",
+    "targetAge": "4세~7세",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세"],
+    "category": "STEAM 놀이교구",
+    "features": "수학 5대 영역(수연산, 도형, 측정, 규칙, 문제해결) 워크북 18권 + 레벨별 전용 교구 18종 + 스마트 AR/OR 앱. 조작과 디지털 인식 기술의 결합."
+  },
+  {
+    "brandId": "facto-schule",
+    "brandName": "팩토슐레 (Facto Schule)",
+    "setName": "팩토슐레 수·연산놀이 워크북 세트",
+    "targetAge": "4세~7세",
+    "targetAgeGroup": ["4세", "5세", "6세", "7세"],
+    "category": "연산놀이/사고력",
+    "features": "색칠하기, 가위질, 스티커 붙이기 등 활동으로 10 이하 수 가르기/모으기, 기초 덧뺄셈을 즐겁게 체득하는 유아 전용 연산놀이북."
+  },
+  {
+    "brandId": "mylittletiger",
+    "brandName": "마이리틀타이거 (My Little Tiger)",
+    "setName": "타이거 수학홈스쿨 10권 세트 (만 2~5세)",
+    "targetAge": "3세~7세",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세", "7세"],
+    "category": "놀이 워크북",
+    "features": "연령별 10권씩 총 40권의 국민 워크북. 스티커 붙이기, 선 긋기, 수 세기, 기초 연산, 공간 인지를 놀이로 완성하는 초가성비 홈스쿨 교재."
+  },
+  {
+    "brandId": "mylittletiger",
+    "brandName": "마이리틀타이거 (My Little Tiger)",
+    "setName": "타이거 첫 연산놀이 & 스티커 수놀이 워크북",
+    "targetAge": "4세~6세",
+    "targetAgeGroup": ["4세", "5세", "6세"],
+    "category": "유아 연산놀이",
+    "features": "핑크퐁·타이거 캐릭터와 함께하는 유아 첫 연산놀이. 10의 보수, 수 묶음, 직관적 덧셈·뺄셈을 다채로운 스티커로 부담 없이 정복."
+  },
+  {
+    "brandId": "mylittletiger",
+    "brandName": "마이리틀타이거 (My Little Tiger)",
+    "setName": "수학타이거 개념24 전집 (토이북 24권+사운드)",
+    "targetAge": "3세~6세",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세"],
+    "category": "토이북/교구 전집",
+    "features": "NCTM 기준 미국수학교사협의회 커리큘럼. 조작형 수학 토이북 24권, 동요 스피커, 동요카드 30장, 핑크퐁 수학 애니메이션 융합 전집."
+  },
+  {
+    "brandId": "bluerabbit",
+    "brandName": "블루래빗 (Blue Rabbit)",
+    "setName": "블루래빗 수학시작 풀패키지 (토끼펜 세트)",
+    "targetAge": "2세~6세",
+    "targetAgeGroup": ["2세", "3세", "4세", "5세", "6세"],
+    "category": "소리펜 토이북",
+    "features": "토끼펜으로 찍으면 소리 나는 스토리텔링 수학 그림책 + 스티커 놀이책 + 가이드북. 글을 모르는 아기도 귀로 들으며 수 개념 체득."
+  },
+  {
+    "brandId": "bluerabbit",
+    "brandName": "블루래빗 (Blue Rabbit)",
+    "setName": "블루래빗 재밌다 수학 & 첫 연산놀이 세트",
+    "targetAge": "3세~6세",
+    "targetAgeGroup": ["3세", "4세", "5세", "6세"],
+    "category": "유아 연산놀이",
+    "features": "만 2~5세 단계별 수와 셈, 연산놀이, 미로, 두뇌 퍼즐 워크북. 오감 스티커와 색칠하기를 통한 직관적 연산놀이 최적화."
+  },
+  {
+    "brandId": "bluerabbit",
+    "brandName": "블루래빗 (Blue Rabbit)",
+    "setName": "블루래빗 원목 셈틀 & 수세기 원목 교구",
+    "targetAge": "2세~5세",
+    "targetAgeGroup": ["2세", "3세", "4세", "5세"],
+    "category": "원목 수교구",
+    "features": "무독성 친환경 원목 수세기 셈틀(주판), 비즈 롤러코스터, 숫자 도형 블록. 영유아 소근육 발달과 양 감각 직관 형성에 탁월."
+  }
+]

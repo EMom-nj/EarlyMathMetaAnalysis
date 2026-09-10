@@ -1,0 +1,47 @@
+[
+  {
+    "id": "marcon2002",
+    "topic": "초등학교 6학년 장기 학업 성취도 역전 현상",
+    "title": "Moving up the grades: Relationship between preschool model and later school success",
+    "authors": "Rebecca A. Marcon",
+    "journal": "Early Childhood Research & Practice (2002)",
+    "finding": "유치원 시기 학습지 위주로 학업을 주입받은 아이들은 초등 4~6학년으로 올라갈수록 성적이 급락한 반면, 놀이·교구 중심 유치원을 다닌 아이들이 6학년 시점에 전 과목 평점(GPA)에서 통계적으로 유의미하게 앞서며 성적이 역전됨.",
+    "link": "https://ecrp.illinois.edu/v4n1/marcon.html"
+  },
+  {
+    "id": "vanderbilt2022",
+    "topic": "밴더빌트 대학 2,990명 대규모 무작위 대조군(RCT) 추적",
+    "title": "Effects of a statewide pre-kindergarten program on children's achievement and behaviors through sixth grade",
+    "authors": "Kelley Durkin, Mark W. Lipsey, Dale C. Farran, Sarah E. Wiesen",
+    "journal": "Developmental Psychology (2022)",
+    "finding": "학습지와 교사 주도 학업 훈련을 집중적으로 받은 주정부 프리K 아이들이 6학년 시점에 표준화 수학·읽기 시험에서 미참여 대조군보다 오히려 더 낮은 점수를 기록했으며, 징계 처분율과 결석률이 더 높았음.",
+    "link": "https://doi.org/10.1037/dev0001301"
+  },
+  {
+    "id": "stipek1995",
+    "topic": "학습지 주입식 교육의 자존감 및 학습 동기 훼손",
+    "title": "Effects of different instructional approaches on young children's achievement and motivation",
+    "authors": "Deborah Stipek, Rachelle Feiler, Denise Daniels, Sharon Milburn",
+    "journal": "Child Development (1995)",
+    "finding": "학습지 위주 교육을 받은 유아들은 교구 중심 유아 대비 수학 성적에 우위가 없었으나, 자신의 능력에 대한 평가가 현저히 낮았고(자존감 저하), 학교 불안 및 실패에 대한 두려움이 유의미하게 높았음.",
+    "link": "https://doi.org/10.2307/1131199"
+  },
+  {
+    "id": "burts1990",
+    "topic": "지면 학습지(워크북) 활동 중 아동의 신체적 스트레스 반응",
+    "title": "A comparison of frequencies of stress behaviors observed in kindergarten children in classrooms with developmentally appropriate versus developmentally inappropriate instructional practices",
+    "authors": "Diane C. Burts, Craig H. Hart, Rosalind Charlesworth, Lisa Kirk",
+    "journal": "Early Childhood Research Quarterly (1990)",
+    "finding": "유아들이 지면 워크북과 학습지 활동을 수행할 때 손톱 물어뜯기, 다리 떨기, 안절부절못함 등 신체적 스트레스 행동이 가장 폭발적으로 증가한 반면, 구체물 교구 조작 중에는 스트레스 빈도가 현저히 낮았음.",
+    "link": "https://doi.org/10.1016/0885-2006(90)90030-5"
+  },
+  {
+    "id": "kamii1998",
+    "topic": "기계적 연산 알고리즘 반복이 수 감각(Number Sense)을 파괴",
+    "title": "The Harmful Effects of Algorithms in Grades 1-4",
+    "authors": "Constance Kamii, Ann Dominick",
+    "journal": "NCTM Yearbook: The Teaching and Learning of Algorithms in School Mathematics (1998)",
+    "finding": "형식적인 지면 세로셈과 기계적 알고리즘을 조기에 반복 훈련시키면 자릿값과 수의 양감을 생각하지 않고 기계적으로 계산하게 되어 유아의 자연스러운 수 감각과 독립적 사고력을 훼손함.",
+    "link": "https://www.constancekamii.org"
+  }
+]
