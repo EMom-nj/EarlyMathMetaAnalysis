@@ -2068,49 +2068,163 @@ button {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 22px 0 26px;
+  }
+  .hero-header {
+    margin: 0 auto 16px;
+  }
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+    letter-spacing: 0px;
+    line-height: 1.3;
+  }
   .hero-title {
-    font-size: 1.85rem;
+    font-size: 1.42rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    letter-spacing: -0.4px;
   }
   .onboarding-card {
-    padding: 20px;
+    padding: 16px 14px;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  }
+  .onboarding-step-title {
+    font-size: 0.80rem;
+    letter-spacing: -0.2px;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .onboarding-step-title .step-num {
+    width: 18px;
+    height: 18px;
+    font-size: 0.68rem;
   }
   .age-selector-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .age-btn {
+    padding: 8px 2px;
+    min-height: 52px;
+    border-radius: 10px;
+    gap: 2px;
+  }
+  .age-btn .age-val {
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
+  .age-btn .age-sub {
+    font-size: 0.66rem;
+    letter-spacing: -0.4px;
   }
   .type-action-row {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 8px;
+  }
+  .type-toggle-group {
+    display: flex;
+    flex-direction: row !important;
+    gap: 6px;
+    padding: 4px;
+    border-radius: 12px;
+    width: 100%;
+  }
+  .type-btn {
+    flex: 1;
+    padding: 9px 4px;
+    font-size: 0.78rem;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+  .type-subtext {
+    display: none;
   }
   .type-action-row .explore-btn {
     justify-content: center;
-  }
-  .type-toggle-group {
-    flex-direction: column;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    border-radius: 12px;
+    width: 100%;
   }
   .selection-summary {
     flex-direction: column;
     align-items: stretch;
-    gap: 14px;
+    gap: 12px;
   }
   .cards-grid {
     grid-template-columns: 1fr;
   }
+  .sticky-nav-bar {
+    padding: 5px 0;
+  }
   .nav-content {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .nav-brand {
+    display: none;
   }
   .nav-quick-filters {
+    width: 100%;
     justify-content: space-between;
+    gap: 6px;
+  }
+  .nav-mini-select {
+    padding: 3px 6px;
+    font-size: 0.76rem;
+    border-radius: 8px;
+    gap: 4px;
+  }
+  .nav-mini-select select {
+    font-size: 0.76rem;
+    padding: 2px 0;
+  }
+  .nav-search-box {
+    flex: 1;
+    min-width: 0;
+  }
+  .nav-search-box input {
+    padding: 5px 8px 5px 26px;
+    font-size: 0.76rem;
+  }
+  .nav-search-box .search-icon {
+    left: 8px;
+    font-size: 0.75rem;
   }
   .side-by-side-grid {
     grid-template-columns: 1fr;
+  }
+  .modal-dialog {
+    width: 95%;
+    max-height: 92vh;
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+  .modal-close-btn {
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
   }
 }
 
 @media (max-width: 480px) {
   .age-selector-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .container {
+    padding: 0 12px;
   }
 }
 
@@ -4699,31 +4813,246 @@ button {
   }
 }
 
-@media (max-width: 640px) {
-  .lb-left-cluster {
-    flex-wrap: wrap;
+/* Mobile Friendly Tab Bar & Leaderboard Card System (390px ~ 768px) */
+@media (max-width: 768px) {
+  /* Tabs as modern swipeable pill chips */
+  .tabs-bar {
+    position: sticky;
+    top: 0;
+    z-index: 95;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #E2E8F0;
+    padding: 6px 0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
   }
-  .lb-action-cluster {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  .tabs-list {
+    display: flex;
+    gap: 6px;
+    padding: 2px 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .tabs-list::-webkit-scrollbar {
+    display: none;
+  }
+  .tab-btn {
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    background: #F1F5F9;
+    color: #475569;
+    border: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    white-space: nowrap;
+    flex-shrink: 0;
+    scroll-snap-align: start;
     gap: 5px;
+    transition: all 0.2s ease;
+  }
+  .tab-btn:hover {
+    color: var(--primary);
+    background: #EEF2FF;
+  }
+  .tab-btn.active {
+    background: #4F46E5;
+    color: #FFFFFF;
+    border-color: #4F46E5;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.28);
+    font-weight: 700;
+  }
+
+  /* Leaderboard Stream Cards */
+  .brand-leaderboard-stream {
+    gap: 12px;
+  }
+  .leaderboard-item {
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  }
+  .lb-main-row {
+    padding: 13px 12px;
+    gap: 10px;
+  }
+  .lb-left-cluster {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
+    flex-wrap: nowrap;
+  }
+  .lb-rank-badge {
+    font-size: 0.76rem;
+    padding: 4px 9px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .lb-avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+  .brand-logo-badge.size-md {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+  .lb-identity {
+    flex: 1;
+    min-width: 0;
+    gap: 2px;
+  }
+  .lb-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .lb-brand-name {
+    font-size: 1.02rem;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+  }
+  .lb-company-tag {
+    font-size: 0.70rem;
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+  .lb-score-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  .lb-score-pill {
+    font-size: 0.74rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 5px;
+    flex-shrink: 0;
+  }
+  .lb-total-score {
+    font-size: 0.72rem;
+    color: #64748B;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lb-cost-badge {
+    margin-left: auto;
+    font-size: 0.76rem;
+    flex-shrink: 0;
+  }
+  .lb-content-cluster {
+    width: 100%;
+    gap: 5px;
+  }
+  .lb-highlight-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.76rem;
+  }
+  .lb-box-label-wrap {
+    font-size: 0.70rem;
+    font-weight: 700;
+  }
+  .lb-box-label {
+    font-size: 0.70rem;
+  }
+  .lb-keyword-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .lb-kw-chip {
+    font-size: 0.70rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  /* Exactly 3 Equal-Width Balanced Action Buttons on Mobile */
+  .lb-action-cluster {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: 100% !important;
+    gap: 6px !important;
     padding-top: 8px;
+    border-top: 1px dashed #E2E8F0;
+    margin-top: 2px;
   }
   .lb-btn {
-    justify-content: center;
-    padding: 7px 3px;
-    font-size: 0.74rem;
-    gap: 3px;
-    border-radius: 8px;
-    letter-spacing: -0.2px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 38px !important;
+    padding: 0 4px !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    border-radius: 8px !important;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: transform 0.1s ease, background 0.15s ease;
   }
-  .lb-btn .chevron-icon {
-    width: 10px;
-    height: 10px;
+  .lb-btn:active {
+    transform: scale(0.97);
+  }
+  .lb-btn-roadmap {
+    background: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    color: #334155 !important;
+  }
+  .lb-btn-roadmap:hover {
+    background: #E2E8F0 !important;
+  }
+  .lb-btn-ratings {
+    background: #EEF2FF !important;
+    border-color: #C7D2FE !important;
+    color: #4F46E5 !important;
+  }
+  .lb-btn-ratings:hover {
+    background: #E0E7FF !important;
+  }
+  .lb-btn-profile {
+    background: #1E293B !important;
+    border-color: #1E293B !important;
+    color: #FFFFFF !important;
+  }
+  .lb-btn-profile:hover {
+    background: #0F172A !important;
+  }
+  .lb-drawer {
+    padding: 14px 12px;
+  }
+  .lb-drawer-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .lb-drawer-title {
+    font-size: 0.88rem;
+  }
+  .lb-drawer-score-badge {
+    font-size: 0.72rem;
   }
   .lb-radar-bars {
     grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .lb-bar-item {
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+  .lb-bar-name {
+    font-size: 0.75rem;
+  }
+  .lb-bar-score {
+    font-size: 0.73rem;
   }
   .lb-strip-tag {
     flex: 1 1 100%;
@@ -4732,16 +5061,16 @@ button {
 
 @media (max-width: 380px) {
   .lb-action-cluster {
-    gap: 3px;
+    gap: 4px !important;
   }
   .lb-btn {
-    padding: 6px 2px;
-    font-size: 0.70rem;
-    gap: 2px;
+    font-size: 0.72rem !important;
+    height: 36px !important;
+    padding: 0 2px !important;
   }
-  .lb-btn .chevron-icon {
-    width: 8px;
-    height: 8px;
+  .lb-rank-badge {
+    font-size: 0.70rem;
+    padding: 3px 6px;
   }
 }
 
@@ -5745,11 +6074,11 @@ button {
           <div class="type-toggle-group">
             <button class="type-btn active" data-type="manipulative">
               <span>🧩</span>
-              <span>교구만 보기 (원목·구체물 조작)</span>
+              <span>교구만 보기 <span class="type-subtext">(원목·구체물 조작)</span></span>
             </button>
             <button class="type-btn" data-type="workbook">
               <span>📚</span>
-              <span>학습지만 보기 (원리·연산·사고력)</span>
+              <span>학습지만 보기 <span class="type-subtext">(원리·연산·사고력)</span></span>
             </button>
           </div>
           <button class="explore-btn" id="exploreStartBtn">
@@ -6121,7 +6450,7 @@ button {
     <span>📋 파이썬 메타 분석 코드가 클립보드에 복사되었습니다!</span>
   </div>
 
-  <!-- Standalone All-In-One Scripts -->
+    <!-- Standalone All-In-One Scripts -->
   <script>
 // Auto-generated Master Data
 const DASHBOARD_DATA = {
@@ -9198,13 +9527,13 @@ const DASHBOARD_DATA = {
       "philosophy": "NCTM 5대 영역 수리사고력(매파빌) + 유대인 하브루타 논리창의(브파빌)",
       "calculation": 4,
       "thinking": 5,
-      "manipulative": 3,
-      "homeLearning": 4,
+      "manipulative": 4,
+      "homeLearning": 5,
       "cost": 3,
       "costSymbol": "💰💰~💰💰💰",
-      "elementaryLink": 4,
+      "elementaryLink": 5,
       "researchEvidence": 4,
-      "strength": "매파빌 288개 활동(NCTM 5영역) + 브파빌 논리창의 추론 완성"
+      "strength": "브레인 파워빌더스(4세 논리창의 1위) + 매쓰 파워빌더스(NCTM 288활동)"
     }
   ]
 }
@@ -9920,7 +10249,7 @@ const BRAND_AGE_FIT_MATRIX = {
   'playfacto': { 2: 7.5, 3: 7.2, 4: 5.2, 5: 6.0, 6: 7.6, 7: 7.8, 8: 6.8, 9: 5.5 }, // 2~3세 1위, 6~7세 초등 교과 5대 영역 올인원 절대 1위
   'monstermath': { 2: 0.2, 3: 1.0, 4: 3.6, 5: 5.0, 6: 7.2, 7: 7.4, 8: 6.2, 9: 5.0 }, // 6~7세 공간도형 & 아레테 사고력 1위권
   'joymath': { 2: 1.5, 3: 2.8, 4: 5.0, 5: 5.4, 6: 5.8, 7: 6.0, 8: 5.8, 9: 5.2 }, // 4~8세 교과서 수록 필수교구 가성비
-  'orda': { 2: 1.0, 3: 2.2, 4: 4.8, 5: 5.6, 6: 6.0, 7: 6.2, 8: 5.4, 9: 4.8 }, // 4~7세 브레인·매쓰 파워빌더스 & 사랑/창의 보드게임
+  'orda': { 2: 1.0, 3: 2.2, 4: 8.8, 5: 5.6, 6: 6.0, 7: 6.2, 8: 5.4, 9: 4.8 }, // 4세 브레인·매쓰 파워빌더스 유아 사고력 1위
   'kids-schole': { 2: 3.2, 3: 4.5, 4: 9.0, 5: 9.2, 6: 4.8, 7: 4.2, 8: 3.5, 9: 2.5 }, // 4~5세 만지는 수학 1위, 그림책+교구 연계
   'mathtime': { 2: 0.2, 3: 0.8, 4: 2.8, 5: 4.0, 6: 5.4, 7: 6.5, 8: 7.8, 9: 7.6 }, // 7~8세+ 입체도형/전개도/정다면체 1위
   'froebel': { 2: 4.0, 3: 4.2, 4: 3.2, 5: 2.8, 6: 2.0, 7: 1.5, 8: 0.8, 9: 0.5 }, // 2~3세 준은물/감각 탐색
@@ -9991,6 +10320,18 @@ function getManipulativeAgePriority(brandId, age) {
 }
 
 // =========================================================
+// 1-A1-2. 연령별 학습지 사용자 지정 랭킹 우선순위 (Workbook Priority Override)
+// - 만 4세 학습지: 1위 오르다 코리아 (브레인 파워빌더스 & 매쓰 파워빌더스 유아 사고력 특화 1위)
+// =========================================================
+function getWorkbookAgePriority(brandId, age) {
+  const numAge = parseInt(age, 10);
+  if (numAge === 4) {
+    if (brandId === 'orda') return 1;
+  }
+  return 999;
+}
+
+// =========================================================
 // 1-A2. BRAND KEYWORDS (교육철학 및 대표강점 핵심 키워드 사전)
 // =========================================================
 const BRAND_KEYWORDS = {
@@ -10031,8 +10372,8 @@ const BRAND_KEYWORDS = {
     strength: ['#입체 구조 문제 해결력', '#창의 사고력 기하 확장', '#초등·중등 교과 연계']
   },
   'orda': {
-    philosophy: ['#하브루타 논리적 추론', '#창의 사고력 보드게임', '#공간지각력 자석가베'],
-    strength: ['#게임 기반 문제 해결력', '#전략적 규칙성 탐구', '#360도 회전 자석가베']
+    philosophy: ['#하브루타 논리적 추론', '#NCTM 5대 수리탐구', '#브레인·매쓰 파워빌더스'],
+    strength: ['#파워빌더스 지면 사고력 1위', '#조건 추론 문제 해결력', '#4세 맞춤 학습지 1위']
   },
   'froebel': {
     philosophy: ['#점·선·면 공간지각력', '#조형 창의 사고력', '#구체물 감각 조작'],
@@ -10847,14 +11188,34 @@ function renderRecommendations() {
     return;
   }
 
-  // 연령별(만 ${state.selectedAge}세) 발달 단계 및 실제 출시 라인업 적합도 가중 점수 순 정렬 (교구 사용자 지정 우선순위 반영)
+  // 연령별(만 ${state.selectedAge}세) 발달 단계 및 실제 출시 라인업 적합도 가중 점수 순 정렬 (교구 및 학습지 사용자 지정 우선순위 반영)
   filteredBrands.sort((a, b) => {
-    const isManipA = MANIPULATIVE_BRAND_IDS.includes(a.id);
-    const isManipB = MANIPULATIVE_BRAND_IDS.includes(b.id);
-    if (isManipA && isManipB) {
-      const prioA = getManipulativeAgePriority(a.id, state.selectedAge);
-      const prioB = getManipulativeAgePriority(b.id, state.selectedAge);
+    if (state.selectedType === 'workbook') {
+      const prioA = getWorkbookAgePriority(a.id, state.selectedAge);
+      const prioB = getWorkbookAgePriority(b.id, state.selectedAge);
       if (prioA !== prioB) return prioA - prioB;
+    } else if (state.selectedType === 'manipulative') {
+      const isManipA = MANIPULATIVE_BRAND_IDS.includes(a.id);
+      const isManipB = MANIPULATIVE_BRAND_IDS.includes(b.id);
+      if (isManipA && isManipB) {
+        const prioA = getManipulativeAgePriority(a.id, state.selectedAge);
+        const prioB = getManipulativeAgePriority(b.id, state.selectedAge);
+        if (prioA !== prioB) return prioA - prioB;
+      }
+    } else {
+      // 'all' 전체 보기일 때도 교구/학습지 지정 우선순위 반영
+      const isManipA = MANIPULATIVE_BRAND_IDS.includes(a.id);
+      const isManipB = MANIPULATIVE_BRAND_IDS.includes(b.id);
+      if (isManipA && isManipB) {
+        const prioA = getManipulativeAgePriority(a.id, state.selectedAge);
+        const prioB = getManipulativeAgePriority(b.id, state.selectedAge);
+        if (prioA !== prioB) return prioA - prioB;
+      }
+      if (!isManipA && !isManipB) {
+        const prioA = getWorkbookAgePriority(a.id, state.selectedAge);
+        const prioB = getWorkbookAgePriority(b.id, state.selectedAge);
+        if (prioA !== prioB) return prioA - prioB;
+      }
     }
     const scoreA = getAgeAdaptiveScore(a, state.selectedAge);
     const scoreB = getAgeAdaptiveScore(b, state.selectedAge);
@@ -11049,11 +11410,6 @@ function renderRecommendations() {
               </div>
             </div>
 
-            <!-- Mobile Toggle Button -->
-            <button class="mobile-expand-btn" onclick="toggleMobileDetail('${mobileDetailId}', this)">
-              📊 7대 세부 평점 및 비용 보기 ▼
-            </button>
-
             <!-- Collapsible ratings grid -->
             <div id="${mobileDetailId}" class="mobile-stars-container hidden">
               <div class="mobile-stars-grid">
@@ -11088,12 +11444,17 @@ function renderRecommendations() {
               </div>
             </div>
 
-            <div class="mobile-card-footer">
-              <button class="mobile-roadmap-btn" onclick="openRoadmapModal('${b.id}')">
-                🗺️ 로드맵
+            <!-- Balanced 3 Action Buttons on Mobile -->
+            <div class="mobile-card-footer lb-action-cluster" onclick="event.stopPropagation();">
+              <button class="lb-btn lb-btn-roadmap" onclick="openRoadmapModal('${b.id}')" title="학습 로드맵 보기">
+                <span>🗺️ 로드맵</span>
               </button>
-              <button class="matrix-action-btn" style="padding:6px 14px; font-size:0.75rem;" onclick="openBrandModal('${b.id}')">
-                전체 상세 보기 →
+              <button class="lb-btn lb-btn-ratings" onclick="toggleMobileDetail('${mobileDetailId}', this)">
+                <span>평점 보기</span>
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <button class="lb-btn lb-btn-profile" onclick="openBrandModal('${b.id}')">
+                <span>상세 →</span>
               </button>
             </div>
           </div>
@@ -11910,8 +12271,12 @@ function renderWorkbooks() {
     return;
   }
 
-  // 학습지 랭킹: 연령별(만 ${state.selectedAge}세) 발달 단계 및 실제 교재 라인업 적합도 가중 정렬
+  // 학습지 랭킹: 연령별(만 ${state.selectedAge}세) 발달 단계 및 실제 교재 라인업 적합도 가중 정렬 (사용자 지정 랭킹 우선순위 반영)
   filtered.sort((a, b) => {
+    const prioA = getWorkbookAgePriority(a.id, state.selectedAge);
+    const prioB = getWorkbookAgePriority(b.id, state.selectedAge);
+    if (prioA !== prioB) return prioA - prioB;
+
     const scoreA = getAgeAdaptiveScore(a, state.selectedAge);
     const scoreB = getAgeAdaptiveScore(b, state.selectedAge);
     if (scoreB.finalScore !== scoreA.finalScore) {
@@ -12629,7 +12994,9 @@ window.toggleMobileDetail = function(detailId, btn) {
   const isHidden = container.classList.contains('hidden');
   container.classList.toggle('hidden');
   if (btn) {
-    btn.innerHTML = isHidden ? '📊 세부 평점 닫기 ▲' : '📊 7대 세부 평점 및 비용 보기 ▼';
+    btn.innerHTML = isHidden 
+      ? '<span>평점 닫기</span><svg class="chevron-icon" style="transform:rotate(180deg);" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>'
+      : '<span>평점 보기</span><svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>';
     btn.classList.toggle('active', isHidden);
   }
 };
