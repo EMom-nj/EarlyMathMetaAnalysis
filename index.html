@@ -3130,86 +3130,212 @@ button {
   box-shadow: 0 3px 10px rgba(79, 70, 229, 0.3);
 }
 
-/* KPI Stat Cards */
-.meta-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
+/* =========================================================
+   Unified Meta Cockpit & Mobile-First Forest Plot System
+========================================================= */
+
+/* Sync Highlight Pulse Animation */
+@keyframes metaSyncPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+    transform: scale(0.995);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(79, 70, 229, 0);
+    transform: scale(1.002);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+    transform: scale(1);
+  }
 }
 
-.meta-stat-card {
+.meta-sync-pulse {
+  animation: metaSyncPulse 0.45s ease-out;
+}
+
+/* KPI Stat Cards & Live Meta Cockpit */
+.meta-stats-grid {
+  margin-bottom: 20px;
+}
+
+.meta-live-cockpit {
   background: white;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
   padding: 18px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
   position: relative;
   overflow: hidden;
+  transition: all 0.25s ease;
 }
 
-.meta-stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--primary);
+.meta-live-cockpit.cockpit-pos {
+  border-left: 6px solid #4F46E5;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
 }
 
-.meta-stat-card.card-positive::before {
-  background: #10B981;
+.meta-live-cockpit.cockpit-neg {
+  border-left: 6px solid #EF4444;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FEF2F2 100%);
 }
 
-.meta-stat-card.card-warning::before {
-  background: #F59E0B;
+.cockpit-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
 }
 
-.meta-stat-card.card-negative::before {
-  background: #EF4444;
+.cockpit-title-wrap {
+  flex: 1;
+  min-width: 200px;
 }
 
-.meta-stat-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.meta-stat-value {
-  font-size: 1.6rem;
+.cockpit-active-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.74rem;
   font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 4px;
+  color: #4F46E5;
+  background: #EEF2FF;
+  padding: 3px 9px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  border: 1px solid #C7D2FE;
+}
+
+.cockpit-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.3px;
+}
+
+.cockpit-tag {
+  font-size: 0.82rem;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cockpit-kpi-main {
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 8px 18px;
+  text-align: center;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.ck-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #64748B;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.ck-val {
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 1.1;
   letter-spacing: -0.5px;
 }
 
-.meta-stat-sub {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  line-height: 1.4;
+.ck-desc {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #475569;
+  margin-top: 2px;
+}
+
+/* 4 Metrics Row */
+.cockpit-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cm-pill {
+  background: #F1F5F9;
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid #E2E8F0;
+}
+
+.cm-label {
+  font-size: 0.72rem;
+  color: #64748B;
+  font-weight: 700;
+}
+
+.cm-val {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #1E293B;
+}
+
+/* Takeaway Banner */
+.cockpit-finding-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #312E81;
+}
+
+.cockpit-neg .cockpit-finding-banner {
+  background: #FEF2F2;
+  border-color: #FECACA;
+  color: #991B1B;
+}
+
+.cf-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+
+.cf-text {
+  font-weight: 600;
 }
 
 /* Forest Plot Card */
 .meta-forest-card {
   background: white;
-  padding: 24px;
+  padding: 20px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
   margin-bottom: 28px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .meta-forest-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 18px;
-  padding-bottom: 14px;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -3221,53 +3347,495 @@ button {
 }
 
 .meta-forest-header p {
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: var(--text-secondary);
   margin: 0;
+}
+
+.forest-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.forest-view-switcher {
+  display: inline-flex;
+  background: #F1F5F9;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+}
+
+.fvs-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.fvs-btn.active {
+  background: white;
+  color: #4F46E5;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
 .forest-legend {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 0.8rem;
+  gap: 12px;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-secondary);
   background: #F8FAFC;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: var(--radius-full);
 }
 
 .fl-item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
 }
 
 .fl-box {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #2563EB;
+  width: 11px;
+  height: 11px;
+  background: #4F46E5;
   border-radius: 2px;
 }
 
 .fl-diamond {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #DC2626;
+  width: 11px;
+  height: 11px;
+  background: #10B981;
   transform: rotate(45deg);
   border-radius: 1px;
 }
 
+/* Mobile Native Forest Plot Cards */
+.forest-mobile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mf-study-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.mf-study-card:hover {
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-color: #CBD5E1;
+}
+
+.mf-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.mf-study-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.mf-study-num {
+  background: #E2E8F0;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.mf-study-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.3;
+}
+
+.mf-study-meta {
+  font-size: 0.76rem;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+.mf-effect-badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.mf-effect-badge.badge-pos {
+  background: #EEF2FF;
+  color: #4F46E5;
+  border: 1px solid #C7D2FE;
+}
+
+.mf-effect-badge.badge-neg {
+  background: #FEF2F2;
+  color: #EF4444;
+  border: 1px solid #FECACA;
+}
+
+.mf-d-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.mf-d-val {
+  font-size: 0.95rem;
+  font-weight: 900;
+  font-family: monospace;
+}
+
+.mf-ci-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #475569;
+  margin-bottom: 8px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Forest Visual Plot Track */
+.mf-plot-track {
+  position: relative;
+  height: 26px;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.mf-track-zero {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  background: #EF4444;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.mf-track-zero::after {
+  content: '0';
+  position: absolute;
+  top: -12px;
+  left: -4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #EF4444;
+}
+
+.mf-whisker-bar {
+  position: absolute;
+  height: 3px;
+  border-radius: 2px;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mf-cap {
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  background: inherit;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mf-cap.left { left: 0; }
+.mf-cap.right { right: 0; }
+
+.mf-point-marker {
+  position: absolute;
+  top: 50%;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  z-index: 3;
+}
+
+.mf-outcome-tag {
+  font-size: 0.74rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Pooled Effect Card */
+.mf-pooled-card {
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.mf-pooled-card.pooled-pos {
+  background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
+  border: 2px solid #10B981;
+}
+
+.mf-pooled-card.pooled-neg {
+  background: linear-gradient(135deg, #FEF2F2 0%, #FFF1F2 100%);
+  border: 2px solid #EF4444;
+}
+
+.mf-pooled-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.mf-pooled-tag {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #065F46;
+}
+
+.pooled-neg .mf-pooled-tag {
+  color: #991B1B;
+}
+
+.mf-pooled-model {
+  font-size: 0.76rem;
+  color: #047857;
+  margin-top: 2px;
+}
+
+.pooled-neg .mf-pooled-model {
+  color: #B91C1C;
+}
+
+.mf-pooled-val-wrap {
+  text-align: right;
+}
+
+.mf-pooled-d {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #047857;
+  line-height: 1;
+  font-family: monospace;
+}
+
+.pooled-neg .mf-pooled-d {
+  color: #DC2626;
+}
+
+.mf-pooled-sig {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #059669;
+  margin-top: 2px;
+}
+
+.pooled-neg .mf-pooled-sig {
+  color: #B91C1C;
+}
+
+.mf-pooled-track {
+  height: 30px;
+  background: white;
+}
+
+.mf-pooled-whisker {
+  height: 4px;
+}
+
+.mf-diamond-shape {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 1.5px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 4;
+}
+
+/* Axis Ticks & Labels */
+.mf-scale-ticks {
+  position: relative;
+  height: 20px;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.mf-tick-label {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 0.70rem;
+  font-family: monospace;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.mf-tick-label.tick-zero {
+  color: #DC2626;
+  font-weight: 800;
+}
+
+.mf-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748B;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px dashed #CBD5E1;
+}
+
+/* Desktop Full Table Container (With Mobile Overflow Support) */
 .forest-svg-container {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   background: #FAFBFD;
   border-radius: 8px;
   padding: 16px;
   border: 1px solid #EEF2F6;
+}
+
+.forest-svg-container .forest-plot-svg {
+  min-width: 860px;
+}
+
+/* Collapsible Code Accordion */
+.meta-code-accordion {
+  border: 1.5px solid #E2E8F0;
+  border-radius: 14px;
+  background: white;
+  margin-top: 24px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.meta-code-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #F8FAFC;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1E293B;
+  gap: 12px;
+}
+
+.meta-code-summary::-webkit-details-marker {
+  display: none;
+}
+
+.meta-code-summary:hover {
+  background: #F1F5F9;
+}
+
+.mca-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mca-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mca-badge {
+  font-size: 0.74rem;
+  background: #EEF2FF;
+  color: #4F46E5;
+  border: 1px solid #C7D2FE;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.mca-arrow {
+  font-size: 0.75rem;
+  color: #64748B;
+  transition: transform 0.2s ease;
+}
+
+.meta-code-accordion[open] .mca-arrow {
+  transform: rotate(180deg);
+}
+
+.meta-code-accordion .meta-code-window {
+  margin: 0;
+  border-radius: 0;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .cockpit-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .cockpit-kpi-main {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 14px;
+  }
+  .cockpit-metrics-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .cm-pill {
+    padding: 6px 10px;
+  }
+  .forest-header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .forest-legend {
+    display: none;
+  }
 }
 
 /* Python IDE Window */
@@ -5414,56 +5982,81 @@ button {
         <div class="meta-forest-card">
           <div class="meta-forest-header">
             <div>
-              <h4 id="metaForestTitle">🌲 Forest Plot 메타 분석 시각화 프리뷰</h4>
-              <p id="metaForestSubtitle">DerSimonian-Laird 변량 효과 모형(Random-Effects Model) 기반 통합 효과 크기 및 연구별 95% 신뢰구간</p>
+              <h4 id="metaForestTitle">🌲 Forest Plot 메타 분석 시각화</h4>
+              <p id="metaForestSubtitle">DerSimonian-Laird 변량 효과 모형(Random-Effects Model) 기반 통합 효과 크기 및 95% 신뢰구간</p>
             </div>
-            <div class="forest-legend">
-              <span class="fl-item"><span class="fl-box"></span> 개별 연구 가중치 (Box Size ∝ Weight)</span>
-              <span class="fl-item"><span class="fl-diamond"></span> 통합 효과 크기 (Pooled Effect Diamond)</span>
+            <div class="forest-header-controls">
+              <div class="forest-view-switcher">
+                <button class="fvs-btn active" id="fvsBtnMobile" onclick="switchForestView('mobile')">📱 모바일 선명 차트</button>
+                <button class="fvs-btn" id="fvsBtnSvg" onclick="switchForestView('svg')">🖥️ 학술 원본 테이블</button>
+              </div>
+              <div class="forest-legend">
+                <span class="fl-item"><span class="fl-box"></span> 개별 연구 가중치 (Box)</span>
+                <span class="fl-item"><span class="fl-diamond"></span> 통합 효과 (Diamond)</span>
+              </div>
             </div>
           </div>
-          <div class="forest-svg-container" id="forestSvgContainer">
+
+          <!-- Mobile Native Forest Plot View (Default for Mobile) -->
+          <div class="forest-mobile-container" id="forestMobileContainer">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <!-- Desktop / Full Table SVG Container (Scrollable) -->
+          <div class="forest-svg-container" id="forestSvgContainer" style="display: none;">
             <!-- Dynamically rendered SVG Forest Plot -->
           </div>
         </div>
 
-        <!-- Python IDE Code Screen Window -->
-        <div class="meta-code-window">
-          <div class="code-window-header">
-            <div class="code-dots">
-              <span class="code-dot dot-red"></span>
-              <span class="code-dot dot-yellow"></span>
-              <span class="code-dot dot-green"></span>
+        <!-- Python IDE Code Screen Window (Collapsible Accordion) -->
+        <details class="meta-code-accordion" id="metaCodeAccordion">
+          <summary class="meta-code-summary">
+            <div class="mca-left">
+              <span class="mca-icon">💻</span>
+              <span class="mca-title">파이썬 메타분석 재현 파이프라인 코드 & CSV 다운로드</span>
             </div>
-            <div class="code-file-tabs">
-              <button class="code-file-tab active" id="codeTabPython" onclick="switchCodeTab('python')">
-                <span>📄 meta_analysis_pipeline.py</span>
-              </button>
-              <button class="code-file-tab" id="codeTabCsv" onclick="switchCodeTab('csv')">
-                <span>📊 empirical_dataset.csv</span>
-              </button>
+            <div class="mca-right">
+              <span class="mca-badge">Google Colab 100% 호환</span>
+              <span class="mca-arrow">▼</span>
             </div>
-            <div class="code-action-buttons">
-              <button class="code-action-btn" onclick="copyMetaCode()" id="copyCodeBtn" title="클립보드에 파이썬 코드 복사">
-                <span>📋 전체 코드 복사</span>
-              </button>
-              <button class="code-action-btn" onclick="downloadMetaScript()" title="파이썬 .py 파일 다운로드">
-                <span>📥 .py 다운로드</span>
-              </button>
-              <button class="code-action-btn" onclick="downloadMetaCsv()" title="CSV 데이터셋 다운로드">
-                <span>📊 CSV 다운로드</span>
-              </button>
+          </summary>
+          <div class="meta-code-window">
+            <div class="code-window-header">
+              <div class="code-dots">
+                <span class="code-dot dot-red"></span>
+                <span class="code-dot dot-yellow"></span>
+                <span class="code-dot dot-green"></span>
+              </div>
+              <div class="code-file-tabs">
+                <button class="code-file-tab active" id="codeTabPython" onclick="switchCodeTab('python')">
+                  <span>📄 meta_analysis_pipeline.py</span>
+                </button>
+                <button class="code-file-tab" id="codeTabCsv" onclick="switchCodeTab('csv')">
+                  <span>📊 empirical_dataset.csv</span>
+                </button>
+              </div>
+              <div class="code-action-buttons">
+                <button class="code-action-btn" onclick="copyMetaCode()" id="copyCodeBtn" title="클립보드에 파이썬 코드 복사">
+                  <span>📋 전체 코드 복사</span>
+                </button>
+                <button class="code-action-btn" onclick="downloadMetaScript()" title="파이썬 .py 파일 다운로드">
+                  <span>📥 .py 다운로드</span>
+                </button>
+                <button class="code-action-btn" onclick="downloadMetaCsv()" title="CSV 데이터셋 다운로드">
+                  <span>📊 CSV 다운로드</span>
+                </button>
+              </div>
             </div>
-          </div>
 
-          <div class="code-window-body">
-            <pre class="code-pre"><code id="pythonCodeDisplay" class="python-code-content"></code></pre>
-          </div>
+            <div class="code-window-body">
+              <pre class="code-pre"><code id="pythonCodeDisplay" class="python-code-content"></code></pre>
+            </div>
 
-          <div class="code-window-footer">
-            <span>💡 <strong>실행 방법 안내:</strong> Google Colab (<a href="https://colab.research.google.com" target="_blank" rel="noopener" style="color:#60A5FA; text-decoration:underline;">colab.research.google.com</a>) 새 노트북에 위 코드를 붙여넣고 <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Shift + Enter</kbd>를 누르면 즉시 고해상도 Forest Plot PNG가 생성됩니다.</span>
+            <div class="code-window-footer">
+              <span>💡 <strong>실행 방법 안내:</strong> Google Colab (<a href="https://colab.research.google.com" target="_blank" rel="noopener" style="color:#60A5FA; text-decoration:underline;">colab.research.google.com</a>) 새 노트북에 위 코드를 붙여넣고 <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Shift + Enter</kbd>를 누르면 즉시 고해상도 Forest Plot PNG가 생성됩니다.</span>
+            </div>
           </div>
-        </div>
+        </details>
       </section>
 
     </div>
@@ -12098,6 +12691,7 @@ const META_ANALYSIS_DATASETS = {
 
 let currentMetaCategory = 'montessori';
 let currentCodeTab = 'code'; // 'code' | 'dataset' | 'guide'
+let currentForestView = 'mobile'; // 'mobile' | 'svg'
 
 function normalCdf(x) {
   const t = 1 / (1 + 0.2316419 * Math.abs(x));
@@ -12201,6 +12795,31 @@ window.switchMetaCategory = function(catId) {
   if (!META_ANALYSIS_DATASETS[catId]) return;
   currentMetaCategory = catId;
   renderMetaAnalysisLab();
+
+  // Smooth visual feedback pulse on mobile & desktop
+  const cockpit = document.querySelector('.meta-live-cockpit');
+  const forestCard = document.querySelector('.meta-forest-card');
+  [cockpit, forestCard].forEach(el => {
+    if (el) {
+      el.classList.remove('meta-sync-pulse');
+      void el.offsetWidth;
+      el.classList.add('meta-sync-pulse');
+    }
+  });
+};
+
+window.switchForestView = function(view) {
+  currentForestView = view;
+  const btnMobile = document.getElementById('fvsBtnMobile');
+  const btnSvg = document.getElementById('fvsBtnSvg');
+  const mobContainer = document.getElementById('forestMobileContainer');
+  const svgContainer = document.getElementById('forestSvgContainer');
+
+  if (btnMobile) btnMobile.classList.toggle('active', view === 'mobile');
+  if (btnSvg) btnSvg.classList.toggle('active', view === 'svg');
+
+  if (mobContainer) mobContainer.style.display = view === 'mobile' ? 'flex' : 'none';
+  if (svgContainer) svgContainer.style.display = view === 'svg' ? 'block' : 'none';
 };
 
 window.switchCodeTab = function(tab) {
@@ -12224,169 +12843,290 @@ function renderMetaStatsCards(stats, dataset) {
 
   const dSign = stats.dRE >= 0 ? '+' : '';
   const isPositive = stats.dRE >= 0;
-  const dColor = isPositive ? 'var(--primary, #6366f1)' : '#ef4444';
+  const dColor = isPositive ? '#4F46E5' : '#EF4444';
   const effectInterpretation = Math.abs(stats.dRE) >= 0.8 ? '매우 큰 효과' :
                               Math.abs(stats.dRE) >= 0.5 ? '중간 이상 효과' :
                               Math.abs(stats.dRE) >= 0.2 ? '작은 효과' : '미미한 효과';
 
   const pFormatted = stats.pValue < 0.0001 ? '< 0.0001 (***)' : stats.pValue.toFixed(4);
+  const takeaway = dataset.claim || '실증 연구 메타 분석 결과입니다.';
 
-  container.innerHTML = 
-    '<div class="meta-stat-card">' +
-      '<div class="meta-stat-header">' +
-        '<span class="meta-stat-icon">📈</span>' +
-        '<span class="meta-stat-title">통합 효과 크기 (Pooled Cohen\'s d)</span>' +
-      '</div>' +
-      '<div class="meta-stat-val" style="color: ' + dColor + ';">' + dSign + stats.dRE.toFixed(3) + '</div>' +
-      '<div class="meta-stat-sub">95% 신뢰구간: [' + stats.ciLowRE.toFixed(3) + ', ' + stats.ciHighRE.toFixed(3) + '] (' + effectInterpretation + ')</div>' +
-    '</div>' +
-    '<div class="meta-stat-card">' +
-      '<div class="meta-stat-header">' +
-        '<span class="meta-stat-icon">🔬</span>' +
-        '<span class="meta-stat-title">통계적 유의성 (Z-score & p-value)</span>' +
-      '</div>' +
-      '<div class="meta-stat-val" style="color: #10b981;">Z = ' + stats.zScore.toFixed(2) + '</div>' +
-      '<div class="meta-stat-sub">p-value: ' + pFormatted + ' (신뢰수준 99.9%)</div>' +
-    '</div>' +
-    '<div class="meta-stat-card">' +
-      '<div class="meta-stat-header">' +
-        '<span class="meta-stat-icon">🧬</span>' +
-        '<span class="meta-stat-title">이질성 검정 (Higgins I² & Cochran Q)</span>' +
-      '</div>' +
-      '<div class="meta-stat-val" style="color: #8b5cf6;">I² = ' + stats.I2.toFixed(1) + '%</div>' +
-      '<div class="meta-stat-sub">Q = ' + stats.Q.toFixed(2) + ' (df=' + stats.df + ', Tau²=' + stats.tau2.toFixed(3) + ')</div>' +
-    '</div>' +
-    '<div class="meta-stat-card">' +
-      '<div class="meta-stat-header">' +
-        '<span class="meta-stat-icon">👥</span>' +
-        '<span class="meta-stat-title">분석 대상 표본 (Sample Size & Studies)</span>' +
-      '</div>' +
-      '<div class="meta-stat-val" style="color: #f59e0b;">' + stats.totalN.toLocaleString() + ' 명</div>' +
-      '<div class="meta-stat-sub">Science, APA 등 엄선된 공인 연구 k = ' + stats.k + ' 편</div>' +
-    '</div>';
+  container.innerHTML = `
+    <!-- High-Impact Live Meta Cockpit -->
+    <div class="meta-live-cockpit ${isPositive ? 'cockpit-pos' : 'cockpit-neg'}">
+      <div class="cockpit-top">
+        <div class="cockpit-title-wrap">
+          <span class="cockpit-active-badge">🎯 실시간 분석 중</span>
+          <h3 class="cockpit-heading">${dataset.name}</h3>
+          <p class="cockpit-tag">${dataset.tag || ''}</p>
+        </div>
+        <div class="cockpit-kpi-main" style="border-color: ${dColor};">
+          <span class="ck-label">통합 효과 크기 (d)</span>
+          <span class="ck-val" style="color: ${dColor};">${dSign}${stats.dRE.toFixed(3)}</span>
+          <span class="ck-desc">${effectInterpretation}</span>
+        </div>
+      </div>
+
+      <!-- 4 Compact Stat Pills -->
+      <div class="cockpit-metrics-row">
+        <div class="cm-pill">
+          <span class="cm-label">95% 신뢰구간</span>
+          <span class="cm-val">[${stats.ciLowRE.toFixed(2)}, ${stats.ciHighRE.toFixed(2)}]</span>
+        </div>
+        <div class="cm-pill">
+          <span class="cm-label">통계적 유의성</span>
+          <span class="cm-val" style="color:#10B981;">p ${pFormatted} (Z=${stats.zScore.toFixed(1)})</span>
+        </div>
+        <div class="cm-pill">
+          <span class="cm-label">이질성 (I²)</span>
+          <span class="cm-val">${stats.I2.toFixed(1)}% (Q=${stats.Q.toFixed(1)})</span>
+        </div>
+        <div class="cm-pill">
+          <span class="cm-label">분석 대상 표본</span>
+          <span class="cm-val" style="color:#F59E0B;">${stats.totalN.toLocaleString()}명 (${stats.k}편 RCT)</span>
+        </div>
+      </div>
+
+      <!-- 1-Line Core Finding -->
+      <div class="cockpit-finding-banner">
+        <span class="cf-icon">${isPositive ? '💡' : '⚠️'}</span>
+        <span class="cf-text">${takeaway}</span>
+      </div>
+    </div>
+  `;
 }
 
 function renderMetaForestPlot(stats, dataset) {
-  const container = document.getElementById('forestSvgContainer');
-  if (!container) return;
+  const mobContainer = document.getElementById('forestMobileContainer');
+  const svgContainer = document.getElementById('forestSvgContainer');
+  if (!mobContainer && !svgContainer) return;
 
   const studies = stats.studies;
   const k = studies.length;
 
-  // Layout parameters
-  const rowHeight = 36;
-  const headerHeight = 40;
-  const diamondRowHeight = 48;
-  const footerHeight = 45;
-  const totalHeight = headerHeight + (k * rowHeight) + diamondRowHeight + footerHeight;
-  const totalWidth = 960;
-
-  // Column X coordinates
-  const colStudyX = 18;
-  const colJournalX = 260;
-  const plotStartX = 420;
-  const plotEndX = 770;
-  const plotWidth = plotEndX - plotStartX;
-  const colEffectX = 810;
-  const colWeightX = 910;
-
-  // Scale: determine min and max d for the axis
+  // Scale bounds calculation
   let minD = Math.min(-0.8, Math.min.apply(null, studies.map(s => s.ciLow)), stats.ciLowRE);
   let maxD = Math.max(1.0, Math.max.apply(null, studies.map(s => s.ciHigh)), stats.ciHighRE);
-  minD = Math.floor((minD - 0.15) * 10) / 10;
-  maxD = Math.ceil((maxD + 0.15) * 10) / 10;
+  minD = Math.floor((minD - 0.12) * 10) / 10;
+  maxD = Math.ceil((maxD + 0.12) * 10) / 10;
+  const range = maxD - minD;
 
-  function dToX(dVal) {
-    const ratio = (dVal - minD) / (maxD - minD);
-    return plotStartX + (ratio * plotWidth);
+  function dToPct(dVal) {
+    return Math.max(0, Math.min(100, ((dVal - minD) / range) * 100));
   }
 
-  const zeroX = dToX(0);
+  const zeroPct = dToPct(0);
+  const pooledColor = stats.dRE >= 0 ? '#10B981' : '#EF4444';
 
-  // SVG Elements
-  let rowsSvg = '';
-  studies.forEach((s, idx) => {
-    const y = headerHeight + (idx * rowHeight) + (rowHeight / 2);
-    const xLow = dToX(s.ciLow);
-    const xHigh = dToX(s.ciHigh);
-    const xPoint = dToX(s.d);
+  // 1. Render Mobile-Optimized Native Cards View
+  if (mobContainer) {
+    const mobileRowsHtml = studies.map((s, idx) => {
+      const isPos = s.d >= 0;
+      const itemColor = isPos ? '#4F46E5' : '#EF4444';
+      const lowPct = dToPct(s.ciLow);
+      const highPct = dToPct(s.ciHigh);
+      const pointPct = dToPct(s.d);
+      const barWidthPct = Math.max(2.5, highPct - lowPct);
+      const boxSize = Math.max(10, Math.min(18, 8 + (s.pctWeight / 100) * 18));
 
-    // Box size proportional to weight (min 6px, max 14px)
-    const boxSize = Math.max(6, Math.min(14, 5 + (s.pctWeight / 100) * 16));
-    const boxHalf = boxSize / 2;
-    const isPositive = s.d >= 0;
-    const itemColor = isPositive ? '#6366f1' : '#ef4444';
+      return `
+        <div class="mf-study-card">
+          <div class="mf-card-top">
+            <div class="mf-study-info">
+              <span class="mf-study-num">${idx + 1}</span>
+              <div>
+                <div class="mf-study-name">${s.study}</div>
+                <div class="mf-study-meta">${s.journal} (${s.year}) · <strong>표본 N=${s.sampleSize.toLocaleString()}명</strong></div>
+              </div>
+            </div>
+            <div class="mf-effect-badge ${isPos ? 'badge-pos' : 'badge-neg'}">
+              <span class="mf-d-label">Cohen's d</span>
+              <span class="mf-d-val">${s.d >= 0 ? '+' : ''}${s.d.toFixed(2)}</span>
+            </div>
+          </div>
 
-    rowsSvg += 
-      '<g class="forest-study-row">' +
-        '<rect x="0" y="' + (headerHeight + (idx * rowHeight)) + '" width="' + totalWidth + '" height="' + rowHeight + '" fill="' + (idx % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent') + '" />' +
-        '<text x="' + colStudyX + '" y="' + (y + 4) + '" fill="#f8fafc" font-size="12.5" font-weight="600">' + s.study + '</text>' +
-        '<text x="' + colJournalX + '" y="' + (y + 4) + '" fill="#94a3b8" font-size="11.5">' + s.journal + ' (N=' + s.sampleSize + ')</text>' +
-        '<line x1="' + xLow + '" y1="' + y + '" x2="' + xHigh + '" y2="' + y + '" stroke="' + itemColor + '" stroke-width="2" stroke-linecap="round" />' +
-        '<line x1="' + xLow + '" y1="' + (y - 4) + '" x2="' + xLow + '" y2="' + (y + 4) + '" stroke="' + itemColor + '" stroke-width="1.5" />' +
-        '<line x1="' + xHigh + '" y1="' + (y - 4) + '" x2="' + xHigh + '" y2="' + (y + 4) + '" stroke="' + itemColor + '" stroke-width="1.5" />' +
-        '<rect x="' + (xPoint - boxHalf) + '" y="' + (y - boxHalf) + '" width="' + boxSize + '" height="' + boxSize + '" fill="' + itemColor + '" rx="1.5">' +
-          '<title>' + s.study + ': d = ' + s.d.toFixed(2) + ' [95% CI: ' + s.ciLow.toFixed(2) + ', ' + s.ciHigh.toFixed(2) + '], 가중치 ' + s.pctWeight.toFixed(1) + '%</title>' +
-        '</rect>' +
-        '<text x="' + colEffectX + '" y="' + (y + 4) + '" fill="#e2e8f0" font-size="12" font-family="monospace">' + (s.d >= 0 ? '+' : '') + s.d.toFixed(2) + ' [' + s.ciLow.toFixed(2) + ', ' + s.ciHigh.toFixed(2) + ']</text>' +
-        '<text x="' + colWeightX + '" y="' + (y + 4) + '" fill="#cbd5e1" font-size="12" font-family="monospace" text-anchor="end">' + s.pctWeight.toFixed(1) + '%</text>' +
-      '</g>';
-  });
+          <div class="mf-ci-preview">
+            <span>95% 신뢰구간: <strong>[${s.ciLow.toFixed(2)}, ${s.ciHigh.toFixed(2)}]</strong></span>
+            <span>연구 가중치: <strong>${s.pctWeight.toFixed(1)}%</strong></span>
+          </div>
 
-  // Diamond for Pooled Effect
-  const diamondY = headerHeight + (k * rowHeight) + (diamondRowHeight / 2);
-  const diaXCenter = dToX(stats.dRE);
-  const diaXLeft = dToX(stats.ciLowRE);
-  const diaXRight = dToX(stats.ciHighRE);
-  const diaHalfH = 8;
-  const diamondColor = stats.dRE >= 0 ? '#10b981' : '#ef4444';
+          <!-- Forest Plot Bar -->
+          <div class="mf-plot-track">
+            <div class="mf-track-zero" style="left: ${zeroPct}%;"></div>
+            <div class="mf-whisker-bar" style="left: ${lowPct}%; width: ${barWidthPct}%; background: ${itemColor};">
+              <span class="mf-cap left"></span>
+              <span class="mf-cap right"></span>
+            </div>
+            <div class="mf-point-marker" style="left: ${pointPct}%; width: ${boxSize}px; height: ${boxSize}px; background: ${itemColor}; margin-left: -${boxSize/2}px; margin-top: -${boxSize/2}px;" title="d = ${s.d.toFixed(2)}"></div>
+          </div>
 
-  const diamondPoints = diaXLeft + ',' + diamondY + ' ' + diaXCenter + ',' + (diamondY - diaHalfH) + ' ' + diaXRight + ',' + diamondY + ' ' + diaXCenter + ',' + (diamondY + diaHalfH);
+          <div class="mf-outcome-tag">
+            <span class="mf-outcome-icon">🎯</span>
+            <span>측정 성과: ${s.outcome}</span>
+          </div>
+        </div>
+      `;
+    }).join('');
 
-  // X Axis Ticks
-  const ticks = [];
-  const step = (maxD - minD) <= 2.0 ? 0.2 : 0.5;
-  for (let val = Math.ceil(minD / step) * step; val <= maxD; val += step) {
-    const fixedVal = parseFloat(val.toFixed(2));
-    ticks.push({ val: fixedVal, x: dToX(fixedVal) });
+    // Scale Ticks for Mobile View
+    const tickVals = [];
+    const step = range <= 2.0 ? 0.4 : 0.6;
+    for (let v = Math.ceil(minD / step) * step; v <= maxD; v += step) {
+      tickVals.push(parseFloat(v.toFixed(1)));
+    }
+    if (!tickVals.includes(0)) tickVals.push(0);
+    tickVals.sort((a,b) => a - b);
+
+    const pooledLowPct = dToPct(stats.ciLowRE);
+    const pooledHighPct = dToPct(stats.ciHighRE);
+    const pooledPointPct = dToPct(stats.dRE);
+    const pooledWidthPct = Math.max(3, pooledHighPct - pooledLowPct);
+
+    const mobilePooledCardHtml = `
+      <div class="mf-pooled-card ${stats.dRE >= 0 ? 'pooled-pos' : 'pooled-neg'}">
+        <div class="mf-pooled-header">
+          <div>
+            <span class="mf-pooled-tag">🏆 종합 메타분석 추정치 (Pooled Effect)</span>
+            <div class="mf-pooled-model">DerSimonian-Laird 임의 효과 모형 (k = ${k}편 종합)</div>
+          </div>
+          <div class="mf-pooled-val-wrap">
+            <div class="mf-pooled-d">${stats.dRE >= 0 ? '+' : ''}${stats.dRE.toFixed(3)}</div>
+            <div class="mf-pooled-sig">${stats.pValue < 0.0001 ? 'p < 0.0001 (***)' : `p = ${stats.pValue.toFixed(4)}`}</div>
+          </div>
+        </div>
+
+        <div class="mf-ci-preview" style="margin-bottom: 12px;">
+          <span>95% 신뢰구간: <strong>[${stats.ciLowRE.toFixed(3)}, ${stats.ciHighRE.toFixed(3)}]</strong></span>
+          <span>Z-값: <strong>Z = ${stats.zScore.toFixed(2)}</strong></span>
+          <span>이질성: <strong>I² = ${stats.I2.toFixed(1)}%</strong></span>
+        </div>
+
+        <!-- Pooled Diamond Bar -->
+        <div class="mf-plot-track mf-pooled-track">
+          <div class="mf-track-zero" style="left: ${zeroPct}%;"></div>
+          <div class="mf-whisker-bar mf-pooled-whisker" style="left: ${pooledLowPct}%; width: ${pooledWidthPct}%; background: ${pooledColor};"></div>
+          <div class="mf-diamond-shape" style="left: ${pooledPointPct}%; background: ${pooledColor};"></div>
+        </div>
+
+        <!-- Scale Ticks -->
+        <div class="mf-scale-ticks">
+          ${tickVals.map(t => `<span class="mf-tick-label ${t === 0 ? 'tick-zero' : ''}" style="left: ${dToPct(t)}%;">${t >= 0 ? '+' : ''}${t.toFixed(1)}</span>`).join('')}
+        </div>
+        <div class="mf-scale-labels">
+          <span>◀ 대조군/기계식 드릴 우세</span>
+          <span>실물 교구 조작군 우세 ▶</span>
+        </div>
+      </div>
+    `;
+
+    mobContainer.innerHTML = mobileRowsHtml + mobilePooledCardHtml;
+    mobContainer.style.display = currentForestView === 'mobile' ? 'flex' : 'none';
   }
 
-  const axisY = headerHeight + (k * rowHeight) + diamondRowHeight + 5;
-  let axisSvg = '<line x1="' + plotStartX + '" y1="' + axisY + '" x2="' + plotEndX + '" y2="' + axisY + '" stroke="#475569" stroke-width="1.5" />';
+  // 2. Render Full Academic SVG (for Desktop or Panning)
+  if (svgContainer) {
+    const rowHeight = 36;
+    const headerHeight = 40;
+    const diamondRowHeight = 48;
+    const footerHeight = 45;
+    const totalHeight = headerHeight + (k * rowHeight) + diamondRowHeight + footerHeight;
+    const totalWidth = 960;
 
-  ticks.forEach(t => {
-    axisSvg += 
-      '<line x1="' + t.x + '" y1="' + axisY + '" x2="' + t.x + '" y2="' + (axisY + 5) + '" stroke="#475569" stroke-width="1.5" />' +
-      '<text x="' + t.x + '" y="' + (axisY + 18) + '" fill="#94a3b8" font-size="10.5" font-family="monospace" text-anchor="middle">' + t.val.toFixed(1) + '</text>';
-  });
+    const colStudyX = 18;
+    const colJournalX = 260;
+    const plotStartX = 420;
+    const plotEndX = 770;
+    const plotWidth = plotEndX - plotStartX;
+    const colEffectX = 810;
+    const colWeightX = 910;
 
-  const svgHtml = 
-    '<svg viewBox="0 0 ' + totalWidth + ' ' + totalHeight + '" class="forest-plot-svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;">' +
-      '<rect x="0" y="0" width="' + totalWidth + '" height="' + totalHeight + '" fill="#0f172a" rx="10" />' +
-      '<rect x="0" y="0" width="' + totalWidth + '" height="' + headerHeight + '" fill="#1e293b" />' +
-      '<text x="' + colStudyX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700">연구 논문 (Study / Authors)</text>' +
-      '<text x="' + colJournalX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700">게재 학술지 (Journal)</text>' +
-      '<text x="' + (plotStartX + plotWidth / 2) + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700" text-anchor="middle">효과 크기 산점도 (Cohen\'s d with 95% CI)</text>' +
-      '<text x="' + colEffectX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700">Cohen\'s d [95% CI]</text>' +
-      '<text x="' + colWeightX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700" text-anchor="end">가중치(%)</text>' +
-      '<line x1="0" y1="' + headerHeight + '" x2="' + totalWidth + '" y2="' + headerHeight + '" stroke="#334155" stroke-width="1.5" />' +
-      '<line x1="' + zeroX + '" y1="' + headerHeight + '" x2="' + zeroX + '" y2="' + axisY + '" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.8" />' +
-      rowsSvg +
-      '<line x1="15" y1="' + (headerHeight + (k * rowHeight)) + '" x2="' + (totalWidth - 15) + '" y2="' + (headerHeight + (k * rowHeight)) + '" stroke="#334155" stroke-width="1" />' +
-      '<rect x="0" y="' + (headerHeight + (k * rowHeight)) + '" width="' + totalWidth + '" height="' + diamondRowHeight + '" fill="rgba(16, 185, 129, 0.05)" />' +
-      '<text x="' + colStudyX + '" y="' + (diamondY + 4) + '" fill="#10b981" font-size="13" font-weight="800">통합 임의 효과 추정치 (Pooled RE)</text>' +
-      '<text x="' + colJournalX + '" y="' + (diamondY + 4) + '" fill="#34d399" font-size="11.5" font-weight="600">DerSimonian-Laird Model</text>' +
-      '<polygon points="' + diamondPoints + '" fill="' + diamondColor + '" opacity="0.95" stroke="#ffffff" stroke-width="1">' +
-        '<title>통합 효과 크기: d = ' + stats.dRE.toFixed(3) + ' [95% CI: ' + stats.ciLowRE.toFixed(3) + ', ' + stats.ciHighRE.toFixed(3) + ']</title>' +
-      '</polygon>' +
-      '<text x="' + colEffectX + '" y="' + (diamondY + 4) + '" fill="#34d399" font-size="13" font-weight="700" font-family="monospace">' + (stats.dRE >= 0 ? '+' : '') + stats.dRE.toFixed(3) + ' [' + stats.ciLowRE.toFixed(2) + ', ' + stats.ciHighRE.toFixed(2) + ']</text>' +
-      '<text x="' + colWeightX + '" y="' + (diamondY + 4) + '" fill="#34d399" font-size="13" font-weight="700" font-family="monospace" text-anchor="end">100.0%</text>' +
-      axisSvg +
-      '<text x="' + plotStartX + '" y="' + (axisY + 34) + '" fill="#94a3b8" font-size="10.5" text-anchor="start">◀ 대조군(기존/드릴) 우세</text>' +
-      '<text x="' + plotEndX + '" y="' + (axisY + 34) + '" fill="#94a3b8" font-size="10.5" text-anchor="end">실물 교구 조작군 우세 ▶</text>' +
-    '</svg>';
+    function dToX(dVal) {
+      const ratio = (dVal - minD) / range;
+      return plotStartX + (ratio * plotWidth);
+    }
 
-  container.innerHTML = svgHtml;
+    const svgZeroX = dToX(0);
+
+    let rowsSvg = '';
+    studies.forEach((s, idx) => {
+      const y = headerHeight + (idx * rowHeight) + (rowHeight / 2);
+      const xLow = dToX(s.ciLow);
+      const xHigh = dToX(s.ciHigh);
+      const xPoint = dToX(s.d);
+      const boxSize = Math.max(6, Math.min(14, 5 + (s.pctWeight / 100) * 16));
+      const boxHalf = boxSize / 2;
+      const isPositive = s.d >= 0;
+      const itemColor = isPositive ? '#6366F1' : '#EF4444';
+
+      rowsSvg += 
+        '<g class="forest-study-row">' +
+          '<rect x="0" y="' + (headerHeight + (idx * rowHeight)) + '" width="' + totalWidth + '" height="' + rowHeight + '" fill="' + (idx % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent') + '" />' +
+          '<text x="' + colStudyX + '" y="' + (y + 4) + '" fill="#f8fafc" font-size="12.5" font-weight="600">' + s.study + '</text>' +
+          '<text x="' + colJournalX + '" y="' + (y + 4) + '" fill="#94a3b8" font-size="11.5">' + s.journal + ' (N=' + s.sampleSize + ')</text>' +
+          '<line x1="' + xLow + '" y1="' + y + '" x2="' + xHigh + '" y2="' + y + '" stroke="' + itemColor + '" stroke-width="2" stroke-linecap="round" />' +
+          '<line x1="' + xLow + '" y1="' + (y - 4) + '" x2="' + xLow + '" y2="' + (y + 4) + '" stroke="' + itemColor + '" stroke-width="1.5" />' +
+          '<line x1="' + xHigh + '" y1="' + (y - 4) + '" x2="' + xHigh + '" y2="' + (y + 4) + '" stroke="' + itemColor + '" stroke-width="1.5" />' +
+          '<rect x="' + (xPoint - boxHalf) + '" y="' + (y - boxHalf) + '" width="' + boxSize + '" height="' + boxSize + '" fill="' + itemColor + '" rx="1.5">' +
+            '<title>' + s.study + ': d = ' + s.d.toFixed(2) + ' [95% CI: ' + s.ciLow.toFixed(2) + ', ' + s.ciHigh.toFixed(2) + '], 가중치 ' + s.pctWeight.toFixed(1) + '%</title>' +
+          '</rect>' +
+          '<text x="' + colEffectX + '" y="' + (y + 4) + '" fill="#e2e8f0" font-size="12" font-family="monospace">' + (s.d >= 0 ? '+' : '') + s.d.toFixed(2) + ' [' + s.ciLow.toFixed(2) + ', ' + s.ciHigh.toFixed(2) + ']</text>' +
+          '<text x="' + colWeightX + '" y="' + (y + 4) + '" fill="#cbd5e1" font-size="12" font-family="monospace" text-anchor="end">' + s.pctWeight.toFixed(1) + '%</text>' +
+        '</g>';
+    });
+
+    const diamondY = headerHeight + (k * rowHeight) + (diamondRowHeight / 2);
+    const diaXCenter = dToX(stats.dRE);
+    const diaXLeft = dToX(stats.ciLowRE);
+    const diaXRight = dToX(stats.ciHighRE);
+    const diaHalfH = 8;
+    const diamondColor = stats.dRE >= 0 ? '#10B981' : '#EF4444';
+    const diamondPoints = diaXLeft + ',' + diamondY + ' ' + diaXCenter + ',' + (diamondY - diaHalfH) + ' ' + diaXRight + ',' + diamondY + ' ' + diaXCenter + ',' + (diamondY + diaHalfH);
+
+    const svgTicks = [];
+    const svgStep = (maxD - minD) <= 2.0 ? 0.2 : 0.5;
+    for (let val = Math.ceil(minD / svgStep) * svgStep; val <= maxD; val += svgStep) {
+      const fixedVal = parseFloat(val.toFixed(2));
+      svgTicks.push({ val: fixedVal, x: dToX(fixedVal) });
+    }
+
+    const axisY = headerHeight + (k * rowHeight) + diamondRowHeight + 5;
+    let axisSvg = '<line x1="' + plotStartX + '" y1="' + axisY + '" x2="' + plotEndX + '" y2="' + axisY + '" stroke="#475569" stroke-width="1.5" />';
+
+    svgTicks.forEach(t => {
+      axisSvg += 
+        '<line x1="' + t.x + '" y1="' + axisY + '" x2="' + t.x + '" y2="' + (axisY + 5) + '" stroke="#475569" stroke-width="1.5" />' +
+        '<text x="' + t.x + '" y="' + (axisY + 18) + '" fill="#94a3b8" font-size="10.5" font-family="monospace" text-anchor="middle">' + t.val.toFixed(1) + '</text>';
+    });
+
+    const svgHtml = 
+      '<svg viewBox="0 0 ' + totalWidth + ' ' + totalHeight + '" class="forest-plot-svg" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;">' +
+        '<rect x="0" y="0" width="' + totalWidth + '" height="' + totalHeight + '" fill="#0f172a" rx="10" />' +
+        '<rect x="0" y="0" width="' + totalWidth + '" height="' + headerHeight + '" fill="#1e293b" />' +
+        '<text x="' + colStudyX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700">연구 논문 (Study / Authors)</text>' +
+        '<text x="' + colJournalX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700">게재 학술지 (Journal)</text>' +
+        '<text x="' + (plotStartX + plotWidth / 2) + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700" text-anchor="middle">효과 크기 산점도 (Cohen\'s d with 95% CI)</text>' +
+        '<text x="' + colEffectX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700">Cohen\'s d [95% CI]</text>' +
+        '<text x="' + colWeightX + '" y="25" fill="#e2e8f0" font-size="12.5" font-weight="700" text-anchor="end">가중치(%)</text>' +
+        '<line x1="0" y1="' + headerHeight + '" x2="' + totalWidth + '" y2="' + headerHeight + '" stroke="#334155" stroke-width="1.5" />' +
+        '<line x1="' + svgZeroX + '" y1="' + headerHeight + '" x2="' + svgZeroX + '" y2="' + axisY + '" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.8" />' +
+        rowsSvg +
+        '<line x1="15" y1="' + (headerHeight + (k * rowHeight)) + '" x2="' + (totalWidth - 15) + '" y2="' + (headerHeight + (k * rowHeight)) + '" stroke="#334155" stroke-width="1" />' +
+        '<rect x="0" y="' + (headerHeight + (k * rowHeight)) + '" width="' + totalWidth + '" height="' + diamondRowHeight + '" fill="rgba(16, 185, 129, 0.05)" />' +
+        '<text x="' + colStudyX + '" y="' + (diamondY + 4) + '" fill="#10b981" font-size="13" font-weight="800">통합 임의 효과 추정치 (Pooled RE)</text>' +
+        '<text x="' + colJournalX + '" y="' + (diamondY + 4) + '" fill="#34d399" font-size="11.5" font-weight="600">DerSimonian-Laird Model</text>' +
+        '<polygon points="' + diamondPoints + '" fill="' + diamondColor + '" opacity="0.95" stroke="#ffffff" stroke-width="1">' +
+          '<title>통합 효과 크기: d = ' + stats.dRE.toFixed(3) + ' [95% CI: ' + stats.ciLowRE.toFixed(3) + ', ' + stats.ciHighRE.toFixed(3) + ']</title>' +
+        '</polygon>' +
+        '<text x="' + colEffectX + '" y="' + (diamondY + 4) + '" fill="#34d399" font-size="13" font-weight="700" font-family="monospace">' + (stats.dRE >= 0 ? '+' : '') + stats.dRE.toFixed(3) + ' [' + stats.ciLowRE.toFixed(2) + ', ' + stats.ciHighRE.toFixed(2) + ']</text>' +
+        '<text x="' + colWeightX + '" y="' + (diamondY + 4) + '" fill="#34d399" font-size="13" font-weight="700" font-family="monospace" text-anchor="end">100.0%</text>' +
+        axisSvg +
+        '<text x="' + plotStartX + '" y="' + (axisY + 34) + '" fill="#94a3b8" font-size="10.5" text-anchor="start">◀ 대조군(기존/드릴) 우세</text>' +
+        '<text x="' + plotEndX + '" y="' + (axisY + 34) + '" fill="#94a3b8" font-size="10.5" text-anchor="end">실물 교구 조작군 우세 ▶</text>' +
+      '</svg>';
+
+    svgContainer.innerHTML = svgHtml;
+    svgContainer.style.display = currentForestView === 'svg' ? 'block' : 'none';
+  }
 }
 
 function generatePythonScript(dataset, stats) {
