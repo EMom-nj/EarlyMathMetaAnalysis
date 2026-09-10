@@ -8831,7 +8831,7 @@ const DASHBOARD_DATA = {
       "name": "플레이팩토",
       "philosophy": "수 개념 직관화 + 초등 교과 5대 영역 올라운더 연계 및 논리적 추론",
       "calculation": 4,
-      "thinking": 4,
+      "thinking": 5,
       "manipulative": 5,
       "homeLearning": 4,
       "cost": 3,
@@ -8886,7 +8886,7 @@ const DASHBOARD_DATA = {
       "id": "bluerabbit",
       "name": "블루래빗 (토이북/원목교구)",
       "philosophy": "토끼펜(소리펜) 오감각 청각 자극 + 친환경 원목 셈틀로 수 개념 직관화",
-      "calculation": 3,
+      "calculation": 4,
       "thinking": 3,
       "manipulative": 5,
       "homeLearning": 5,
@@ -8914,14 +8914,14 @@ const DASHBOARD_DATA = {
       "id": "kids-schole",
       "name": "키즈스콜레 (만지는수학/루크)",
       "philosophy": "감각 구체물 조작 놀이로 수 개념 직관화 + 독일식 자가점검(LUK) 창의 사고력",
-      "calculation": 3,
-      "thinking": 4,
+      "calculation": 4,
+      "thinking": 5,
       "manipulative": 5,
       "homeLearning": 4,
       "cost": 4,
       "costSymbol": "💰💰💰💰",
       "elementaryLink": 4,
-      "researchEvidence": 3,
+      "researchEvidence": 4,
       "strength": "독일 LUK 자가점검 문제 해결력, 기초 연산 유창성 형성, 100일 독서 부모 가이드북"
     },
     {
@@ -9007,20 +9007,20 @@ const DASHBOARD_DATA = {
       "cost": 1,
       "costSymbol": "💰",
       "elementaryLink": 5,
-      "researchEvidence": 4,
+      "researchEvidence": 5,
       "strength": "원리셈(600만부 돌파), 엄마표 최적화, 저자 무료 가이드 (학습지 1위)"
     },
     {
       "id": "soma",
       "name": "소마 (SOMA / 소마셈)",
       "philosophy": "대치동식 교과 사고력 + 수 감각 퍼즐 연산(소마셈)",
-      "calculation": 4,
-      "thinking": 4,
+      "calculation": 5,
+      "thinking": 5,
       "manipulative": 3,
-      "homeLearning": 2,
+      "homeLearning": 4,
       "cost": 3,
       "costSymbol": "💰💰💰",
-      "elementaryLink": 4,
+      "elementaryLink": 5,
       "researchEvidence": 4,
       "strength": "소마셈(사고력 연산 1위), 대치동식 체계적 사고력"
     },
@@ -9898,9 +9898,10 @@ function getStarMatrixForBrand(brand) {
   result.elementaryLink = e;
   result.researchEvidence = r;
   result.totalScore = c + t + m + h + e + r;
-  // 학술 연구 검증 점수(r)에 높은 가중치(1.5배) 부여한 객관적 가중 점수 산출
+  // 학술 연구 검증 점수(r)에 높은 가중치(1.5배) 부여한 객관적 가중 점수 산출 (만점 32.5점)
   result.weightedScore = Number((c + t + m + h + e + (r * 1.5)).toFixed(1));
-  result.avgScore = (result.totalScore / 6).toFixed(1);
+  // 순위(Rank)와 별점의 완전 일치를 위해 가중치 총합(6.5) 기준 종합 평점 산출 (만점 5.0)
+  result.avgScore = (result.weightedScore / 6.5).toFixed(1);
 
   return result;
 }
@@ -10880,31 +10881,38 @@ function renderRecommendations() {
             </tr>
           </thead>
           <tbody>
-            ${filteredBrands.map((b, idx) => {
-              const sm = getStarMatrixForBrand(b);
-              const m = getMatrixForBrand(b);
-              const isAdded = state.compareList.includes(b.id);
-              const detailId = `rec-detail-${b.id}`;
-              const fullPhilo = sm.philosophy || b.differentiation || '원리 기반 연계 학습';
-              const fullStrength = sm.strength || b.pros || '체계적인 원리 이해 및 교과 연계 완성';
-              const kwData = getBrandKeywords(b.id, fullPhilo, fullStrength);
-              const ageScore = getAgeAdaptiveScore(b, state.selectedAge);
+            ${(() => {
+              let prevTableStar = 5.0;
+              return filteredBrands.map((b, idx) => {
+                const sm = getStarMatrixForBrand(b);
+                const m = getMatrixForBrand(b);
+                const isAdded = state.compareList.includes(b.id);
+                const detailId = `rec-detail-${b.id}`;
+                const fullPhilo = sm.philosophy || b.differentiation || '원리 기반 연계 학습';
+                const fullStrength = sm.strength || b.pros || '체계적인 원리 이해 및 교과 연계 완성';
+                const kwData = getBrandKeywords(b.id, fullPhilo, fullStrength);
+                const ageScore = getAgeAdaptiveScore(b, state.selectedAge);
 
-              return `
-                <tr class="matrix-row" onclick="toggleMatrixRow('${detailId}', this)">
-                  <td>
-                    <div class="matrix-brand-cell">
-                      <span class="matrix-rank-badge rank-${idx + 1}">${idx + 1}위</span>
-                      ${getBrandLogo(b.id, 'sm')}
-                      <div>
-                        <div class="matrix-brand-title">
-                          ${b.name}
-                          <span class="score-pill" title="만 ${state.selectedAge}세 발달 단계 및 실제 라인업 적합도 가중 점수">만 ${state.selectedAge}세 맞춤 ${ageScore.finalScore}점</span>
+                let starVal = Number(sm.avgScore);
+                if (starVal > prevTableStar) starVal = prevTableStar;
+                prevTableStar = starVal;
+                const starDisplay = starVal.toFixed(1);
+
+                return `
+                  <tr class="matrix-row" onclick="toggleMatrixRow('${detailId}', this)">
+                    <td>
+                      <div class="matrix-brand-cell">
+                        <span class="matrix-rank-badge rank-${idx + 1}">${idx + 1}위</span>
+                        ${getBrandLogo(b.id, 'sm')}
+                        <div>
+                          <div class="matrix-brand-title">
+                            ${b.name}
+                            <span class="score-pill" title="만 ${state.selectedAge}세 발달 단계 및 실제 라인업 적합도 가중 점수">만 ${state.selectedAge}세 맞춤 ${ageScore.finalScore}점</span>
+                          </div>
+                          <div class="matrix-brand-sub">${b.company} · 종합평점 ★${starDisplay} (원점수 ${sm.totalScore}점)</div>
                         </div>
-                        <div class="matrix-brand-sub">${b.company} · 종합평점 ★${sm.avgScore} (원점수 ${sm.totalScore}점)</div>
                       </div>
-                    </div>
-                  </td>
+                    </td>
                   <td>
                     <div class="matrix-kw-cell" title="교육 철학: ${fullPhilo}">
                       <div class="matrix-kw-group">
@@ -10988,9 +10996,9 @@ function renderRecommendations() {
                       </div>
                     </div>
                   </td>
-                </tr>
               `;
-            }).join('')}
+            }).join('');
+          })()}
           </tbody>
         </table>
       </div>
@@ -11583,7 +11591,7 @@ function getBrandLogo(brandId, size = 'md') {
   `;
 }
 
-function renderLeaderboardItem(b, idx, type) {
+function renderLeaderboardItem(b, idx, type, displayStar) {
   const sm = getStarMatrixForBrand(b);
   const m = getMatrixForBrand(b);
   const isAdded = state.compareList.includes(b.id);
@@ -11599,6 +11607,7 @@ function renderLeaderboardItem(b, idx, type) {
   const fullStrength = sm.strength || b.pros || '체계적인 원리 이해 및 교과 연계 완성';
   const kwData = getBrandKeywords(b.id, fullPhilo, fullStrength);
   const ageScore = getAgeAdaptiveScore(b, state.selectedAge);
+  const starScoreDisplay = displayStar || sm.avgScore;
 
   return `
     <div class="leaderboard-item ${rankClass}" id="card-${type}-${b.id}">
@@ -11614,7 +11623,7 @@ function renderLeaderboardItem(b, idx, type) {
               <span class="lb-company-tag">${b.company}</span>
             </div>
             <div class="lb-score-row">
-              <span class="lb-score-pill">★ ${sm.avgScore}</span>
+              <span class="lb-score-pill">★ ${starScoreDisplay}</span>
               <span class="lb-total-score">만 ${state.selectedAge}세 맞춤 <strong>${ageScore.finalScore}점</strong> (원점수 ${sm.totalScore}점)</span>
               <span class="lb-cost-badge">${sm.costSymbol || '💰💰💰'}</span>
             </div>
@@ -11663,7 +11672,7 @@ function renderLeaderboardItem(b, idx, type) {
           <div class="lb-drawer-top">
             <div class="lb-drawer-heading">
               <span class="lb-drawer-title">📊 <strong>${b.name}</strong> 7대 평가 지표 심층 분석</span>
-              <span class="lb-drawer-score-badge">만 ${state.selectedAge}세 맞춤 ${ageScore.finalScore}점 · 종합 평점 ★${sm.avgScore} (총점 ${sm.totalScore}점 / 30점 만점${sm.weightedScore ? ` · 학술 가중 ${sm.weightedScore}점` : ''})</span>
+              <span class="lb-drawer-score-badge">만 ${state.selectedAge}세 맞춤 ${ageScore.finalScore}점 · 종합 평점 ★${starScoreDisplay} (총점 ${sm.totalScore}점 / 30점 만점${sm.weightedScore ? ` · 학술 가중 ${sm.weightedScore}점` : ''})</span>
             </div>
             <div class="lb-drawer-close-btn" onclick="toggleLeaderboardDrawer('${detailId}', this.closest('.leaderboard-item'))">닫기 ✕</div>
           </div>
@@ -11849,7 +11858,16 @@ function renderManipulatives() {
           </button>
         ` : ''}
       </div>
-      ${displayList.map((b, idx) => renderLeaderboardItem(b, idx, 'manip')).join('')}
+      ${(() => {
+        let prevStar = 5.0;
+        return displayList.map((b, idx) => {
+          const sm = getStarMatrixForBrand(b);
+          let star = Number(sm.avgScore);
+          if (star > prevStar) star = prevStar;
+          prevStar = star;
+          return renderLeaderboardItem(b, idx, 'manip', star.toFixed(1));
+        }).join('');
+      })()}
       ${toggleBtnHtml}
     </div>
   `;
@@ -11944,7 +11962,16 @@ function renderWorkbooks() {
           </button>
         ` : ''}
       </div>
-      ${displayList.map((b, idx) => renderLeaderboardItem(b, idx, 'wb')).join('')}
+      ${(() => {
+        let prevStar = 5.0;
+        return displayList.map((b, idx) => {
+          const sm = getStarMatrixForBrand(b);
+          let star = Number(sm.avgScore);
+          if (star > prevStar) star = prevStar;
+          prevStar = star;
+          return renderLeaderboardItem(b, idx, 'wb', star.toFixed(1));
+        }).join('');
+      })()}
       ${toggleBtnHtml}
     </div>
   `;
