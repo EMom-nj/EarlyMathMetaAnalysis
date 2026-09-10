@@ -3739,75 +3739,86 @@ button {
   min-width: 860px;
 }
 
-/* Collapsible Code Accordion */
-.meta-code-accordion {
-  border: 1.5px solid #E2E8F0;
-  border-radius: 14px;
-  background: white;
-  margin-top: 24px;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.meta-code-summary {
+/* Python Code Section Header (Always Visible & Prominent) */
+.meta-code-section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
-  background: #F8FAFC;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  transition: background 0.2s ease;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #1E293B;
+  background: white;
+  border: 1.5px solid #E2E8F0;
+  border-bottom: none;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  padding: 18px 22px;
+  margin-top: 32px;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
-.meta-code-summary::-webkit-details-marker {
-  display: none;
+.mcsh-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.meta-code-summary:hover {
-  background: #F1F5F9;
+.mcsh-icon {
+  font-size: 1.6rem;
+  background: #EEF2FF;
+  border: 1px solid #C7D2FE;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
-.mca-left {
+.mcsh-title {
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.mcsh-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+.mcsh-badges {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
-.mca-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.mca-badge {
-  font-size: 0.74rem;
+.mcsh-badge-colab {
+  font-size: 0.76rem;
+  font-weight: 700;
   background: #EEF2FF;
   color: #4F46E5;
   border: 1px solid #C7D2FE;
-  padding: 2px 8px;
-  border-radius: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
-.mca-arrow {
-  font-size: 0.75rem;
-  color: #64748B;
-  transition: transform 0.2s ease;
+.mcsh-badge-verified {
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: #ECFDF5;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
-.meta-code-accordion[open] .mca-arrow {
-  transform: rotate(180deg);
-}
-
-.meta-code-accordion .meta-code-window {
-  margin: 0;
-  border-radius: 0;
-  border: none;
+.meta-code-section-header + .meta-code-window {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
 }
 
 @media (max-width: 768px) {
@@ -6008,55 +6019,57 @@ button {
           </div>
         </div>
 
-        <!-- Python IDE Code Screen Window (Collapsible Accordion) -->
-        <details class="meta-code-accordion" id="metaCodeAccordion">
-          <summary class="meta-code-summary">
-            <div class="mca-left">
-              <span class="mca-icon">💻</span>
-              <span class="mca-title">파이썬 메타분석 재현 파이프라인 코드 & CSV 다운로드</span>
-            </div>
-            <div class="mca-right">
-              <span class="mca-badge">Google Colab 100% 호환</span>
-              <span class="mca-arrow">▼</span>
-            </div>
-          </summary>
-          <div class="meta-code-window">
-            <div class="code-window-header">
-              <div class="code-dots">
-                <span class="code-dot dot-red"></span>
-                <span class="code-dot dot-yellow"></span>
-                <span class="code-dot dot-green"></span>
-              </div>
-              <div class="code-file-tabs">
-                <button class="code-file-tab active" id="codeTabPython" onclick="switchCodeTab('python')">
-                  <span>📄 meta_analysis_pipeline.py</span>
-                </button>
-                <button class="code-file-tab" id="codeTabCsv" onclick="switchCodeTab('csv')">
-                  <span>📊 empirical_dataset.csv</span>
-                </button>
-              </div>
-              <div class="code-action-buttons">
-                <button class="code-action-btn" onclick="copyMetaCode()" id="copyCodeBtn" title="클립보드에 파이썬 코드 복사">
-                  <span>📋 전체 코드 복사</span>
-                </button>
-                <button class="code-action-btn" onclick="downloadMetaScript()" title="파이썬 .py 파일 다운로드">
-                  <span>📥 .py 다운로드</span>
-                </button>
-                <button class="code-action-btn" onclick="downloadMetaCsv()" title="CSV 데이터셋 다운로드">
-                  <span>📊 CSV 다운로드</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="code-window-body">
-              <pre class="code-pre"><code id="pythonCodeDisplay" class="python-code-content"></code></pre>
-            </div>
-
-            <div class="code-window-footer">
-              <span>💡 <strong>실행 방법 안내:</strong> Google Colab (<a href="https://colab.research.google.com" target="_blank" rel="noopener" style="color:#60A5FA; text-decoration:underline;">colab.research.google.com</a>) 새 노트북에 위 코드를 붙여넣고 <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Shift + Enter</kbd>를 누르면 즉시 고해상도 Forest Plot PNG가 생성됩니다.</span>
+        <!-- Python IDE Code Screen Window (Always Open & Prominent) -->
+        <div class="meta-code-section-header">
+          <div class="mcsh-title-group">
+            <span class="mcsh-icon">💻</span>
+            <div>
+              <h3 class="mcsh-title">파이썬 메타분석 재현 파이프라인 코드 & CSV 다운로드</h3>
+              <p class="mcsh-desc">학술 연구 데이터 기반 실증 분석을 Google Colab 및 로컬 환경에서 100% 동일하게 재현할 수 있는 실행형 스크립트입니다.</p>
             </div>
           </div>
-        </details>
+          <div class="mcsh-badges">
+            <span class="mcsh-badge-colab">⚡ Google Colab 100% 호환</span>
+            <span class="mcsh-badge-verified">✓ 실행 검증 완료</span>
+          </div>
+        </div>
+
+        <div class="meta-code-window">
+          <div class="code-window-header">
+            <div class="code-dots">
+              <span class="code-dot dot-red"></span>
+              <span class="code-dot dot-yellow"></span>
+              <span class="code-dot dot-green"></span>
+            </div>
+            <div class="code-file-tabs">
+              <button class="code-file-tab active" id="codeTabPython" onclick="switchCodeTab('python')">
+                <span>📄 meta_analysis_pipeline.py</span>
+              </button>
+              <button class="code-file-tab" id="codeTabCsv" onclick="switchCodeTab('csv')">
+                <span>📊 empirical_dataset.csv</span>
+              </button>
+            </div>
+            <div class="code-action-buttons">
+              <button class="code-action-btn" onclick="copyMetaCode()" id="copyCodeBtn" title="클립보드에 파이썬 코드 복사">
+                <span>📋 전체 코드 복사</span>
+              </button>
+              <button class="code-action-btn" onclick="downloadMetaScript()" title="파이썬 .py 파일 다운로드">
+                <span>📥 .py 다운로드</span>
+              </button>
+              <button class="code-action-btn" onclick="downloadMetaCsv()" title="CSV 데이터셋 다운로드">
+                <span>📊 CSV 다운로드</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="code-window-body">
+            <pre class="code-pre"><code id="pythonCodeDisplay" class="python-code-content"></code></pre>
+          </div>
+
+          <div class="code-window-footer">
+            <span>💡 <strong>실행 방법 안내:</strong> Google Colab (<a href="https://colab.research.google.com" target="_blank" rel="noopener" style="color:#60A5FA; text-decoration:underline;">colab.research.google.com</a>) 새 노트북에 위 코드를 붙여넣고 <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Shift + Enter</kbd>를 누르면 즉시 고해상도 Forest Plot PNG가 생성됩니다.</span>
+          </div>
+        </div>
       </section>
 
     </div>
