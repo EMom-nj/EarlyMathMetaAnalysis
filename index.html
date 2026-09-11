@@ -3298,6 +3298,10 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  width: 100%;
 }
 
 .meta-preset-pill {
@@ -3312,8 +3316,20 @@ button {
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: flex-start !important;
+  text-align: left !important;
   gap: 6px;
   user-select: none;
+  margin: 0 !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.meta-preset-pill .pill-text {
+  text-align: left !important;
+  display: inline-block;
 }
 
 .meta-preset-pill:hover {
@@ -3949,7 +3965,7 @@ button {
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
   padding: 18px 22px;
-  margin-top: 32px;
+  margin-top: 16px;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -6303,6 +6319,31 @@ button {
     padding: 14px 20px;
     font-size: 0.9rem;
   }
+  .meta-selector-bar {
+    padding: 16px 14px;
+    margin-bottom: 18px;
+    text-align: left !important;
+  }
+  .meta-selector-label {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+  .meta-preset-pills {
+    gap: 8px;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: 100%;
+  }
+  .meta-preset-pill {
+    padding: 7px 13px;
+    font-size: 0.82rem;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    margin: 0 !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 }
 </style>
 </head>
@@ -6581,52 +6622,6 @@ button {
           </p>
         </div>
 
-        <!-- Meta-Analysis Domain Selector Bar -->
-        <div class="meta-selector-bar">
-          <div class="meta-selector-label">
-            <strong>🎯 메타 분석 대상 연구 영역 선택:</strong>
-            <span style="font-size:0.8rem; color:var(--text-muted);">(선택 시 데이터셋, 효과크기(d), Forest Plot 및 Python 스크립트가 실시간 동기화됩니다)</span>
-          </div>
-          <div class="meta-preset-pills" id="metaPresetPills">
-            <!-- Dynamically generated pills -->
-          </div>
-        </div>
-
-        <!-- Meta-Analysis KPI Stat Cards -->
-        <div class="meta-stats-grid" id="metaStatsGrid">
-          <!-- Dynamically populated by app.js -->
-        </div>
-
-        <!-- Forest Plot Visualization Preview -->
-        <div class="meta-forest-card">
-          <div class="meta-forest-header">
-            <div>
-              <h4 id="metaForestTitle">🌲 Forest Plot 메타 분석 시각화</h4>
-              <p id="metaForestSubtitle">DerSimonian-Laird 변량 효과 모형(Random-Effects Model) 기반 통합 효과 크기 및 95% 신뢰구간</p>
-            </div>
-            <div class="forest-header-controls">
-              <div class="forest-view-switcher">
-                <button class="fvs-btn active" id="fvsBtnMobile" onclick="switchForestView('mobile')">📱 모바일 선명 차트</button>
-                <button class="fvs-btn" id="fvsBtnSvg" onclick="switchForestView('svg')">🖥️ 학술 원본 테이블</button>
-              </div>
-              <div class="forest-legend">
-                <span class="fl-item"><span class="fl-box"></span> 개별 연구 가중치 (Box)</span>
-                <span class="fl-item"><span class="fl-diamond"></span> 통합 효과 (Diamond)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Mobile Native Forest Plot View (Default for Mobile) -->
-          <div class="forest-mobile-container" id="forestMobileContainer">
-            <!-- Dynamically populated by app.js -->
-          </div>
-
-          <!-- Desktop / Full Table SVG Container (Scrollable) -->
-          <div class="forest-svg-container" id="forestSvgContainer" style="display: none;">
-            <!-- Dynamically rendered SVG Forest Plot -->
-          </div>
-        </div>
-
         <!-- Python IDE Code Screen Window (Always Open & Prominent) -->
         <div class="meta-code-section-header">
           <div class="mcsh-title-group">
@@ -6676,6 +6671,52 @@ button {
 
           <div class="code-window-footer">
             <span>💡 <strong>실행 방법 안내:</strong> Google Colab (<a href="https://colab.research.google.com" target="_blank" rel="noopener" style="color:#60A5FA; text-decoration:underline;">colab.research.google.com</a>) 새 노트북에 위 코드를 붙여넣고 <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-size:0.75rem;">Shift + Enter</kbd>를 누르면 즉시 고해상도 Forest Plot PNG가 생성됩니다.</span>
+          </div>
+        </div>
+
+        <!-- Meta-Analysis Domain Selector Bar -->
+        <div class="meta-selector-bar">
+          <div class="meta-selector-label">
+            <strong>🎯 메타 분석 대상 연구 영역 선택:</strong>
+            <span style="font-size:0.8rem; color:var(--text-muted);">(선택 시 데이터셋, 효과크기(d), Forest Plot 및 Python 스크립트가 실시간 동기화됩니다)</span>
+          </div>
+          <div class="meta-preset-pills" id="metaPresetPills">
+            <!-- Dynamically generated pills -->
+          </div>
+        </div>
+
+        <!-- Meta-Analysis KPI Stat Cards -->
+        <div class="meta-stats-grid" id="metaStatsGrid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+
+        <!-- Forest Plot Visualization Preview -->
+        <div class="meta-forest-card">
+          <div class="meta-forest-header">
+            <div>
+              <h4 id="metaForestTitle">🌲 Forest Plot 메타 분석 시각화</h4>
+              <p id="metaForestSubtitle">DerSimonian-Laird 변량 효과 모형(Random-Effects Model) 기반 통합 효과 크기 및 95% 신뢰구간</p>
+            </div>
+            <div class="forest-header-controls">
+              <div class="forest-view-switcher">
+                <button class="fvs-btn active" id="fvsBtnMobile" onclick="switchForestView('mobile')">📱 모바일 선명 차트</button>
+                <button class="fvs-btn" id="fvsBtnSvg" onclick="switchForestView('svg')">🖥️ 학술 원본 테이블</button>
+              </div>
+              <div class="forest-legend">
+                <span class="fl-item"><span class="fl-box"></span> 개별 연구 가중치 (Box)</span>
+                <span class="fl-item"><span class="fl-diamond"></span> 통합 효과 (Diamond)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Native Forest Plot View (Default for Mobile) -->
+          <div class="forest-mobile-container" id="forestMobileContainer">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <!-- Desktop / Full Table SVG Container (Scrollable) -->
+          <div class="forest-svg-container" id="forestSvgContainer" style="display: none;">
+            <!-- Dynamically rendered SVG Forest Plot -->
           </div>
         </div>
       </section>
@@ -13436,7 +13477,7 @@ function renderMetaPills() {
   container.innerHTML = keys.map(k => {
     const d = META_ANALYSIS_DATASETS[k];
     const isActive = k === currentMetaCategory ? 'active' : '';
-    return '<button class="meta-preset-pill ' + isActive + '" onclick="switchMetaCategory(\'' + k + '\')">' + d.name + '</button>';
+    return '<button type="button" class="meta-preset-pill ' + isActive + '" onclick="switchMetaCategory(\'' + k + '\')"><span class="pill-text">' + d.name + '</span></button>';
   }).join('');
 }
 
